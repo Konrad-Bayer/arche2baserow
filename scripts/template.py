@@ -15,51 +15,52 @@ TOPCOLLECTION = [
     "hasMetadataCreator",
     "hasRelatedDiscipline",
     "hasSubject",
-    "hasOwner",
-    "hasRightsHolder",
-    "hasLicensor",
-    "hasDepositor",
-    "hasCurator",
-    "hasCreator",
-    "hasTemporalCoverage",
-    "hasSpatialCoverage",
-    "hasActor",
     "hasPid",
     "hasFunder",
     "hasPrincipalInvestigator",
     "hasLanguage",
     "hasLifeCycleStatus",
-    "hasCoverageStartDate",
-    "hasCoverageEndDate",
     "hasCustomCitation"
 ]
 COLLECTION = [
     "hasTitle",
-    "hasAuthor",
-    "hasActor",
+    "hasDescription",
+    "hasCreator",
     "hasMetadataCreator",
     "hasRelatedDiscipline",
     "hasOwner",
     "hasRightsHolder",
     "hasLicensor",
+    "hasLicense",
     "hasDepositor",
     "hasCreator",
     "isPartOf",
     "hasPid",
     "hasLanguage",
     "hasSubject",
-    "hasOaiSet",
     "hasCurator",
-    "hasContact",
     "hasCustomCitation",
     "hasTemporalCoverage",
     "hasCoverageStartDate",
-    "hasCoverageEndDate"
+    "hasCoverageEndDate",
+]
+COLLECTION_SUB = [
+    "hasTitle",
+    "hasAlternativeTitle",
+    "hasCreator",
+    "hasAuthor",
+    "hasActor",
+    "isPartOf",
+    "hasPid",
+    "hasSubject",
+    "hasOaiSet",
+    "hasTemporalCoverage",
+    "hasCoverageStartDate",
+    "hasCoverageEndDate",
+    "hasTag",
 ]
 RESOURCE = [
     "hasTitle",
-    "hasAuthor",
-    "hasActor",
     "hasMetadataCreator",
     "hasRelatedDiscipline",
     "hasOwner",
@@ -67,18 +68,28 @@ RESOURCE = [
     "hasLicensor",
     "hasDepositor",
     "hasLicense",
-    "hasCategory",
     "isPartOf",
     "hasFilename",
     "hasPid",
     "hasFormat",
-    "isTitleImageOf",
     "hasCurator",
     "hasCreator",
     "hasAccessRestriction",
+    "isTitleImageOf",
+    "hasCategory",
+]
+RESOURCE_SUB = [
+    "hasTitle",
+    "isPartOf",
+    "hasFilename",
+    "hasPid",
+    "hasFormat",
+    "hasAccessRestriction",
+    "hasNextItem",
     "hasTag",
     "hasCreatedStartDateOriginal",
     "hasCreatedEndDateOriginal",
+    "hasCategory",
 ]
 METADATA = [
     "hasTitle",
@@ -92,6 +103,19 @@ METADATA = [
 ]
 PUBLICATION = [
     "hasTitle"
+]
+PERSON = [
+    "hasFirstName",
+    "hasLastName",
+    "hasPersonalTitle",
+]
+ORGANIZATION = [
+    "hasName",
+    "hasAlternativeName",
+    "hasAffiliation",
+    "hasEmail",
+    "hasOrcid",
+    "hasGndId"
 ]
 # export object can be extentent with more tables
 BASEROW_PROJECT_TABLE = {

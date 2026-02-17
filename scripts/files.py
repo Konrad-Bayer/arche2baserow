@@ -3,14 +3,9 @@ import glob
 import json
 import re
 
-from time import sleep
 from tqdm import tqdm
-from template import COLLECTION, RESOURCE
-from utils.baserow import (create_id_list,
-                           create_database_table,
-                           update_table_rows_batch,
-                           update_table_field_types)
-from config import (jwt_token, BASEROW_DB_ID)
+from template import COLLECTION_SUB, RESOURCE_SUB
+from utils.baserow import create_id_list
 
 konrad_bayer_uri = "https://d-nb.info/gnd/118507753/"
 
@@ -246,8 +241,12 @@ def create_arche_baserow():
     collection_data = [item for item in data if item["type"] == "Collection"]
     resource_data = [item for item in data if item["type"] == "Resource"]
 
-    cols = align_files_with_template(collection_data, COLLECTION, "Collection")
-    res = align_files_with_template(resource_data, RESOURCE, "Resource")
+    cols = align_files_with_template(collection_data,
+                                     COLLECTION_SUB,
+                                     "Collection")
+    res = align_files_with_template(resource_data,
+                                    RESOURCE_SUB,
+                                    "Resource")
 
     with open("cols.json", "w") as f:
         json.dump(cols, f, indent=4)
@@ -264,29 +263,29 @@ def chunk_list(items: list, size: int = 50):
 
 
 if __name__ == "__main__":
-    # extract_data_from_files()
+    extract_data_from_files()
     create_arche_baserow()
-    with open("cols.json", "r") as f:
-        cols = json.load(f)
-    with open("res.json", "r") as f:
-        res = json.load(f)
+    # with open("cols.json", "r") as f:
+    #     cols = json.load(f)
+    # with open("res.json", "r") as f:
+    #     res = json.load(f)
 
-    os.makedirs("chunks", exist_ok=True)
-    cols_chunks = list(chunk_list(cols, 100))
-    for idx, chunk in enumerate(cols_chunks, start=1):
-        fname = f"chunks/cols_chunk_{idx}.json"
-        with open(fname, "w") as f:
-            json.dump(chunk, f, indent=2)
-        # upload chunk to Baserow (table id as needed)
-        update_table_rows_batch("5194", chunk)
-        sleep(3)
+    # os.makedirs("chunks", exist_ok=True)
+    # cols_chunks = list(chunk_list(cols, 100))
+    # for idx, chunk in enumerate(cols_chunks, start=1):
+    #     fname = f"chunks/cols_chunk_{idx}.json"
+    #     with open(fname, "w") as f:
+    #         json.dump(chunk, f, indent=2)
+    #     # upload chunk to Baserow (table id as needed)
+    #     update_table_rows_batch("5194", chunk)
+    #     sleep(3)
 
-    res_chunks = list(chunk_list(res, 100))
-    for idx, chunk in enumerate(res_chunks, start=1):
-        fname = f"chunks/res_chunk_{idx}.json"
-        with open(fname, "w") as f:
-            json.dump(chunk, f, indent=2)
-        update_table_rows_batch("5195", chunk)
-        sleep(3)
+    # res_chunks = list(chunk_list(res, 100))
+    # for idx, chunk in enumerate(res_chunks, start=1):
+    #     fname = f"chunks/res_chunk_{idx}.json"
+    #     with open(fname, "w") as f:
+    #         json.dump(chunk, f, indent=2)
+    #     update_table_rows_batch("5195", chunk)
+    #     sleep(3)
 
     print("Data uploaded to Baserow")

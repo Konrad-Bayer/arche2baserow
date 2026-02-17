@@ -1,0 +1,47 @@
+name: Dump Baserow tables and create ARCHE turtle files
+
+on:
+  workflow_dispatch:
+    inputs:
+      database_id:
+        type: number
+        description: '(Required) Database ID as number'
+        required: true
+        default: 0
+      project_name:
+        type: string
+        description: '(Required) Project Name as string'
+        required: true
+        default: 'my-arche-project'
+
+jobs:
+  update_baserow:
+    name: Uploading Arche Schema to Baserow
+    runs-on: ubuntu-latest
+    env:
+      BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
+      BASEROW_DB_ID: ${{ github.event.inputs.database_id }}
+      BASEROW_USER: ${{ secrets.BASEROW_USER }}
+      BASEROW_PW: ${{ secrets.BASEROW_PW }}
+      PROJECT_NAME: ${{ github.event.inputs.project_name }}
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+      - name: Baserow Dump and TEI/XML Download
+        run: |
+          uv run scripts/baserow_dump.py
+      - name: Creating ARCHE constants ttl file
+        run: |
+          uv run scripts/arche_constants.py
+      - name: Commit data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Downloaded/Updated Data

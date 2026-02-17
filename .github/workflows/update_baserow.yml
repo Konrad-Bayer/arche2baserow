@@ -1,0 +1,37 @@
+name: Uploading Arche Schema to Baserow
+
+on:
+  workflow_dispatch:
+    inputs:
+      database_id:
+        type: number
+        description: 'Database ID as number'
+        required: true
+        default: 0
+
+jobs:
+  update_baserow:
+    name: Uploading Arche Schema to Baserow
+    runs-on: ubuntu-latest
+    env:
+      BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
+      BASEROW_DB_ID: ${{ github.event.inputs.database_id }}
+      BASEROW_USER: ${{ secrets.BASEROW_USER }}
+      BASEROW_PW: ${{ secrets.BASEROW_PW }}
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+      - name: Creating JSON Files and uploading Arche Schema to Baserow
+        run: |
+          uv run scripts/arche2json.py
+          uv run scripts/vocabs2json.py
+          uv run scripts/arche2baserow.py
+        

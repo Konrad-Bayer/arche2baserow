@@ -1,0 +1,17 @@
+[project]
+name = "arche-2-baserow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "acdh-baserow-pyutils>=0.10",
+    "acdh-graph-pyutils>=0.0.3",
+    "black>=24.10.0",
+    "coverage>=7.6.9",
+    "flake8>=7.1.1",
+    "lxml>=5.3.0",
+    "pytest>=8.3.4",
+    "rdflib>=6.3.2",
+    "tqdm>=4.67.1",
+]

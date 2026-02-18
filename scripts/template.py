@@ -54,10 +54,11 @@ COLLECTION_SUB = [
     "hasPid",
     "hasSubject",
     "hasOaiSet",
-    "hasTemporalCoverage",
+    # "hasTemporalCoverage",
     "hasCoverageStartDate",
     "hasCoverageEndDate",
     "hasTag",
+    "hasNextItem",
 ]
 RESOURCE = [
     "hasTitle",
@@ -87,8 +88,8 @@ RESOURCE_SUB = [
     "hasAccessRestriction",
     "hasNextItem",
     "hasTag",
-    "hasCreatedStartDateOriginal",
-    "hasCreatedEndDateOriginal",
+    # "hasCreatedStartDateOriginal",
+    # "hasCreatedEndDateOriginal",
     "hasCategory",
 ]
 METADATA = [

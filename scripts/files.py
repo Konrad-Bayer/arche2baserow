@@ -2,13 +2,24 @@ import os
 import glob
 import json
 import re
+# import locale                     
 
+from datetime import datetime
 from tqdm import tqdm
 from template import COLLECTION_SUB, RESOURCE_SUB
 from utils.baserow import create_id_list
 
+# locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
+
 konrad_bayer_uri = "https://d-nb.info/gnd/118507753/"
 
+entity_str_replace = {
+    "an bayer konrad": "an Bayer, Konrad",
+    "an bayer traudl": "an Bayer, Traudl",
+    "an bayer": "an Bayer, Konrad",
+    "von bayer traudl": "von Bayer, Traudl",
+    "von bayer konrad": "von Bayer, Konrad",
+}
 
 def natural_key(path: str):
     name = os.path.basename(path)
@@ -162,17 +173,83 @@ def create_template_lists(ids: int,
         uri_path = item['isPartOf']
     uri = f"{item['collection']}/{item['identifier']}"
     for prop in custom_properties:
-
+        literal = ""
+        date = None
+        # hasNextItem
+        if prop == "hasNextItem" and item["hasNextItem"]:
+            literal = []
+            literal.append(item["collection"])
+            if item["type"] == "Resource":
+                literal.append(item["isPartOf"])
+            if item["type"] == "Collection":
+                literal.append(item["identifier"])
+            literal.append(item["hasNextItem"])
+            literal = "/".join(literal)
+        # hasAuthor and hasActor
         if prop == "hasAuthor" or prop == "hasActor":
             literal = f"{item['author']} - {item['actor']}" if item["author"]\
                 and item["actor"] else None
+        # hasTitle
+        if prop == "hasTitle":
+            if item["collection"] == "kalender":
+                if item["type"] == "Collection":
+                    literal = item["title"].split("-")[0] if item["title"] else ""
+                    literal = f"{literal[0][0].upper()}{literal[0][1:]} {literal[1:]}"
+                else:
+                    literal = item['page'] if item['page'] else ""
+            else:
+                if item["type"] == "Collection":
+                    author = entity_str_replace.get(item['author'], item['author'])\
+                        if item['author'] else ""
+                    actor = entity_str_replace.get(item['actor'], item['actor'])\
+                        if item['actor'] else ""
+                    date_str = ""
+                    if item['date']:
+                        # Year-only
+                        if len(item['date']) == 4:
+                            try:
+                                date_str = datetime.strptime(item['date'], "%Y")
+                            except ValueError:
+                                date_str = item['date']
+                        # Likely full date (try ISO first, then verbose formats)
+                        elif len(item['date']) == 10:
+                            # convert to datetime object if possible, then format as "17. Juli 1955"
+                            # locale must be de_DE for German month names
+                            try:
+                                date_str = datetime.fromisoformat(item['date'])
+                                date_str = date_str.strftime("%d. %B %Y")
+                            except ValueError:
+                                date_str = item['date']
+                    literal = f"Korrespondenz {author} {actor} am {date_str}{item['title'] if item['title'] else ""}"
+                else:
+                    literal = item['page'] if item['page'] else ""
+        # isPartOf
+        if prop == "isPartOf":
+            literal = uri_path
+        # hasTag
+        if prop == "hasTag":
+            literal = "TEXT"
+        # hasOaiSet
+        if prop == "hasOaiSet":
+            object_uri_vocabs = [87]
         else:
-            literal = ""
-        if prop == "hasTemporalCoverage" or prop == "hasCoverageStartDate"\
-                or prop == "hasCoverageEndDate":
-            date = item["date"] if item["type"] == "Collection" else None
+            object_uri_vocabs = []
+        # Dates
+        if prop == "hasCoverageStartDate":
+            if item["date"] and len(item["date"]) == 4:
+                date = f"{item['date']}-01-01"
+            else:
+                date = item["date"] if item["date"] else ""
+        if prop == "hasCoverageEndDate":
+            if item["date"] and len(item["date"]) == 4:
+                date = f"{item['date']}-12-31"
+            else:
+                date = item["date"] if item["date"] else ""
+        # hasLanguage
+        if prop == "hasLanguage":
+            lang = "de"
         else:
-            date = ""
+            lang = ""
         print(f"Creating {prop} template...")
         template.append({
             "id": ids,
@@ -183,13 +260,12 @@ def create_template_lists(ids: int,
             "Object_uri_places": [],
             "Object_uri_organizations": [],
             "Object_uri_resource": [],
-            "Object_uri_vocabs": [],
+            "Object_uri_vocabs": object_uri_vocabs,
             "Literal": literal,
-            "Language": "de",
+            "Language": lang,
             "Date": date,
             "Number": None,
-            "Inherit": [],
-            "isPartOf": uri_path if prop == "isPartOf" else "",
+            "Inherit": []
         })
         ids += 1
     return ids, template
@@ -263,7 +339,7 @@ def chunk_list(items: list, size: int = 50):
 
 
 if __name__ == "__main__":
-    extract_data_from_files()
+    # extract_data_from_files()
     create_arche_baserow()
     # with open("cols.json", "r") as f:
     #     cols = json.load(f)

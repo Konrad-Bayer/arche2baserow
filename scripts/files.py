@@ -8,6 +8,7 @@ from datetime import datetime
 from tqdm import tqdm
 from template import COLLECTION_SUB, RESOURCE_SUB
 from utils.baserow import create_id_list
+from typing import TypedDict
 
 # locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 
@@ -21,143 +22,171 @@ entity_str_replace = {
     "von bayer konrad": "von Bayer, Konrad",
 }
 
-def natural_key(path: str):
+
+def natural_key(path: str) -> list[int | str]:
     name = os.path.basename(path)
     parts = re.split(r'(\d+)', name)
     # convert digit parts to int, keep non-digits as lower-case strings
     return [int(p) if p.isdigit() else p.lower() for p in parts]
 
 
-def list_directories_or_files(path: str, data: list | dict) -> list[str]:
+class DataItem(TypedDict, total=False):
+    name: str
+    identifier: str
+    author: str | None
+    actor: str | None
+    date: str | None
+    title: str | None
+    isPartOf: str
+    page: str | None
+    collection: str
+    type: str
+    hasNextItem: str | None
+    path: str
+
+
+def _parse_collection_directory(
+        item: str,
+        name: str,
+        name_list: list[str]) -> tuple[str, str | None, str | None, str | None, str | None]:
+
+    """Extract collection, identifier, title, author, actor from directory name."""
+
+    collection = None
+    identifier = None
+    title = None
+    author = None
+    actor = None
+    date = None
+
+    if "_briefe" in name or "_mappen" in name:
+        identifier = "_".join(name_list[0:3]) if len(name_list) > 2 else name_list[0]
+        title = name_list[2] if len(name_list) > 2 else name_list[1]
+        collection = "korrespondenz"
+    elif "Korrespondenz" in item:
+        identifier = name_list[0]
+        author = name_list[1]
+        actor = name_list[2]
+        date = name_list[3] if len(name_list) > 3 and name_list[3].startswith("19") else None
+        title = name_list[3] if not date and len(name_list) > 3 else None
+        if len(name_list) > 4 and title:
+            title += "_" + "_".join(name_list[4:])
+        collection = "korrespondenz"
+    else:
+        identifier = name_list[0]
+        title = name_list[1]
+        date = title.split("-")[1] if "-" in title else None
+        collection = "kalender"
+
+    return collection, identifier, title, author, actor, date
+
+
+def _create_data_item(name: str, identifier: str, is_part_of: str, item_type: str, **kwargs) -> DataItem:
+    """Factory function to create consistent DataItem objects."""
+    return {
+        "name": name,
+        "identifier": identifier,
+        "author": kwargs.get("author"),
+        "actor": kwargs.get("actor"),
+        "date": kwargs.get("date"),
+        "title": kwargs.get("title"),
+        "isPartOf": is_part_of.lower(),
+        "page": kwargs.get("page"),
+        "collection": kwargs.get("collection"),
+        "type": item_type,
+        "hasNextItem": kwargs.get("hasNextItem"),
+        "path": kwargs.get("path"),
+    }
+
+
+def list_directories_or_files(path: str, data: list) -> list[DataItem]:
     """List all directories or files in a given path."""
-    content = sorted(glob.glob(os.path.join(path, "*")),
-                     key=natural_key)
+    content = sorted(glob.glob(os.path.join(path, "*")), key=natural_key)
+
     for idx, item in enumerate(tqdm(content, total=len(content))):
-        nextItem = content[idx + 1] if idx + 1 < len(content) else None
-        nextItemName = os.path.basename(nextItem) if nextItem else None
         name = os.path.basename(item)
-        print(f"Processing: {name}")
         name_list = name.split("_")
         is_part_of = os.path.dirname(item).split("/")[-1]
-        if is_part_of == "Taschenkalender":
-            is_part_of = "kalender"
-        if len(name_list) > 1:
-            hasNextItem = None
-            if os.path.isdir(item):
-                name1 = None
-                name2 = None
-                date = None
-                title = None
-                author = None
-                actor = None
-                collection = None
-                print(f"Directory: {item}")
-                if "_briefe-an" in name or "_briefe-von" in name\
-                        or "_briefe-mappen" in name\
-                        or "_mappen-zu-briefe" in name:
-                    if len(name_list) == 3:
-                        identifier = "_".join(name_list[0:3])
-                        title = name_list[2]
-                    else:
-                        identifier = name_list[0]
-                        title = name_list[1]
-                    collection = "korrespondenz"
-                else:
-                    firstChildItem = sorted(
-                        glob.glob(os.path.join(item, "*")),
-                        key=natural_key)[0]\
-                        if glob.glob(os.path.join(item, "*")) else None
-                    hasNextItem = os.path.basename(firstChildItem)\
-                        if firstChildItem else None
-                    if "Korrespondenz" in item:
-                        identifier = name_list[0]
-                        name1 = name_list[1]
-                        name2 = name_list[2]
-                        if name_list[3].startswith("19"):
-                            date = name_list[3]
-                        else:
-                            title = name_list[3]
-                        if len(name_list) > 4:
-                            if title:
-                                title += "_" + "_".join(name_list[4:])
-                            else:
-                                title = "_".join(name_list[4:])
-                        collection = "korrespondenz"
-                    else:
-                        identifier = name_list[0]
-                        title = name_list[1]
-                        date = title.split("-")[1]
-                        collection = "kalender"
-                if name1 and name2:
-                    if "von" in name1:
-                        author = name1
-                        actor = name2
-                    else:
-                        author = name2
-                        actor = name1
-                if author and actor:
-                    # if author == "von-bayer-konrad":
-                    #     author = konrad_bayer_uri
-                    # if actor == "an-bayer" or actor == "an-bayer-konrad":
-                    #     actor = konrad_bayer_uri
-                    author = " ".join(author.split("-"))
-                    actor = " ".join(actor.split("-"))
-                data_item = {
-                    "name": name,
-                    "identifier": identifier,
-                    "author": author,
-                    "actor": actor,
-                    "date": date,
-                    "title": title,
-                    "isPartOf": is_part_of.lower(),
-                    "page": None,
-                    "collection": collection,
-                    "type": "Collection",
-                    "hasNextItem": hasNextItem,
-                    "path": item,
-                }
-                # data_item["children"] = []
-                list_directories_or_files(item, data)
-            elif os.path.isfile(item):
-                print(f"File: {item}")
-                hasNextItem = nextItemName
-                identifier = f"{name_list[1]}/{name}"
-                if "Korrespondenz" in item:
-                    collection = "korrespondenz"
-                    page = "_".join(name_list[2:]).replace(".tiff", "")
-                else:
-                    collection = "kalender"
-                    page = "_".join(name_list[3:]).replace(".tiff", "")
-                data_item = {
-                    "name": name,
-                    "identifier": identifier,
-                    "author": None,
-                    "actor": None,
-                    "date": None,
-                    "title": None,
-                    "isPartOf": name_list[1],
-                    "page": page,
-                    "collection": collection,
-                    "type": "Resource",
-                    "hasNextItem": hasNextItem,
-                    "path": item,
-                }
-            else:
-                continue
-            data.append(data_item)
-        else:
-            # if name == "Taschenkalender":
-            #     name = "Kalender"
-            # data_item = {
-            #     "name": name,
-            #     "isPartOf": is_part_of,
-            #     "path": item,
-            #     "type": "Collection" if os.path.isdir(item) else "Resource"
-            # }
-            # # data_item["children"] = []
+        is_part_of = "kalender" if is_part_of == "Taschenkalender" else is_part_of
+
+        if len(name_list) <= 1:
             list_directories_or_files(item, data)
-            # data.append(data_item)
+            continue
+
+        print(f"Processing: {name}")
+        next_item = content[idx + 1] if idx + 1 < len(content) else None
+        next_item_name = os.path.basename(next_item) if next_item else None
+
+        if os.path.isdir(item):
+            collection, identifier, title, author, actor, date = _parse_collection_directory(item, name, name_list)
+            first_child = sorted(glob.glob(os.path.join(item, "*")), key=natural_key)
+            has_next_item = os.path.basename(first_child[0]) if first_child else None
+
+            if author and actor:
+                author = " ".join(author.split("-"))
+                actor = " ".join(actor.split("-"))
+
+            data_item = _create_data_item(
+                name, identifier, is_part_of, "Collection",
+                author=author, actor=actor, title=title, date=date,
+                collection=collection, hasNextItem=has_next_item, path=item
+            )
+            data.append(data_item)
+            list_directories_or_files(item, data)
+
+        elif os.path.isfile(item):
+            collection = "korrespondenz" if "Korrespondenz" in item else "kalender"
+            page_offset = 2 if collection == "korrespondenz" else 3
+            page = "_".join(name_list[page_offset:]).replace(".tiff", "")
+            identifier = f"{name_list[1]}/{name}"
+
+            data_item = _create_data_item(
+                name, identifier, name_list[1], "Resource",
+                collection=collection, page=page, hasNextItem=next_item_name, path=item
+            )
+            data.append(data_item)
+
     return data
+
+
+class TemplateItem(TypedDict):
+    id: int
+    Subject_uri: str
+    Class: list[int]
+    Predicate_uri: list[int]
+    Object_uri_persons: list[int]
+    Object_uri_places: list[int]
+    Object_uri_organizations: list[int]
+    Object_uri_resource: list[int]
+    Object_uri_vocabs: list[int]
+    Literal: str | None
+    Language: str | None
+    Date: str | None
+    Number: int | None
+    Inherit: list[int]
+
+
+def _create_template_item(ids: int, uri: str, classes_name: str, prop: str,
+                          default_properties: list[dict], default_classes: list[dict],
+                          literal: str | None = None, date: str | None = None,
+                          lang: str | None = None, object_uri_vocabs: list[int] = []) -> TemplateItem:
+    """Factory function to create consistent TemplateItem objects."""
+    return {
+        "id": ids,
+        "Subject_uri": uri,
+        "Class": create_id_list(default_classes, classes_name),
+        "Predicate_uri": create_id_list(default_properties, prop),
+        "Object_uri_persons": [],
+        "Object_uri_places": [],
+        "Object_uri_organizations": [],
+        "Object_uri_resource": [],
+        "Object_uri_vocabs": object_uri_vocabs,
+        "Literal": literal,
+        "Language": lang,
+        "Date": date,
+        "Number": None,
+        "Inherit": []
+    }
 
 
 def create_template_lists(ids: int,
@@ -251,22 +280,12 @@ def create_template_lists(ids: int,
         else:
             lang = ""
         print(f"Creating {prop} template...")
-        template.append({
-            "id": ids,
-            "Subject_uri": uri,
-            "Class": create_id_list(default_classes, classes_name),
-            "Predicate_uri": create_id_list(default_properties, prop),
-            "Object_uri_persons": [],
-            "Object_uri_places": [],
-            "Object_uri_organizations": [],
-            "Object_uri_resource": [],
-            "Object_uri_vocabs": object_uri_vocabs,
-            "Literal": literal,
-            "Language": lang,
-            "Date": date,
-            "Number": None,
-            "Inherit": []
-        })
+
+        template.append(_create_template_item(
+            ids, uri, classes_name, prop, default_properties, default_classes,
+            literal=literal, date=date, lang=lang, object_uri_vocabs=object_uri_vocabs
+        ))
+
         ids += 1
     return ids, template
 
@@ -339,7 +358,7 @@ def chunk_list(items: list, size: int = 50):
 
 
 if __name__ == "__main__":
-    # extract_data_from_files()
+    extract_data_from_files()
     create_arche_baserow()
     # with open("cols.json", "r") as f:
     #     cols = json.load(f)

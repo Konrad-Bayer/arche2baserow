@@ -141,3 +141,4 @@ res.json
 cols.json
 data.json
 curation_tools.md
+rdf/test-arche_constants.ttl

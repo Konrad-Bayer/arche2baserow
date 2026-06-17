@@ -293,5 +293,5 @@ file_glob = glob.glob("json_dumps/*.json")
 for file in file_glob:
     create_arche_entity_triples(file)
 
-serialize_graph(G, "turtle", "rdf/arche_constants.ttl")
-print("Done with ARCHE constants. file: rdf/arche_constants.ttl")
+serialize_graph(G, "turtle", "rdf/test-arche_constants.ttl")
+print("Done with ARCHE constants. file: rdf/test-arche_constants.ttl")

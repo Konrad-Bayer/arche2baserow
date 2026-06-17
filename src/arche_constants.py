@@ -14,10 +14,6 @@ from acdh_graph_pyutils.graph import (
 from acdh_graph_pyutils.namespaces import NAMESPACES
 from rdflib import URIRef, Literal, Namespace
 
-# load metadata json files
-with open("json_dumps/Project_denormalized.json", "r") as f:
-    metadata = json.load(f)
-
 # define namespaces
 NAMESPACES["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 NAMESPACES["rdfs"] = "http://www.w3.org/2000/01/rdf-schema#"
@@ -26,6 +22,12 @@ NAMESPACES["arche"] = "https://vocabs.acdh.oeaw.ac.at/schema#"
 arche_id = URIRef("https://id.acdh.oeaw.ac.at/")
 ARCHE = Namespace(NAMESPACES["arche"])
 COLLECTION_NAME = PROJECT_NAME
+# create empty graph
+G = create_empty_graph(
+    namespaces=NAMESPACES,
+    identifier=arche_id,
+    store=create_memory_store()
+)
 
 
 def create_entity_uri_from_string(string: str) -> URIRef:
@@ -68,7 +70,7 @@ def create_minimal_entity_triple(entity: list, entity_type: str) -> None:
         object_uri = URIRef(ARCHE["Organisation"])
     else:
         raise UnboundLocalError(f"Entity type not defined. {entity_type}")
-    create_type_triple(g, subject_uri, object_uri)
+    create_type_triple(G, subject_uri, object_uri)
 
 
 def get_entity_uri(
@@ -86,7 +88,7 @@ def get_entity_uri(
                 object_uri = URIRef(ent["data"]["Subject_uri"])
             else:
                 continue
-            create_custom_triple(g, subject_uri, predicate_uri, object_uri)
+            create_custom_triple(G, subject_uri, predicate_uri, object_uri)
             if entity_type is not None:
                 create_minimal_entity_triple(ent, entity_type)
 
@@ -105,7 +107,7 @@ def get_resource_uri(
                 object_uri = URIRef(f'{res["data"]["Namespace"]}{res["value"]}')
             except KeyError:
                 object_uri = URIRef(f'{arche_id}{res["value"]}')
-            create_custom_triple(g, subject_uri, predicate_uri, object_uri)
+            create_custom_triple(G, subject_uri, predicate_uri, object_uri)
 
 
 def get_literal(
@@ -120,9 +122,12 @@ def get_literal(
     if isinstance(literal, str) and len(literal) > 0:
         if isinstance(literal_lang, str) and len(literal_lang) > 0:
             if literal_lang != LANG_SPECIAL_TOKEN:
-                create_custom_triple(g, subject_uri, predicate_uri, Literal(literal, lang=literal_lang))
+                create_custom_triple(G, subject_uri, predicate_uri, Literal(literal, lang=literal_lang))
             else:
-                create_custom_triple(g, subject_uri, predicate_uri, Literal(literal))
+                create_custom_triple(G, subject_uri, predicate_uri, Literal(literal))
+        else:
+            if "/" in literal:
+                create_custom_triple(G, subject_uri, predicate_uri, URIRef(f'{arche_id}{literal.replace(" ", "")}'))  # fix extra whitespaces in files.py
 
 
 def get_date(
@@ -134,7 +139,7 @@ def get_date(
     Create a Literal with datatype date from a string.
     """
     if isinstance(date, str) and len(date) > 0:
-        create_custom_triple(g, subject_uri, predicate_uri, Literal(date, datatype=f'{NAMESPACES["xsd"]}date'))
+        create_custom_triple(G, subject_uri, predicate_uri, Literal(date, datatype=f'{NAMESPACES["xsd"]}date'))
 
 
 def get_number(
@@ -146,98 +151,94 @@ def get_number(
     Create a Literal with datatype integer from a string.
     """
     if isinstance(number, int) and len(number) > 0:
-        create_custom_triple(g, subject_uri, predicate_uri, Literal(number, datatype=f'{NAMESPACES["xsd"]}integer'))
+        create_custom_triple(G, subject_uri, predicate_uri, Literal(number, datatype=f'{NAMESPACES["xsd"]}integer'))
 
 
-# create empty graph
-g = create_empty_graph(
-    namespaces=NAMESPACES,
-    identifier=arche_id,
-    store=create_memory_store()
-)
+def create_arche_constants_triples(metadata: dict) -> None:
+    """
+    Create triples for ARCHE constants from the metadata json file.
+    """
+    for meta in tqdm(metadata.values(), total=len(metadata)):
+        subject_string = meta["Subject_uri"]
+        subject_uri = URIRef(f'{arche_id}{subject_string}')
+        if isinstance(meta["Class"], list) and len(meta["Class"]) == 1:
+            type_class = meta["Class"][0]
+            type_uri = URIRef(f'{type_class["data"]["Namespace"]}{type_class["value"]}')
+            create_type_triple(G, subject_uri, type_uri)
+        if isinstance(meta["Predicate_uri"], list) and len(meta["Predicate_uri"]) == 1:
+            predicate_class = meta["Predicate_uri"][0]
+            predicate_uri = URIRef(f'{predicate_class["data"]["Namespace"]}{predicate_class["value"]}')
+            # create triples from persons
+            persons_list = meta["Object_uri_persons"]
+            get_entity_uri(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                entity=persons_list,
+                entity_type="persons"
+            )
+            # create triples from places
+            places_list = meta["Object_uri_places"]
+            get_entity_uri(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                entity=places_list,
+                entity_type="places"
+            )
+            # create triples from organizations
+            organizations_list = meta["Object_uri_organizations"]
+            get_entity_uri(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                entity=organizations_list,
+                entity_type="organizations"
+            )
+            # create triples from resources
+            resource_list = meta["Object_uri_resource"]
+            get_resource_uri(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                resource=resource_list
+            )
+            # create triples from vocabs
+            vocabs_list = meta["Object_uri_vocabs"]
+            get_resource_uri(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                resource=vocabs_list
+            )
+            # create triples from literal
+            literal = meta["Literal"]
+            language = meta["Language"]
+            get_literal(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                literal=literal,
+                literal_lang=language
+            )
+            # create triples from date
+            date = meta["Date"]
+            get_date(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                date=date
+            )
+            # create triples from number
+            number = meta["Number"]
+            get_number(
+                subject_uri=subject_uri,
+                predicate_uri=predicate_uri,
+                number=number
+            )
 
-for meta in tqdm(metadata.values(), total=len(metadata)):
-    subject_string = meta["Subject_uri"]
-    subject_uri = URIRef(f'{arche_id}{subject_string}')
-    if isinstance(meta["Class"], list) and len(meta["Class"]) == 1:
-        type_class = meta["Class"][0]
-        type_uri = URIRef(f'{type_class["data"]["Namespace"]}{type_class["value"]}')
-        create_type_triple(g, subject_uri, type_uri)
-    if isinstance(meta["Predicate_uri"], list) and len(meta["Predicate_uri"]) == 1:
-        predicate_class = meta["Predicate_uri"][0]
-        predicate_uri = URIRef(f'{predicate_class["data"]["Namespace"]}{predicate_class["value"]}')
-        # create triples from persons
-        persons_list = meta["Object_uri_persons"]
-        get_entity_uri(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            entity=persons_list,
-            entity_type="persons"
-        )
-        # create triples from places
-        places_list = meta["Object_uri_places"]
-        get_entity_uri(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            entity=places_list,
-            entity_type="places"
-        )
-        # create triples from organizations
-        organizations_list = meta["Object_uri_organizations"]
-        get_entity_uri(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            entity=organizations_list,
-            entity_type="organizations"
-        )
-        # create triples from resources
-        resource_list = meta["Object_uri_resource"]
-        get_resource_uri(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            resource=resource_list
-        )
-        # create triples from vocabs
-        vocabs_list = meta["Object_uri_vocabs"]
-        get_resource_uri(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            resource=vocabs_list
-        )
-        # create triples from literal
-        literal = meta["Literal"]
-        language = meta["Language"]
-        get_literal(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            literal=literal,
-            literal_lang=language
-        )
-        # create triples from date
-        date = meta["Date"]
-        get_date(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            date=date
-        )
-        # create triples from number
-        number = meta["Number"]
-        get_number(
-            subject_uri=subject_uri,
-            predicate_uri=predicate_uri,
-            number=number
-        )
 
-# create graph for ARCHE entities
-# open json file
-files = [
-    "Persons_denormalized",
-    "Places_denormalized",
-    "Organizations_denormalized"
-]
-file_glob = glob.glob("json_dumps/*.json")
-
-for file in file_glob:
+def create_arche_entity_triples(file: str) -> None:
+    # create graph for ARCHE entities
+    # open json file
+    files = [
+        "Persons_denormalized",
+        "Places_denormalized",
+        "Organizations_denormalized"
+    ]
     fn = file.split("/")[-1].split(".")[0]
     if fn in files:
         with open(file, "r") as f:
@@ -248,7 +249,7 @@ for file in file_glob:
                 predicate_class = meta["Predicate_uri"][0]
                 predicate_uri = URIRef(
                     f'{predicate_class["data"]["Namespace"]}{predicate_class["value"]}')
-                entity_type = fn.replace("_denormalized", "").lower()
+                # entity_type = fn.replace("_denormalized", "").lower()
                 try:
                     get_entity_uri(
                         subject_uri=subject_uri,
@@ -266,7 +267,31 @@ for file in file_glob:
                     literal_lang=meta["Language"]
                 )
 
+
+# load metadata json files
+with open("json_dumps/Project_denormalized.json", "r") as f:
+    metadata = json.load(f)
+# load metadata json files
+with open("json_dumps/Collections_denormalized.json", "r") as f:
+    collections = json.load(f)
+# load metadata json files
+with open("json_dumps/Resources_denormalized.json", "r") as f:
+    resources = json.load(f)
+
 # serialize graph
 os.makedirs("rdf", exist_ok=True)
-serialize_graph(g, "turtle", "rdf/arche_constants.ttl")
+ALL_CONSTANTS = [
+    metadata,
+    collections,
+    resources
+]
+# constant triples
+for constant in ALL_CONSTANTS:
+    create_arche_constants_triples(constant)
+# entities triples
+file_glob = glob.glob("json_dumps/*.json")
+for file in file_glob:
+    create_arche_entity_triples(file)
+
+serialize_graph(G, "turtle", "rdf/arche_constants.ttl")
 print("Done with ARCHE constants. file: rdf/arche_constants.ttl")

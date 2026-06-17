@@ -31,7 +31,7 @@ jobs:
           pip install uv
       - name: Creating JSON Files and uploading Arche Schema to Baserow
         run: |
-          uv run scripts/arche2json.py
-          uv run scripts/vocabs2json.py
-          uv run scripts/arche2baserow.py
+          uv run src/arche2json.py
+          uv run src/vocabs2json.py
+          uv run src/arche2baserow.py
         

@@ -37,10 +37,10 @@ jobs:
           pip install uv
       - name: Baserow Dump and TEI/XML Download
         run: |
-          uv run scripts/baserow_dump.py
+          uv run src/baserow_dump.py
       - name: Creating ARCHE constants ttl file
         run: |
-          uv run scripts/arche_constants.py
+          uv run src/arche_constants.py
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

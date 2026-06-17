@@ -1,5 +1,5 @@
 import json
-import os
+# import os
 from time import sleep
 from config import (jwt_token, BASEROW_DB_ID)
 from template import BASEROW_PROJECT_TABLE
@@ -306,7 +306,7 @@ for key, value in BASEROW_PROJECT_TABLE.items():
     print(f"Updating {key} table rows...")
     ids_update, custom_template_project = create_template_lists(
         ids,
-        get_properties(BASEROW_PROJECT_TABLE, key),
+        value,
         key,
         properties,
         classes,
@@ -318,65 +318,4 @@ for key, value in BASEROW_PROJECT_TABLE.items():
                             custom_template_project)
     sleep(3)
 print("Done...")
-
-# collections = create_database_table(
-#     BASEROW_DB_ID,
-#     jwt_token,
-#     "Collections",
-#     "Subject_uri"
-# )
-# sleep(3)
-# resources = create_database_table(
-#     BASEROW_DB_ID,
-#     jwt_token,
-#     "Resources",
-#     "Subject_uri"
-# )
-
-# default_fields.append(
-#     {"name": "isPartOf", "type": "text"},
-# )
-# sleep(3)
-# update_table_field_types(
-#     collections["id"],
-#     jwt_token,
-#     default_fields
-# )
-# sleep(3)
-# update_table_field_types(
-#     resources["id"],
-#     jwt_token,
-#     default_fields
-# )
-# sleep(3)
-
-# with open("cols.json", "r") as f:
-#     cols = json.load(f)
-# with open("res.json", "r") as f:
-#     res = json.load(f)
-
-
-# def chunk_list(items: list, size: int = 50):
-#     """Yield successive chunks (lists) of length `size` from `items`."""
-#     for i in range(0, len(items), size):
-#         yield items[i:i + size]
-
-
-# os.makedirs("chunks", exist_ok=True)
-# cols_chunks = list(chunk_list(cols, 100))
-# for idx, chunk in enumerate(cols_chunks, start=1):
-#     fname = f"chunks/cols_chunk_{idx}.json"
-#     with open(fname, "w") as f:
-#         json.dump(chunk, f, indent=2)
-#     # upload chunk to Baserow (table id as needed)
-#     update_table_rows_batch(collections["id"], chunk)
-#     sleep(3)
-
-# res_chunks = list(chunk_list(res, 100))
-# for idx, chunk in enumerate(res_chunks, start=1):
-#     fname = f"chunks/res_chunk_{idx}.json"
-#     with open(fname, "w") as f:
-#         json.dump(chunk, f, indent=2)
-#     update_table_rows_batch(resources["id"], chunk)
-#     sleep(3)
 print("Data uploaded to Baserow")

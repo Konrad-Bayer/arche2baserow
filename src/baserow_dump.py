@@ -20,6 +20,8 @@ if isinstance(BASEROW_DB_ID, str) or isinstance(BASEROW_DB_ID, int) and BASEROW_
 
     print("Denormalizing data...")
     denormalize_json("Project", output_folder, MAPPING_PROJECT)
+    denormalize_json("Collections", output_folder, MAPPING_PROJECT)
+    denormalize_json("Resources", output_folder, MAPPING_PROJECT)
     denormalize_json("Persons", output_folder, MAPPING_PERSONS)
     denormalize_json("Organizations", output_folder, MAPPING_ORGS)
     denormalize_json("Places", output_folder, MAPPING_PLACES)

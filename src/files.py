@@ -12,6 +12,33 @@ from typing import TypedDict
 from config import (jwt_token, BASEROW_DB_ID, PROJECT_NAME)
 
 
+dir_schema = {
+    "korrespondenz": {
+        "separator": "_",
+        "wrapper": {
+            "author_idx": 1,
+            "actor_idx": 2
+        },
+        "letter": {
+            "author_idx": 0,
+            "actor_idx": 1,
+            "date_idx": 2
+        },
+        "page": {
+            "page_idx": 2,
+        }
+    },
+    "kalender": {
+        "separator": "-",
+        "wrapper": {
+            "date_idx": 1,
+        },
+        "page": {
+            "page_idx": 3,
+        }
+    }
+}
+
 # Baserow Collection and Resource table template fields
 default_fields = [
     {"name": "Subject_uri", "type": "text"},
@@ -70,6 +97,7 @@ default_fields = [
 ]
 
 
+# from data json to baserow template list
 def create_template_lists(ids: int,
                           custom_properties: list[str],
                           classes_name: str,
@@ -169,7 +197,12 @@ def create_template_lists(ids: int,
                     if item["type"] == "Resource":
                         literal.append(item["isPartOf"])
                     if item["type"] == "Collection":
-                        literal.append(item["identifier"])
+                        verify_sub_path = item["identifier"].split("/")
+                        if verify_sub_path[-1].startswith("korrespondenz")\
+                                or verify_sub_path[-1].startswith("Korrespondenz"):  # check if there is a sub collection
+                            literal.append("/".join(verify_sub_path[:-1]))  # remove last item of list
+                        else:
+                            literal.append(item["identifier"])
                     literal.append(item["hasNextItem"])
                     literal = "/".join(literal)
 
@@ -181,21 +214,33 @@ def create_template_lists(ids: int,
                     page = item['page'] if item['page'] else ""
                     literal = f"{is_part_of} {page}".strip()
 
-            case "hasCoverageStartDate":
+            case "hasCoverageStartDate" | "hasCreatedStartDateOriginal":
                 if item["date"]:
-                    if len(item["date"]) == 4:
-                        date = f"{item['date']}-01-01"
-                    else:
-                        date = item["date"]
-                    inherit = [48]
+                    verify, date_type = verify_iso_date(item["date"])
+                    if verify:
+                        if date_type == "year":
+                            date = f"{item['date']}-01-01"
+                        elif date_type == "year-month":
+                            date = f"{item['date']}-01"
+                        elif date_type == "full":
+                            date = item["date"]
+                        else:
+                            date = ""
+                    # inherit = [48]
 
-            case "hasCoverageEndDate":
+            case "hasCoverageEndDate" | "hasCreatedEndDateOriginal":
                 if item["date"]:
-                    if len(item["date"]) == 4:
-                        date = f"{item['date']}-12-31"
-                    else:
-                        date = item["date"]
-                    inherit = [48]
+                    verify, date_type = verify_iso_date(item["date"])
+                    if verify:
+                        if date_type == "year":
+                            date = f"{item['date']}-12-31"
+                        elif date_type == "year-month":
+                            date = f"{item['date']}-01"
+                        elif date_type == "full":
+                            date = item["date"]
+                        else:
+                            date = ""
+                    # inherit = [48]
 
             case "hasLanguage":
                 object_uri_vocabs = [3949]  # deu
@@ -295,15 +340,32 @@ def _parse_collection_directory(
     elif "Korrespondenz" in item:
         collection = "korrespondenz"
         author, actor = get_actor_author_from_name_list(name_list)
+        date = name_list[dir_schema["korrespondenz"]["letter"]["date_idx"]]
 
     # everything is is part of the calendar collection
     else:
+        sep = dir_schema["kalender"]["separator"]
         collection = "kalender"
-        date = name.split("-")[-1] if "-" in name else None
+        date = name.split(sep)[-1] if sep in name else None
 
     identifier = f"{PROJECT_NAME}/{collection}/{name.lower()}"
 
     return collection, identifier, title, author, actor, date
+
+
+def verify_iso_date(date_str: str) -> bool:
+    """Verify if a given date string is in ISO format (YYYY-MM-DD)."""
+    try:
+        if len(date_str) == 4 and date_str.isdigit():  # Year only
+            return True, "year"
+        elif len(date_str) == 7 and date_str[:4].isdigit() and date_str[5:7].isdigit():  # Year and month
+            return True, "year-month"
+        elif len(date_str) == 10 and date_str[:4].isdigit() and date_str[5:7].isdigit() and date_str[8:10].isdigit():  # Full date
+            return True, "full"
+        else:
+            return False, None
+    except ValueError:
+        return False, None
 
 
 def get_actor_author_from_name_list(name_list: list[str], wrapper: bool = False) -> tuple[str | None, str | None]:
@@ -313,18 +375,18 @@ def get_actor_author_from_name_list(name_list: list[str], wrapper: bool = False)
 
     if len(name_list) > 2:
         if wrapper:  # correspondences between two poeple is wrapped in a directory
-            author = name_list[1]
-            actor = name_list[2]
+            author = name_list[dir_schema["korrespondenz"]["wrapper"]["author_idx"]]
+            actor = name_list[dir_schema["korrespondenz"]["wrapper"]["actor_idx"]]
 
         else:  # correspondence collection or resource
-            author = name_list[0]
-            actor = name_list[1]
+            author = name_list[dir_schema["korrespondenz"]["letter"]["author_idx"]]
+            actor = name_list[dir_schema["korrespondenz"]["letter"]["actor_idx"]]
 
             # first item in dir name before _ is expected to be the author
             #  e.g. "von-bayer-konrad_an-traudl_1930-01-01"; except if it starts with "an-"
             if author and author.startswith("an-"):
-                author = name_list[1]
-                actor = name_list[0]
+                author = name_list[dir_schema["korrespondenz"]["letter"]["actor_idx"]]
+                actor = name_list[dir_schema["korrespondenz"]["letter"]["author_idx"]]
 
     else:
         with open("logs_letter_collection.txt", "a") as log_file:
@@ -391,7 +453,11 @@ def list_directories_or_files(
                 continue
 
             collection = "korrespondenz" if "Korrespondenz" in item else "kalender"
-            page_offset = 2 if collection == "korrespondenz" else 3
+            page_offset = None
+            if collection == "korrespondenz":
+                page_offset = dir_schema["korrespondenz"]["page"]["page_idx"]
+            else:
+                page_offset = dir_schema["kalender"]["page"]["page_idx"]
             page = "_".join(name_list[page_offset:]).replace(".tiff", "")
             identifier = f"{PROJECT_NAME}/{collection}/{is_part_of}/{name}"
             is_part_of = f"{PROJECT_NAME}/{collection}/{is_part_of}"
@@ -399,18 +465,23 @@ def list_directories_or_files(
             # author and actor handling
             parent_dir = os.path.dirname(item)
             parent_name = os.path.basename(parent_dir)
-            parent_name_list = parent_name.split("_")
 
             if collection == "korrespondenz":
+                parent_name_list = parent_name.split(dir_schema["korrespondenz"]["separator"])
                 author, actor = get_actor_author_from_name_list(parent_name_list)
 
                 actor_pers, author_pers, actor_org, author_org = get_actor_author_from_name(
                     author, actor, persons_dict, organizations_dict
                 )
 
+                date = parent_name_list[dir_schema["korrespondenz"]["letter"]["date_idx"]]
+            else:
+                parent_name_list = parent_name.split(dir_schema["kalender"]["separator"])
+                date = parent_name_list[dir_schema["kalender"]["wrapper"]["date_idx"]]
+
             data_item = _create_data_item(
                 name, identifier, is_part_of, "Resource", author_pers=author_pers, author_org=author_org,
-                actor_pers=actor_pers, actor_org=actor_org,
+                actor_pers=actor_pers, actor_org=actor_org, date=date,
                 collection=collection, page=page, hasNextItem=next_item_name, path=item
             )
             data.append(data_item)
@@ -600,51 +671,51 @@ if __name__ == "__main__":
         organizations_dict=organization_dict)
     cols, res = create_arche_baserow()
 
-    collections = create_database_table(
-        BASEROW_DB_ID,
-        jwt_token,
-        "Collections",
-        "Subject_uri"
-    )
-    sleep(3)
-    resources = create_database_table(
-        BASEROW_DB_ID,
-        jwt_token,
-        "Resources",
-        "Subject_uri"
-    )
+    # collections = create_database_table(
+    #     BASEROW_DB_ID,
+    #     jwt_token,
+    #     "Collections",
+    #     "Subject_uri"
+    # )
+    # sleep(3)
+    # resources = create_database_table(
+    #     BASEROW_DB_ID,
+    #     jwt_token,
+    #     "Resources",
+    #     "Subject_uri"
+    # )
 
-    sleep(3)
-    update_table_field_types(
-        collections["id"],
-        jwt_token,
-        default_fields
-    )
-    sleep(3)
-    update_table_field_types(
-        resources["id"],
-        jwt_token,
-        default_fields
-    )
-    sleep(3)
+    # sleep(3)
+    # update_table_field_types(
+    #     collections["id"],
+    #     jwt_token,
+    #     default_fields
+    # )
+    # sleep(3)
+    # update_table_field_types(
+    #     resources["id"],
+    #     jwt_token,
+    #     default_fields
+    # )
+    # sleep(3)
 
-    sample = 100
-    os.makedirs("chunks", exist_ok=True)
-    cols_chunks = list(chunk_list(cols, 100))
-    for idx, chunk in enumerate(cols_chunks[:sample], start=1):
-        fname = f"chunks/cols_chunk_{idx}.json"
-        with open(fname, "w") as f:
-            json.dump(chunk, f, indent=2)
-        # upload chunk to Baserow (table id as needed)
-        update_table_rows_batch(collections["id"], chunk)
-        sleep(3)
+    # sample = 100
+    # os.makedirs("chunks", exist_ok=True)
+    # cols_chunks = list(chunk_list(cols, 100))
+    # for idx, chunk in enumerate(cols_chunks[:sample], start=1):
+    #     fname = f"chunks/cols_chunk_{idx}.json"
+    #     with open(fname, "w") as f:
+    #         json.dump(chunk, f, indent=2)
+    #     # upload chunk to Baserow (table id as needed)
+    #     update_table_rows_batch(collections["id"], chunk)
+    #     sleep(3)
 
-    res_chunks = list(chunk_list(res, 100))
-    for idx, chunk in enumerate(res_chunks[:sample], start=1):
-        fname = f"chunks/res_chunk_{idx}.json"
-        with open(fname, "w") as f:
-            json.dump(chunk, f, indent=2)
-        update_table_rows_batch(resources["id"], chunk)
-        sleep(3)
+    # res_chunks = list(chunk_list(res, 100))
+    # for idx, chunk in enumerate(res_chunks[:sample], start=1):
+    #     fname = f"chunks/res_chunk_{idx}.json"
+    #     with open(fname, "w") as f:
+    #         json.dump(chunk, f, indent=2)
+    #     update_table_rows_batch(resources["id"], chunk)
+    #     sleep(3)
 
-    print("Data uploaded to Baserow")
+    # print("Data uploaded to Baserow")

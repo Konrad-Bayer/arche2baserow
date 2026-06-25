@@ -20,7 +20,17 @@ TOPCOLLECTION = [
     "hasPrincipalInvestigator",
     "hasLanguage",
     "hasLifeCycleStatus",
-    "hasCustomCitation"
+    "hasTemporalCoverage",
+    "hasSpatialCoverage",
+    "hasRightsHolder",
+    "hasOwner",
+    "hasLicensor",
+    "hasEditor",
+    "hasDepositor",
+    "hasCurator",
+    "hasCoverageEndDate",
+    "hasCoverageStartDate",
+    "hasActor"
 ]
 COLLECTION = [
     "hasTitle",
@@ -38,10 +48,11 @@ COLLECTION = [
     "hasLanguage",
     "hasSubject",
     "hasCurator",
-    "hasCustomCitation",
     "hasTemporalCoverage",
     "hasCoverageStartDate",
     "hasCoverageEndDate",
+    "hasDigitisingAgent",
+    "hasContact"
 ]
 COLLECTION_SUB = [
     "hasTitle",
@@ -61,6 +72,11 @@ COLLECTION_SUB = [
     "hasTag",
     "hasNextItem",
     "hasLanguage",
+    "hasCurator",
+    "hasRelatedDiscipline",
+    "hasDigitisingAgent",
+    "hasDepositor",
+    "hasContact"
 ]
 RESOURCE = [
     "hasTitle",
@@ -103,6 +119,11 @@ RESOURCE_SUB = [
     "hasSpatialCoverage",
     "hasCategory",
     "hasLanguage",
+    "hasRelatedDiscipline",
+    "hasOaiSet",
+    "hasDepositor",
+    "hasCurator",
+    "hasContact"
 ]
 METADATA = [
     "hasTitle",

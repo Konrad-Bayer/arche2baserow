@@ -45,43 +45,43 @@ default_fields = [
     {
         "name": "Class",
         "type": "link_row",
-        "link_row_table_id": 5197,
+        "link_row_table_id": 5197,  # classes
         "has_related_field": False
     },
     {
         "name": "Predicate_uri",
         "type": "link_row",
-        "link_row_table_id": 5198,
+        "link_row_table_id": 5198,  # properties
         "has_related_field": False
     },
     {
         "name": "Object_uri_persons",
         "type": "link_row",
-        "link_row_table_id": 5199,
+        "link_row_table_id": 5199,  # persons
         "has_related_field": False
     },
     {
         "name": "Object_uri_places",
         "type": "link_row",
-        "link_row_table_id": 5200,
+        "link_row_table_id": 5200,  # places
         "has_related_field": False
     },
     {
         "name": "Object_uri_organizations",
         "type": "link_row",
-        "link_row_table_id": 5201,
+        "link_row_table_id": 5201,  # organizations
         "has_related_field": False
     },
     {
         "name": "Object_uri_resource",
         "type": "link_row",
-        "link_row_table_id": 5202,
+        "link_row_table_id": 5202,  # Project
         "has_related_field": False
     },
     {
         "name": "Object_uri_vocabs",
         "type": "link_row",
-        "link_row_table_id": 5196,
+        "link_row_table_id": 5196,  # vocabs
         "has_related_field": False
     },
     {"name": "Literal", "type": "text"},
@@ -91,7 +91,7 @@ default_fields = [
     {
         "name": "Inherit",
         "type": "link_row",
-        "link_row_table_id": 5197,
+        "link_row_table_id": 5197,  # classes
         "has_related_field": False
     }
 ]
@@ -121,6 +121,26 @@ def create_template_lists(ids: int,
 
         # case statements for specific properties to handle their values
         match prop:
+            case "hasSpatialCoverage":
+                object_uri_places = [1]  # Wien
+
+            # VERIFY ###########################
+            case "hasContact":
+                object_uri_organizations = [2]  # Blaues Laub
+
+            case "hasDepositor":
+                object_uri_organizations = [2]  # Blaues Laub
+
+            case "hasRelatedDiscipline":
+                object_uri_vocabs = [497, 780]  # Literaturwissenschaft, Digital Humanities
+
+            case "hasCurator":
+                object_uri_persons = [2]  # Daniel Elsner
+
+            case "hasPid":
+                literal = "create"
+                lang = "na"
+
             case "hasActor":
                 if item["type"] == "Collection":
                     if item["collection"] == "korrespondenz":
@@ -140,19 +160,18 @@ def create_template_lists(ids: int,
                 else:
                     object_uri_persons = [1]  # Konrad Bayer
 
-            case "hasRightsHolder":
-                if item["collection"] == "kalender":
-                    object_uri_organizations = [2]  # Blaues Laub
-
-            case "hasLicensor":
-                if item["collection"] == "kalender":
-                    object_uri_organizations = [2]  # Blaues Laub
-
             case "hasLicense":
                 object_uri_vocabs = [56]  # CC BY 4.0
 
+            case "hasRightsHolder" | "hasLicensor":
+                if item["collection"] == "kalender":
+                    object_uri_organizations = [2]  # Blaues Laub
+                else:
+                    if "von-bayer-konrad" in item["identifier"] or "von-bayer-traudl" in item["identifier"]:
+                        object_uri_organizations = [2]  # Blaues Laub
+
             case "hasCategory":
-                object_uri_vocabs = [2]  # Konrad Bayer
+                object_uri_vocabs = [2]  # image
 
             case "hasDigitisingAgent":
                 object_uri_organizations = [2]  # Blaues Laub
@@ -162,9 +181,11 @@ def create_template_lists(ids: int,
 
             case "hasFormat":
                 literal = "image/tiff"
+                lang = "na"
 
-            case "hasFileName":
+            case "hasFilename":
                 literal = item['name']
+                lang = "na"
 
             case "hasCreator":
                 object_uri_persons = [4, 5]  # Julius, Sandro
@@ -178,41 +199,67 @@ def create_template_lists(ids: int,
             case "hasSubject":
                 if item["collection"] == "korrespondenz":
                     literal = "Korrespondenzen"
+                    lang = "de"
                 else:
-                    literal = "Kalender, Taschenkalender"
+                    literal = "Kalender"
+                    lang = "de"
 
             case "hasTag":
-                literal = "TEXT"
+                if item["type"] == "Collection" and (item["title"].startswith("Korrespondenz") or
+                                                     item["title"].startswith("korrespondenz")):
+                    continue  # skip this property for the first sub collection of Korrespondenz
+                elif item["type"] == "Resource":
+                    continue  # skip this property only required in Collection
+                else:
+                    literal = "TEXT"
+                    lang = "und"
 
             case "isPartOf":
                 literal = uri_path
 
             case "hasOaiSet":
-                object_uri_vocabs = [87]
+                if item["type"] == "Collection" and (item["title"].startswith("Korrespondenz") or
+                                                     item["title"].startswith("korrespondenz")):
+                    continue  # skip this property for the first sub collection of Korrespondenz
+                elif item["type"] == "Resource":
+                    continue  # skip this property only required in Collection
+                else:
+                    object_uri_vocabs = [87]  # Kulturpool
 
             case "hasNextItem":
                 if item["hasNextItem"]:
-                    literal = []
-                    # literal.append(item["collection"])
-                    if item["type"] == "Resource":
-                        literal.append(item["isPartOf"])
-                    if item["type"] == "Collection":
-                        verify_sub_path = item["identifier"].split("/")
-                        if verify_sub_path[-1].startswith("korrespondenz")\
-                                or verify_sub_path[-1].startswith("Korrespondenz"):  # check if there is a sub collection
-                            literal.append("/".join(verify_sub_path[:-1]))  # remove last item of list
-                        else:
-                            literal.append(item["identifier"])
-                    literal.append(item["hasNextItem"])
-                    literal = "/".join(literal)
+                    if item["type"] == "Collection" and (item["title"].startswith("Korrespondenz") or
+                                                         item["title"].startswith("korrespondenz")):
+                        continue  # skip this property for the first sub collection of Korrespondenz
+                    else:
+                        literal = []
+                        # literal.append(item["collection"])
+                        if item["type"] == "Resource":
+                            literal.append(item["isPartOf"])
+                        if item["type"] == "Collection":
+                            verify_sub_path = item["identifier"].split("/")
+                            if verify_sub_path[-1].startswith("korrespondenz")\
+                                    or verify_sub_path[-1].startswith("Korrespondenz"):  # check if there is a sub collection
+                                literal.append("/".join(verify_sub_path[:-1]))  # remove last item of list
+                            else:
+                                literal.append(item["identifier"])
+                        literal.append(item["hasNextItem"])
+                        literal = "/".join(literal)
 
             case "hasTitle":
                 if item["type"] == "Collection":
-                    literal = " ".join(" ".join(item["title"].split("_")).split("-"))
+                    if item["collection"] == "kalender":
+                        literal_list = item["title"].split("_")
+                        capitalize = literal_list[1].capitalize()
+                        literal = " ".join(capitalize.split("-"))
+                    else:
+                        literal = " ".join(" ".join(item["title"].split("_")).split("-"))
+                    lang = "de"
                 else:
-                    is_part_of = " ".join(" ".join(item["isPartOf"].split("/")[-1].split("_")).split("-"))
-                    page = item['page'] if item['page'] else ""
-                    literal = f"{is_part_of} {page}".strip()
+                    # is_part_of = " ".join(" ".join(item["isPartOf"].split("/")[-1].split("_")).split("-"))
+                    # page = item['page'] if item['page'] else ""
+                    literal = item['name']
+                    lang = "und"
 
             case "hasCoverageStartDate" | "hasCreatedStartDateOriginal":
                 if item["date"]:
@@ -658,6 +705,7 @@ def entities_dict(entities: dict[str, dict]) -> dict[str, int]:
 
 
 if __name__ == "__main__":
+    prod = False  # Set to True to upload data to Baserow
     with open("json_dumps/Persons.json", "r") as f:
         persons = json.load(f)
     person_dict = entities_dict(persons)
@@ -671,51 +719,52 @@ if __name__ == "__main__":
         organizations_dict=organization_dict)
     cols, res = create_arche_baserow()
 
-    # collections = create_database_table(
-    #     BASEROW_DB_ID,
-    #     jwt_token,
-    #     "Collections",
-    #     "Subject_uri"
-    # )
-    # sleep(3)
-    # resources = create_database_table(
-    #     BASEROW_DB_ID,
-    #     jwt_token,
-    #     "Resources",
-    #     "Subject_uri"
-    # )
+    if prod:
+        collections = create_database_table(
+            BASEROW_DB_ID,
+            jwt_token,
+            "Collections",
+            "Subject_uri"
+        )
+        sleep(1)
+        resources = create_database_table(
+            BASEROW_DB_ID,
+            jwt_token,
+            "Resources",
+            "Subject_uri"
+        )
 
-    # sleep(3)
-    # update_table_field_types(
-    #     collections["id"],
-    #     jwt_token,
-    #     default_fields
-    # )
-    # sleep(3)
-    # update_table_field_types(
-    #     resources["id"],
-    #     jwt_token,
-    #     default_fields
-    # )
-    # sleep(3)
+        sleep(1)
+        update_table_field_types(
+            collections["id"],
+            jwt_token,
+            default_fields
+        )
+        sleep(1)
+        update_table_field_types(
+            resources["id"],
+            jwt_token,
+            default_fields
+        )
+        sleep(1)
 
-    # sample = 100
-    # os.makedirs("chunks", exist_ok=True)
-    # cols_chunks = list(chunk_list(cols, 100))
-    # for idx, chunk in enumerate(cols_chunks[:sample], start=1):
-    #     fname = f"chunks/cols_chunk_{idx}.json"
-    #     with open(fname, "w") as f:
-    #         json.dump(chunk, f, indent=2)
-    #     # upload chunk to Baserow (table id as needed)
-    #     update_table_rows_batch(collections["id"], chunk)
-    #     sleep(3)
+        # sample = 100
+        os.makedirs("chunks", exist_ok=True)
+        cols_chunks = list(chunk_list(cols, 100))
+        for idx, chunk in enumerate(cols_chunks, start=1):
+            fname = f"chunks/cols_chunk_{idx}.json"
+            with open(fname, "w") as f:
+                json.dump(chunk, f, indent=2)
+            # upload chunk to Baserow (table id as needed)
+            update_table_rows_batch(collections["id"], chunk)
+            sleep(1)
 
-    # res_chunks = list(chunk_list(res, 100))
-    # for idx, chunk in enumerate(res_chunks[:sample], start=1):
-    #     fname = f"chunks/res_chunk_{idx}.json"
-    #     with open(fname, "w") as f:
-    #         json.dump(chunk, f, indent=2)
-    #     update_table_rows_batch(resources["id"], chunk)
-    #     sleep(3)
+        res_chunks = list(chunk_list(res, 100))
+        for idx, chunk in enumerate(res_chunks, start=1):
+            fname = f"chunks/res_chunk_{idx}.json"
+            with open(fname, "w") as f:
+                json.dump(chunk, f, indent=2)
+            update_table_rows_batch(resources["id"], chunk)
+            sleep(1)
 
-    # print("Data uploaded to Baserow")
+        print("Data uploaded to Baserow")

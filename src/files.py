@@ -496,7 +496,7 @@ def list_directories_or_files(
             list_directories_or_files(item, data, persons_dict=persons_dict, organizations_dict=organizations_dict)
 
         elif os.path.isfile(item):
-            if ".tiff" not in name.lower():
+            if ".tif" not in name.lower():
                 continue
 
             collection = "korrespondenz" if "Korrespondenz" in item else "kalender"
@@ -505,7 +505,7 @@ def list_directories_or_files(
                 page_offset = dir_schema["korrespondenz"]["page"]["page_idx"]
             else:
                 page_offset = dir_schema["kalender"]["page"]["page_idx"]
-            page = "_".join(name_list[page_offset:]).replace(".tiff", "")
+            page = "_".join(name_list[page_offset:]).replace(".tiff", "").replace(".tif", "")
             identifier = f"{PROJECT_NAME}/{collection}/{is_part_of}/{name}"
             is_part_of = f"{PROJECT_NAME}/{collection}/{is_part_of}"
 
@@ -705,7 +705,7 @@ def entities_dict(entities: dict[str, dict]) -> dict[str, int]:
 
 
 if __name__ == "__main__":
-    prod = False  # Set to True to upload data to Baserow
+    prod = True  # Set to True to upload data to Baserow
     with open("json_dumps/Persons.json", "r") as f:
         persons = json.load(f)
     person_dict = entities_dict(persons)
@@ -720,44 +720,46 @@ if __name__ == "__main__":
     cols, res = create_arche_baserow()
 
     if prod:
-        collections = create_database_table(
-            BASEROW_DB_ID,
-            jwt_token,
-            "Collections",
-            "Subject_uri"
-        )
-        sleep(1)
+        # collections = create_database_table(
+        #     BASEROW_DB_ID,
+        #     jwt_token,
+        #     "Collections",
+        #     "Subject_uri"
+        # )
+        # sleep(1)
+
+        # update_table_field_types(
+        #     collections["id"],
+        #     jwt_token,
+        #     default_fields
+        # )
+        # sleep(1)
+
+        # # sample = 100
+        # os.makedirs("chunks", exist_ok=True)
+        # cols_chunks = list(chunk_list(cols, 100))
+        # for idx, chunk in enumerate(cols_chunks, start=1):
+        #     fname = f"chunks/cols_chunk_{idx}.json"
+        #     with open(fname, "w") as f:
+        #         json.dump(chunk, f, indent=2)
+        #     # upload chunk to Baserow (table id as needed)
+        #     update_table_rows_batch(collections["id"], chunk)
+        #     sleep(1)
+
         resources = create_database_table(
             BASEROW_DB_ID,
             jwt_token,
             "Resources",
             "Subject_uri"
         )
+        sleep(1)
 
-        sleep(1)
-        update_table_field_types(
-            collections["id"],
-            jwt_token,
-            default_fields
-        )
-        sleep(1)
         update_table_field_types(
             resources["id"],
             jwt_token,
             default_fields
         )
         sleep(1)
-
-        # sample = 100
-        os.makedirs("chunks", exist_ok=True)
-        cols_chunks = list(chunk_list(cols, 100))
-        for idx, chunk in enumerate(cols_chunks, start=1):
-            fname = f"chunks/cols_chunk_{idx}.json"
-            with open(fname, "w") as f:
-                json.dump(chunk, f, indent=2)
-            # upload chunk to Baserow (table id as needed)
-            update_table_rows_batch(collections["id"], chunk)
-            sleep(1)
 
         res_chunks = list(chunk_list(res, 100))
         for idx, chunk in enumerate(res_chunks, start=1):

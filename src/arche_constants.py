@@ -13,6 +13,7 @@ from acdh_graph_pyutils.graph import (
 )
 from acdh_graph_pyutils.namespaces import NAMESPACES
 from rdflib import URIRef, Literal, Namespace
+from rdflib.namespace import RDF
 
 # define namespaces
 NAMESPACES["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -268,6 +269,30 @@ def create_arche_entity_triples(file: str) -> None:
                 )
 
 
+def inherit_rights_from_parent_collection() -> None:
+    """
+    Let specific resources inherit rights-related triples from their parent collection.
+    """
+    resource_type = URIRef(f'{NAMESPACES["arche"]}Resource')
+    is_part_of = URIRef(f'{NAMESPACES["arche"]}isPartOf')
+    inherited_predicates = [
+        URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'),
+        URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
+        URIRef(f'{NAMESPACES["arche"]}hasOwner')
+    ]
+    target_subject_fragment = "konradbayer/korrespondenz"
+
+    for subject_uri in G.subjects(RDF.type, resource_type):
+        if target_subject_fragment not in str(subject_uri):
+            continue
+        parent_collection_uri = G.value(subject_uri, is_part_of)
+        if not isinstance(parent_collection_uri, URIRef):
+            continue
+        for predicate_uri in inherited_predicates:
+            for object_uri in G.objects(parent_collection_uri, predicate_uri):
+                create_custom_triple(G, subject_uri, predicate_uri, object_uri)
+
+
 # load metadata json files
 with open("json_dumps/Project_denormalized.json", "r") as f:
     metadata = json.load(f)
@@ -292,6 +317,8 @@ for constant in ALL_CONSTANTS:
 file_glob = glob.glob("json_dumps/*.json")
 for file in file_glob:
     create_arche_entity_triples(file)
+
+inherit_rights_from_parent_collection()
 
 serialize_graph(G, "turtle", "rdf/test-arche_constants.ttl")
 print("Done with ARCHE constants. file: rdf/test-arche_constants.ttl")

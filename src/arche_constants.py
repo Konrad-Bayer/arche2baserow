@@ -273,12 +273,14 @@ def inherit_rights_from_parent_collection() -> None:
     """
     Let specific resources inherit rights-related triples from their parent collection.
     """
+    print("Inheriting rights-related triples from parent collection...")
     resource_type = URIRef(f'{NAMESPACES["arche"]}Resource')
     is_part_of = URIRef(f'{NAMESPACES["arche"]}isPartOf')
     inherited_predicates = [
         URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'),
         URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
-        URIRef(f'{NAMESPACES["arche"]}hasOwner')
+        URIRef(f'{NAMESPACES["arche"]}hasOwner'),
+        URIRef(f'{NAMESPACES["arche"]}hasSubject'),
     ]
     target_subject_fragment = "konradbayer/korrespondenz"
 
@@ -291,6 +293,23 @@ def inherit_rights_from_parent_collection() -> None:
         for predicate_uri in inherited_predicates:
             for object_uri in G.objects(parent_collection_uri, predicate_uri):
                 create_custom_triple(G, subject_uri, predicate_uri, object_uri)
+
+
+def split_hasSubject_triple() -> None:
+    """
+    Split hasSubject triples into multiple triples for each subject separated by a comma.
+    """
+    print("Splitting hasSubject triples...")
+    has_subject = URIRef(f'{NAMESPACES["arche"]}hasSubject')
+    for subject_uri in G.subjects(RDF.type, URIRef(f'{NAMESPACES["arche"]}Collection')):
+        subjects = list(G.objects(subject_uri, has_subject))
+        if len(subjects) != 0:
+            subject_strings = [v.strip() for v in G.value(subject_uri, has_subject).split(",")]
+            # remove the original triple
+            G.remove((subject_uri, has_subject, None))
+            # create new triples for each subject
+            for obj in subject_strings:
+                create_custom_triple(G, subject_uri, has_subject, Literal(obj, lang="de"))
 
 
 # load metadata json files
@@ -318,6 +337,7 @@ file_glob = glob.glob("json_dumps/*.json")
 for file in file_glob:
     create_arche_entity_triples(file)
 
+split_hasSubject_triple()
 inherit_rights_from_parent_collection()
 
 serialize_graph(G, "turtle", "rdf/test-arche_constants.ttl")

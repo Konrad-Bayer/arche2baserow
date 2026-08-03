@@ -281,6 +281,7 @@ def inherit_rights_from_parent_collection() -> None:
         URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
         URIRef(f'{NAMESPACES["arche"]}hasOwner'),
         URIRef(f'{NAMESPACES["arche"]}hasSubject'),
+        URIRef(f'{NAMESPACES["arche"]}hasSpatialCoverage'),
     ]
     target_subject_fragment = "konradbayer/korrespondenz"
 
@@ -292,6 +293,8 @@ def inherit_rights_from_parent_collection() -> None:
             continue
         for predicate_uri in inherited_predicates:
             for object_uri in G.objects(parent_collection_uri, predicate_uri):
+                if "hasOwner" in str(predicate_uri):
+                    G.remove((subject_uri, predicate_uri, None))
                 create_custom_triple(G, subject_uri, predicate_uri, object_uri)
 
 
@@ -310,6 +313,18 @@ def split_hasSubject_triple() -> None:
             # create new triples for each subject
             for obj in subject_strings:
                 create_custom_triple(G, subject_uri, has_subject, Literal(obj, lang="de"))
+
+
+def get_collection_subjects_missing_predicate(predicate_uri: URIRef) -> list[URIRef]:
+    """
+    Return all Collection subject URIs that do not have the given predicate.
+    """
+    collection_type = URIRef(f'{NAMESPACES["arche"]}Collection')
+    missing_subjects = []
+    for subject_uri in G.subjects(RDF.type, collection_type):
+        if G.value(subject_uri, predicate_uri) is None:
+            missing_subjects.append(subject_uri)
+    return missing_subjects
 
 
 # load metadata json files
@@ -339,6 +354,15 @@ for file in file_glob:
 
 split_hasSubject_triple()
 inherit_rights_from_parent_collection()
+
+# save missing predicate uris to a json file
+missing_predicate = URIRef(f'{NAMESPACES["arche"]}hasMetadataCreator')
+missing_subjects = get_collection_subjects_missing_predicate(missing_predicate)
+
+print(f"Missing {missing_predicate} for {len(missing_subjects)} Collection subjects.")
+print("Missing Collection subjects:")
+for subject in missing_subjects:
+    print(subject)
 
 serialize_graph(G, "turtle", "rdf/test-arche_constants.ttl")
 print("Done with ARCHE constants. file: rdf/test-arche_constants.ttl")

@@ -735,8 +735,8 @@ if __name__ == "__main__":
         # )
         # sleep(1)
 
-        # # sample = 100
-        # os.makedirs("chunks", exist_ok=True)
+        sample = 100
+        os.makedirs("chunks", exist_ok=True)
         # cols_chunks = list(chunk_list(cols, 100))
         # for idx, chunk in enumerate(cols_chunks, start=1):
         #     fname = f"chunks/cols_chunk_{idx}.json"

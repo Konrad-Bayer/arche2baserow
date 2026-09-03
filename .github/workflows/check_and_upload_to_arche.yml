@@ -13,6 +13,14 @@ on:
         description: '(Required) Project Name as string'
         required: true
         default: 'my-arche-project'
+      arche_instance:
+        type: choice
+        options:
+          - arche-curation.acdh-dev
+          - arche.acdh
+        description: '(Required) ARCHE instance as choice (e.g., arche-curation.acdh-dev, arche-prod.acdh.oeaw.ac.at)'
+        required: true
+        default: 'arche-curation.acdh-dev'
 
 jobs:
   build_pages:
@@ -21,15 +29,16 @@ jobs:
     env:
       ANT_OPTS: -Xmx5g
       REDMINE_ID: 27229
-      ARCHE_INSTANCE: arche-curation.acdh-dev
-      ARCHE_INSTANCE_NAME: Curation
-      PROJECT_NAME : konradbayer
+      ARCHE_INSTANCE: ${{ github.event.inputs.arche_instance }}
+      ARCHE_INSTANCE_NAME: ${{ github.event.inputs.arche_instance == 'arche-curation.acdh-dev' && 'Curation' || 'Production' }}
       OUTPUT_DIR: rdf
       BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
       BASEROW_DB_ID: ${{ github.event.inputs.database_id }}
       BASEROW_USER: ${{ secrets.BASEROW_USER }}
       BASEROW_PW: ${{ secrets.BASEROW_PW }}
       PROJECT_NAME: ${{ github.event.inputs.project_name }}
+      ARCHE_LOGIN: ${{ secrets.ARCHE_LOGIN }}
+      ARCHE_PASSWORD: ${{ secrets.ARCHE_PASSWORD }}
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v7
@@ -56,11 +65,11 @@ jobs:
     - name: ingest arche metadata topcol, col, res
       run: |
         echo 'STEP=Upload AIP to ${ARCHE_INSTANCE_NAME} Instance' >> $GITHUB_ENV
-        # vendor/bin/arche-delete-triples ${OUTPUT_DIR}/delete_facsimiles_creator.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PASSWORD}}
+        # vendor/bin/arche-delete-triples ${OUTPUT_DIR}/delete_facsimiles_creator.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD}
         # sleep 60
-        vendor/bin/arche-import-metadata ${OUTPUT_DIR}/arche_constants.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PASSWORD}} --retriesOnConflict 25
-        vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID 'Upload AIP to ${ARCHE_INSTANCE_NAME} Instance'
-    - name: on failure
-      if: ${{ failure() }}
-      run: |
-        vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" --statusCode 1 $REDMINE_ID "$STEP"
+        vendor/bin/arche-import-metadata ${OUTPUT_DIR}/arche_constants.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD} --retriesOnConflict 25
+        # vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID "Upload AIP to ${ARCHE_INSTANCE_NAME} Instance"
+    # - name: on failure
+    #   if: ${{ failure() }}
+    #   run: |
+    #     vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" --statusCode 1 $REDMINE_ID "$STEP"

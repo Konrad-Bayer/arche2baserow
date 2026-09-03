@@ -27,7 +27,7 @@ acdhi:azbl acdh:hasIdentifier acdhi:azbl;
     a acdh:Person;
     acdh:hasTitle "Julius Handl"@und;
     acdh:isMemberOf acdhi:azbl.
-<https://www.wikidata.org/wiki/Q47012226> acdh:hasIdentifier <https://www.wikidata.org/wiki/Q47012226>;
+<https://www.wikidata.org/wiki/Q133821035> acdh:hasIdentifier <https://www.wikidata.org/wiki/Q133821035>;
     a acdh:Organisation;
     acdh:hasTitle "Bundesministerium für Wohnen, Kunst, Kultur, Medien und Sport"@de.
 <https://d-nb.info/gnd/10078672-8> acdh:hasIdentifier <https://d-nb.info/gnd/10078672-8>;
@@ -453,7 +453,7 @@ acdhi:konradbayer a acdh:TopCollection;
     acdh:hasDepositor acdhi:azbl;
     acdh:hasDescription "Der Wiener Dichter Konrad Bayer (1932-1964), dessen Stammnachlass von der Assoziation zum blauen Laub archivarisch betreut wird, war als Mitglied der “Wiener Gruppe” ein wichtiger Akteur der österreichischen Nachkriegsavantgarde. Im Rahmen des Förderprogramms “Digitale Transformation” des BMWKMS wird in Zusammenarbeit mit dem ACDH ein Teil des Nachlasses öffentlich zugänglich gemacht. Inhalt der Sammlung sind Digitalisate von Bayers Taschenkalendern aus den Jahren 1953-1964, in die er literarische Notizen, Termine und Kontakte eintrug, sowie der Großteil seiner erhaltenen Korrespondenz. Diese umfasst Schriftverkehr mit Verlagen und Zeitschriften (Rowohlt, manuskripte), Briefe und Postkarten von künstlerischen Wegbegleiter:innen (H.C. Artmann, Ferry Radax, Ida Szigethy) sowie private Korrespondenz, darunter der umfangreiche Briefwechsel mit seiner Partnerin Traudl Bayer."@de;
     acdh:hasEditor <https://orcid.org/0009-0001-4481-0967>, <https://orcid.org/0009-0009-6117-8244>;
-    acdh:hasFunder <https://www.wikidata.org/wiki/Q47012226>;
+    acdh:hasFunder <https://www.wikidata.org/wiki/Q133821035>;
     acdh:hasLicensor <https://d-nb.info/gnd/10078672-8>, <https://d-nb.info/gnd/1008405-8>, <https://d-nb.info/gnd/1008658-4>, <https://d-nb.info/gnd/1009721-1>, <https://d-nb.info/gnd/1011859-7>, <https://d-nb.info/gnd/10140798-1>, <https://d-nb.info/gnd/1047806894>, <https://d-nb.info/gnd/1070046302>, <https://d-nb.info/gnd/114377502>, <https://d-nb.info/gnd/1213265274>, <https://d-nb.info/gnd/123821762>, <https://d-nb.info/gnd/1247774503>, <https://d-nb.info/gnd/137834675>, <https://d-nb.info/gnd/14324812X>, <https://d-nb.info/gnd/16323470-X>, <https://d-nb.info/gnd/2007965-5>, <https://d-nb.info/gnd/2020099-7>, <https://d-nb.info/gnd/2020461-9>, <https://d-nb.info/gnd/5084733-8>, <https://d-nb.info/gnd/7674-0>, acdhi:azbl, acdhi:babetteklemmer, acdhi:barbaraachleitner, acdhi:carolinawuerthle, acdhi:christabreicha, acdhi:edithschreiber, acdhi:heiditomiak, acdhi:irmgardhaeberlebubb, acdhi:lianefrischenschlager, acdhi:renesigel, acdhi:reuss-gueterdirektion, acdhi:salomeakermann, acdhi:salomestauffer, acdhi:silardisaak, acdhi:violettegarnier, <https://www.wikidata.org/wiki/Q692419>;
     acdh:hasLifeCycleStatus <https://vocabs.acdh.oeaw.ac.at/archelifecyclestatus/active>;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>, <https://orcid.org/0009-0009-6117-8244>;

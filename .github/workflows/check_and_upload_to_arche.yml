@@ -42,20 +42,20 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v7
-    - name: Set up Python environment
-      uses: actions/setup-python@v7
-      with:
-        python-version: "3.12"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install uv
-    - name: Baserow Dump and TEI/XML Download
-      run: |
-        uv run src/baserow_dump.py
-    - name: Creating ARCHE constants ttl file
-      run: |
-        uv run src/arche_constants.py
+    # - name: Set up Python environment
+    #   uses: actions/setup-python@v7
+    #   with:
+    #     python-version: "3.12"
+    # - name: Install dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install uv
+    # - name: Baserow Dump and TEI/XML Download
+    #   run: |
+    #     uv run src/baserow_dump.py
+    # - name: Creating ARCHE constants ttl file
+    #   run: |
+    #     uv run src/arche_constants.py
     - name: ingestion dependencies
       run: |
         composer require "acdh-oeaw/arche-ingest:^1"
@@ -67,7 +67,7 @@ jobs:
         echo 'STEP=Upload AIP to ${ARCHE_INSTANCE_NAME} Instance' >> $GITHUB_ENV
         # vendor/bin/arche-delete-triples ${OUTPUT_DIR}/delete_facsimiles_creator.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD}
         # sleep 60
-        vendor/bin/arche-import-metadata ${OUTPUT_DIR}/arche_constants.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD} --retriesOnConflict 25
+        vendor/bin/arche-import-metadata ${OUTPUT_DIR}/arche_constants_crawler.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD} --retriesOnConflict 25
         # vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID "Upload AIP to ${ARCHE_INSTANCE_NAME} Instance"
     # - name: on failure
     #   if: ${{ failure() }}

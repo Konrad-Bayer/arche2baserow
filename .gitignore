@@ -133,7 +133,7 @@ dmypy.json
 *.ipynb
 
 /out
-/json_dumps
+/json_dumps_local
 .secret.env
 test.sh
 /chunks
@@ -141,4 +141,11 @@ res.json
 cols.json
 data.json
 curation_tools.md
-rdf/test-arche_constants.ttl
+rdf/test-arche_constants*.ttl
+rdf/fileList.json
+/reports
+/filechecker
+/meta/crawler_*.ttl
+/meta/crawler_*.log
+/data
+missing*.json

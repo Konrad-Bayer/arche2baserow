@@ -26,9 +26,9 @@ jobs:
       PROJECT_NAME: ${{ github.event.inputs.project_name }}
     steps:
       - name: Check out source repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
       - name: Set up Python environment
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Install dependencies
@@ -42,6 +42,6 @@ jobs:
         run: |
           uv run src/arche_constants.py
       - name: Commit data
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Downloaded/Updated Data

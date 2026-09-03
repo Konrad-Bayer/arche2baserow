@@ -72,6 +72,12 @@ python scripts/arche_constants.py # create ttl file from denormalized data
 ── RDF<br>
    └── arche_constants.ttl<br>
 
+## Curation Tools
+
+```bash
+for i in `find ./data -type d` ; do bash ./tif_lzw.sh $i 2>&1 | tee -a tif-lzw.log ; done
+```
+
 ## Useful Links
 
 * [Baserow API](https://baserow.io/user-docs/database-api)

@@ -20,7 +20,8 @@ NAMESPACES["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 NAMESPACES["rdfs"] = "http://www.w3.org/2000/01/rdf-schema#"
 NAMESPACES["xsd"] = "http://www.w3.org/2001/XMLSchema#"
 NAMESPACES["arche"] = "https://vocabs.acdh.oeaw.ac.at/schema#"
-arche_id = URIRef("https://id.acdh.oeaw.ac.at/")
+NAMESPACES["archeId"] = "https://id.acdh.oeaw.ac.at/"
+arche_id = URIRef(NAMESPACES["archeId"])
 ARCHE = Namespace(NAMESPACES["arche"])
 COLLECTION_NAME = PROJECT_NAME
 # create empty graph
@@ -128,7 +129,8 @@ def get_literal(
                 create_custom_triple(G, subject_uri, predicate_uri, Literal(literal))
         else:
             if "/" in literal:
-                create_custom_triple(G, subject_uri, predicate_uri, URIRef(f'{arche_id}{literal.replace(" ", "")}'))  # fix extra whitespaces in files.py
+                # fix extra whitespaces in files.py
+                create_custom_triple(G, subject_uri, predicate_uri, URIRef(f'{arche_id}{literal.replace(" ", "")}'))
 
 
 def get_date(
@@ -282,20 +284,38 @@ def inherit_rights_from_parent_collection() -> None:
         URIRef(f'{NAMESPACES["arche"]}hasOwner'),
         URIRef(f'{NAMESPACES["arche"]}hasSubject'),
         URIRef(f'{NAMESPACES["arche"]}hasSpatialCoverage'),
+        URIRef(f'{NAMESPACES["arche"]}hasCoverageStartDate'),
+        URIRef(f'{NAMESPACES["arche"]}hasCoverageEndDate'),
     ]
+    # for most subjects, we only want to apply the inheritance to a specific target fragment
+    # for hasCoverageStartDate and hasCoverageEndDate, we do not restrict to a specific target fragment
     target_subject_fragment = "konradbayer/korrespondenz"
 
     for subject_uri in G.subjects(RDF.type, resource_type):
-        if target_subject_fragment not in str(subject_uri):
-            continue
         parent_collection_uri = G.value(subject_uri, is_part_of)
         if not isinstance(parent_collection_uri, URIRef):
             continue
         for predicate_uri in inherited_predicates:
             for object_uri in G.objects(parent_collection_uri, predicate_uri):
                 if "hasOwner" in str(predicate_uri):
+                    if target_subject_fragment not in str(subject_uri):
+                        continue
                     G.remove((subject_uri, predicate_uri, None))
-                create_custom_triple(G, subject_uri, predicate_uri, object_uri)
+                    create_custom_triple(G, subject_uri, predicate_uri, object_uri)
+                elif "hasCoverageStartDate" in str(predicate_uri):
+                    G.remove((subject_uri, URIRef(f'{NAMESPACES["arche"]}hasCreatedStartDateOriginal'), None))
+                    create_custom_triple(G, subject_uri,
+                                         URIRef(f'{NAMESPACES["arche"]}hasCreatedStartDateOriginal'),
+                                         Literal(object_uri, datatype=f'{NAMESPACES["xsd"]}date'))
+                elif "hasCoverageEndDate" in str(predicate_uri):
+                    G.remove((subject_uri, URIRef(f'{NAMESPACES["arche"]}hasCreatedEndDateOriginal'), None))
+                    create_custom_triple(G, subject_uri,
+                                         URIRef(f'{NAMESPACES["arche"]}hasCreatedEndDateOriginal'),
+                                         Literal(object_uri, datatype=f'{NAMESPACES["xsd"]}date'))
+                else:
+                    if target_subject_fragment not in str(subject_uri):
+                        continue
+                    create_custom_triple(G, subject_uri, predicate_uri, object_uri)
 
 
 def split_hasSubject_triple() -> None:
@@ -315,6 +335,18 @@ def split_hasSubject_triple() -> None:
                 create_custom_triple(G, subject_uri, has_subject, Literal(obj, lang="de"))
 
 
+def add_hasIdentifier_to_all_subjects() -> None:
+    """
+    Add arche:hasIdentifier to each subject,
+    using the subject URI as object value.
+    """
+    print("Adding hasIdentifier triples...")
+    has_identifier = URIRef(f'{NAMESPACES["arche"]}hasIdentifier')
+    for subject_uri in set(G.subjects()):
+        if isinstance(subject_uri, URIRef):
+            create_custom_triple(G, subject_uri, has_identifier, subject_uri)
+
+
 def get_collection_subjects_missing_predicate(predicate_uri: URIRef) -> list[URIRef]:
     """
     Return all Collection subject URIs that do not have the given predicate.
@@ -325,6 +357,43 @@ def get_collection_subjects_missing_predicate(predicate_uri: URIRef) -> list[URI
         if G.value(subject_uri, predicate_uri) is None:
             missing_subjects.append(subject_uri)
     return missing_subjects
+
+
+def add_missing_predicate_triples(predicate_uri: URIRef, default_object: URIRef) -> None:
+    """
+    Add the given predicate with the default object to all Collection subjects missing it.
+    """
+    missing_subjects = get_collection_subjects_missing_predicate(predicate_uri)
+    object_uri = default_object
+    if len(missing_subjects) > 0:
+        print(f"Adding missing {predicate_uri} triples for {len(missing_subjects)} Collection subjects.")
+        with open(f"missing_{predicate_uri.split('#')[-1]}.json", "w") as f:
+            json.dump([str(subject) for subject in missing_subjects], f)
+        for subject_uri in missing_subjects:
+            if predicate_uri == URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'):
+                resources = list(G.subjects(URIRef(f'{NAMESPACES["arche"]}isPartOf'), subject_uri))
+                if resources:
+                    object_uri = G.value(resources[0], URIRef(f'{NAMESPACES["arche"]}hasAuthor'))
+            if object_uri is not None:
+                create_custom_triple(G, subject_uri, predicate_uri, object_uri)
+            else:
+                create_custom_triple(G, subject_uri, predicate_uri, default_object)
+
+
+def add_license_to_all_collection_with_oaiset(predicate_uri: URIRef, default_object: URIRef) -> None:
+    """
+    If a Collection has an OAISET Kulturpool add the license of the arche:hasNextItem Resource to this Collection.
+    """
+    oaiset_cols = list(G.subjects(URIRef(f'{NAMESPACES["arche"]}hasOaiSet'),
+                                  URIRef("https://vocabs.acdh.oeaw.ac.at/archeoaisets/kulturpool")))
+    for col_uri in oaiset_cols:
+        next_resource = G.value(col_uri, URIRef(f'{NAMESPACES["arche"]}hasNextItem'))
+        if next_resource is not None:
+            license_uri = G.value(next_resource, predicate_uri)
+            if license_uri is not None:
+                create_custom_triple(G, col_uri, predicate_uri, license_uri)
+            else:
+                create_custom_triple(G, col_uri, predicate_uri, default_object)
 
 
 # load metadata json files
@@ -339,6 +408,11 @@ with open("json_dumps/Resources_denormalized.json", "r") as f:
 
 # serialize graph
 os.makedirs("rdf", exist_ok=True)
+# entities triples
+file_glob = glob.glob("json_dumps/*.json")
+for file in file_glob:
+    create_arche_entity_triples(file)
+
 ALL_CONSTANTS = [
     metadata,
     collections,
@@ -347,22 +421,20 @@ ALL_CONSTANTS = [
 # constant triples
 for constant in ALL_CONSTANTS:
     create_arche_constants_triples(constant)
-# entities triples
-file_glob = glob.glob("json_dumps/*.json")
-for file in file_glob:
-    create_arche_entity_triples(file)
+
+# save missing predicate uris to a json file
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasMetadataCreator'),
+                              URIRef(f'{NAMESPACES["archeId"]}kplatzhalter'))
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'),
+                              URIRef(f'{NAMESPACES["archeId"]}azbl'))
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
+                              URIRef(f'{NAMESPACES["archeId"]}azbl'))
+add_license_to_all_collection_with_oaiset(URIRef(f'{NAMESPACES["arche"]}hasLicense'),
+                                          URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"))
 
 split_hasSubject_triple()
 inherit_rights_from_parent_collection()
+add_hasIdentifier_to_all_subjects()
 
-# save missing predicate uris to a json file
-missing_predicate = URIRef(f'{NAMESPACES["arche"]}hasMetadataCreator')
-missing_subjects = get_collection_subjects_missing_predicate(missing_predicate)
-
-print(f"Missing {missing_predicate} for {len(missing_subjects)} Collection subjects.")
-print("Missing Collection subjects:")
-for subject in missing_subjects:
-    print(subject)
-
-serialize_graph(G, "turtle", "rdf/test-arche_constants.ttl")
-print("Done with ARCHE constants. file: rdf/test-arche_constants.ttl")
+serialize_graph(G, "turtle", "rdf/arche_constants.ttl")
+print("Done with ARCHE constants. file: rdf/arche_constants.ttl")

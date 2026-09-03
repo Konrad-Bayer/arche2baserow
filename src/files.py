@@ -384,7 +384,7 @@ def _parse_collection_directory(
         author, actor = get_actor_author_from_name_list(name_list, wrapper=True)
 
     # Handle collection representing the letter itself
-    elif "Korrespondenz" in item:
+    elif "Korrespondenz" in item or "korrespondenz" in item:
         collection = "korrespondenz"
         author, actor = get_actor_author_from_name_list(name_list)
         date = name_list[dir_schema["korrespondenz"]["letter"]["date_idx"]]
@@ -499,7 +499,7 @@ def list_directories_or_files(
             if ".tif" not in name.lower():
                 continue
 
-            collection = "korrespondenz" if "Korrespondenz" in item else "kalender"
+            collection = "korrespondenz" if "Korrespondenz" in item or "korrespondenz" in item else "kalender"
             page_offset = None
             if collection == "korrespondenz":
                 page_offset = dir_schema["korrespondenz"]["page"]["page_idx"]
@@ -705,7 +705,7 @@ def entities_dict(entities: dict[str, dict]) -> dict[str, int]:
 
 
 if __name__ == "__main__":
-    prod = True  # Set to True to upload data to Baserow
+    prod = False  # Set to True to upload data to Baserow
     with open("json_dumps/Persons.json", "r") as f:
         persons = json.load(f)
     person_dict = entities_dict(persons)

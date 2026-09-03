@@ -12,7 +12,7 @@ on:
         type: string
         description: '(Required) Project Name as string'
         required: true
-        default: 'my-arche-project'
+        default: 'konradbayer'
       arche_instance:
         type: choice
         options:

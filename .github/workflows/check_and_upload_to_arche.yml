@@ -64,11 +64,11 @@ jobs:
         echo "RUN_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_ENV
     - name: ingest arche metadata topcol, col, res
       run: |
-        echo 'STEP=Upload AIP to ${ARCHE_INSTANCE_NAME} Instance' >> $GITHUB_ENV
-        # vendor/bin/arche-delete-triples ${OUTPUT_DIR}/delete_facsimiles_creator.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD}
+        echo "STEP=Upload AIP to $ARCHE_INSTANCE_NAME Instance" >> $GITHUB_ENV
+        # vendor/bin/arche-delete-triples $OUTPUT_DIR/delete_facsimiles_creator.ttl https://$ARCHE_INSTANCE.oeaw.ac.at/api $ARCHE_LOGIN $ARCHE_PASSWORD
         # sleep 60
-        vendor/bin/arche-import-metadata ${OUTPUT_DIR}/arche_constants_crawler.ttl https://${ARCHE_INSTANCE}.oeaw.ac.at/api ${ARCHE_LOGIN} ${ARCHE_PASSWORD} --retriesOnConflict 25
-        # vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID "Upload AIP to ${ARCHE_INSTANCE_NAME} Instance"
+        vendor/bin/arche-import-metadata $OUTPUT_DIR/arche_constants_crawler.ttl https://$ARCHE_INSTANCE.oeaw.ac.at/api $ARCHE_LOGIN $ARCHE_PASSWORD --retriesOnConflict 25
+        # vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID "Upload AIP to $ARCHE_INSTANCE_NAME Instance"
     # - name: on failure
     #   if: ${{ failure() }}
     #   run: |

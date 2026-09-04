@@ -19,10 +19,10 @@ from rdflib.namespace import RDF
 NAMESPACES["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 NAMESPACES["rdfs"] = "http://www.w3.org/2000/01/rdf-schema#"
 NAMESPACES["xsd"] = "http://www.w3.org/2001/XMLSchema#"
-NAMESPACES["arche"] = "https://vocabs.acdh.oeaw.ac.at/schema#"
-NAMESPACES["archeId"] = "https://id.acdh.oeaw.ac.at/"
-arche_id = URIRef(NAMESPACES["archeId"])
-ARCHE = Namespace(NAMESPACES["arche"])
+NAMESPACES["acdh"] = "https://vocabs.acdh.oeaw.ac.at/schema#"
+NAMESPACES["acdhi"] = "https://id.acdh.oeaw.ac.at/"
+arche_id = URIRef(NAMESPACES["acdhi"])
+ARCHE = Namespace(NAMESPACES["acdh"])
 COLLECTION_NAME = PROJECT_NAME
 # create empty graph
 G = create_empty_graph(
@@ -276,16 +276,16 @@ def inherit_rights_from_parent_collection() -> None:
     Let specific resources inherit rights-related triples from their parent collection.
     """
     print("Inheriting rights-related triples from parent collection...")
-    resource_type = URIRef(f'{NAMESPACES["arche"]}Resource')
-    is_part_of = URIRef(f'{NAMESPACES["arche"]}isPartOf')
+    resource_type = URIRef(f'{NAMESPACES["acdh"]}Resource')
+    is_part_of = URIRef(f'{NAMESPACES["acdh"]}isPartOf')
     inherited_predicates = [
-        URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'),
-        URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
-        URIRef(f'{NAMESPACES["arche"]}hasOwner'),
-        URIRef(f'{NAMESPACES["arche"]}hasSubject'),
-        URIRef(f'{NAMESPACES["arche"]}hasSpatialCoverage'),
-        URIRef(f'{NAMESPACES["arche"]}hasCoverageStartDate'),
-        URIRef(f'{NAMESPACES["arche"]}hasCoverageEndDate'),
+        URIRef(f'{NAMESPACES["acdh"]}hasRightsHolder'),
+        URIRef(f'{NAMESPACES["acdh"]}hasLicensor'),
+        URIRef(f'{NAMESPACES["acdh"]}hasOwner'),
+        URIRef(f'{NAMESPACES["acdh"]}hasSubject'),
+        URIRef(f'{NAMESPACES["acdh"]}hasSpatialCoverage'),
+        URIRef(f'{NAMESPACES["acdh"]}hasCoverageStartDate'),
+        URIRef(f'{NAMESPACES["acdh"]}hasCoverageEndDate'),
     ]
     # for most subjects, we only want to apply the inheritance to a specific target fragment
     # for hasCoverageStartDate and hasCoverageEndDate, we do not restrict to a specific target fragment
@@ -303,14 +303,14 @@ def inherit_rights_from_parent_collection() -> None:
                     G.remove((subject_uri, predicate_uri, None))
                     create_custom_triple(G, subject_uri, predicate_uri, object_uri)
                 elif "hasCoverageStartDate" in str(predicate_uri):
-                    G.remove((subject_uri, URIRef(f'{NAMESPACES["arche"]}hasCreatedStartDateOriginal'), None))
+                    G.remove((subject_uri, URIRef(f'{NAMESPACES["acdh"]}hasCreatedStartDateOriginal'), None))
                     create_custom_triple(G, subject_uri,
-                                         URIRef(f'{NAMESPACES["arche"]}hasCreatedStartDateOriginal'),
+                                         URIRef(f'{NAMESPACES["acdh"]}hasCreatedStartDateOriginal'),
                                          Literal(object_uri, datatype=f'{NAMESPACES["xsd"]}date'))
                 elif "hasCoverageEndDate" in str(predicate_uri):
-                    G.remove((subject_uri, URIRef(f'{NAMESPACES["arche"]}hasCreatedEndDateOriginal'), None))
+                    G.remove((subject_uri, URIRef(f'{NAMESPACES["acdh"]}hasCreatedEndDateOriginal'), None))
                     create_custom_triple(G, subject_uri,
-                                         URIRef(f'{NAMESPACES["arche"]}hasCreatedEndDateOriginal'),
+                                         URIRef(f'{NAMESPACES["acdh"]}hasCreatedEndDateOriginal'),
                                          Literal(object_uri, datatype=f'{NAMESPACES["xsd"]}date'))
                 else:
                     if target_subject_fragment not in str(subject_uri):
@@ -323,8 +323,17 @@ def split_hasSubject_triple() -> None:
     Split hasSubject triples into multiple triples for each subject separated by a comma.
     """
     print("Splitting hasSubject triples...")
-    has_subject = URIRef(f'{NAMESPACES["arche"]}hasSubject')
-    for subject_uri in G.subjects(RDF.type, URIRef(f'{NAMESPACES["arche"]}Collection')):
+    has_subject = URIRef(f'{NAMESPACES["acdh"]}hasSubject')
+    for subject_uri in G.subjects(RDF.type, URIRef(f'{NAMESPACES["acdh"]}Collection')):
+        subjects = list(G.objects(subject_uri, has_subject))
+        if len(subjects) != 0:
+            subject_strings = [v.strip() for v in G.value(subject_uri, has_subject).split(",")]
+            # remove the original triple
+            G.remove((subject_uri, has_subject, None))
+            # create new triples for each subject
+            for obj in subject_strings:
+                create_custom_triple(G, subject_uri, has_subject, Literal(obj, lang="de"))
+    for subject_uri in G.subjects(RDF.type, URIRef(f'{NAMESPACES["acdh"]}TopCollection')):
         subjects = list(G.objects(subject_uri, has_subject))
         if len(subjects) != 0:
             subject_strings = [v.strip() for v in G.value(subject_uri, has_subject).split(",")]
@@ -337,11 +346,11 @@ def split_hasSubject_triple() -> None:
 
 def add_hasIdentifier_to_all_subjects() -> None:
     """
-    Add arche:hasIdentifier to each subject,
+    Add acdh:hasIdentifier to each subject,
     using the subject URI as object value.
     """
     print("Adding hasIdentifier triples...")
-    has_identifier = URIRef(f'{NAMESPACES["arche"]}hasIdentifier')
+    has_identifier = URIRef(f'{NAMESPACES["acdh"]}hasIdentifier')
     for subject_uri in set(G.subjects()):
         if isinstance(subject_uri, URIRef):
             create_custom_triple(G, subject_uri, has_identifier, subject_uri)
@@ -351,7 +360,7 @@ def get_collection_subjects_missing_predicate(predicate_uri: URIRef) -> list[URI
     """
     Return all Collection subject URIs that do not have the given predicate.
     """
-    collection_type = URIRef(f'{NAMESPACES["arche"]}Collection')
+    collection_type = URIRef(f'{NAMESPACES["acdh"]}Collection')
     missing_subjects = []
     for subject_uri in G.subjects(RDF.type, collection_type):
         if G.value(subject_uri, predicate_uri) is None:
@@ -370,10 +379,10 @@ def add_missing_predicate_triples(predicate_uri: URIRef, default_object: URIRef)
         with open(f"missing_{predicate_uri.split('#')[-1]}.json", "w") as f:
             json.dump([str(subject) for subject in missing_subjects], f)
         for subject_uri in missing_subjects:
-            if predicate_uri == URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'):
-                resources = list(G.subjects(URIRef(f'{NAMESPACES["arche"]}isPartOf'), subject_uri))
+            if predicate_uri == URIRef(f'{NAMESPACES["acdh"]}hasRightsHolder'):
+                resources = list(G.subjects(URIRef(f'{NAMESPACES["acdh"]}isPartOf'), subject_uri))
                 if resources:
-                    object_uri = G.value(resources[0], URIRef(f'{NAMESPACES["arche"]}hasAuthor'))
+                    object_uri = G.value(resources[0], URIRef(f'{NAMESPACES["acdh"]}hasAuthor'))
             if object_uri is not None:
                 create_custom_triple(G, subject_uri, predicate_uri, object_uri)
             else:
@@ -382,12 +391,12 @@ def add_missing_predicate_triples(predicate_uri: URIRef, default_object: URIRef)
 
 def add_license_to_all_collection_with_oaiset(predicate_uri: URIRef, default_object: URIRef) -> None:
     """
-    If a Collection has an OAISET Kulturpool add the license of the arche:hasNextItem Resource to this Collection.
+    If a Collection has an OAISET Kulturpool add the license of the acdh:hasNextItem Resource to this Collection.
     """
-    oaiset_cols = list(G.subjects(URIRef(f'{NAMESPACES["arche"]}hasOaiSet'),
+    oaiset_cols = list(G.subjects(URIRef(f'{NAMESPACES["acdh"]}hasOaiSet'),
                                   URIRef("https://vocabs.acdh.oeaw.ac.at/archeoaisets/kulturpool")))
     for col_uri in oaiset_cols:
-        next_resource = G.value(col_uri, URIRef(f'{NAMESPACES["arche"]}hasNextItem'))
+        next_resource = G.value(col_uri, URIRef(f'{NAMESPACES["acdh"]}hasNextItem'))
         if next_resource is not None:
             license_uri = G.value(next_resource, predicate_uri)
             if license_uri is not None:
@@ -423,18 +432,18 @@ for constant in ALL_CONSTANTS:
     create_arche_constants_triples(constant)
 
 # save missing predicate uris to a json file
-add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasMetadataCreator'),
-                              URIRef(f'{NAMESPACES["archeId"]}kplatzhalter'))
-add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasRightsHolder'),
-                              URIRef(f'{NAMESPACES["archeId"]}azbl'))
-add_missing_predicate_triples(URIRef(f'{NAMESPACES["arche"]}hasLicensor'),
-                              URIRef(f'{NAMESPACES["archeId"]}azbl'))
-add_license_to_all_collection_with_oaiset(URIRef(f'{NAMESPACES["arche"]}hasLicense'),
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["acdh"]}hasMetadataCreator'),
+                              URIRef(f'{NAMESPACES["acdhi"]}kplatzhalter'))
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["acdh"]}hasRightsHolder'),
+                              URIRef(f'{NAMESPACES["acdhi"]}azbl'))
+add_missing_predicate_triples(URIRef(f'{NAMESPACES["acdh"]}hasLicensor'),
+                              URIRef(f'{NAMESPACES["acdhi"]}azbl'))
+add_license_to_all_collection_with_oaiset(URIRef(f'{NAMESPACES["acdh"]}hasLicense'),
                                           URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"))
 
 split_hasSubject_triple()
 inherit_rights_from_parent_collection()
 # add_hasIdentifier_to_all_subjects()
 
-serialize_graph(G, "turtle", "rdf/arche_constants.ttl")
-print("Done with ARCHE constants. file: rdf/arche_constants.ttl")
+serialize_graph(G, "turtle", "rdf/arche_constants_preorder.ttl")
+print("Done with ARCHE constants. file: rdf/arche_constants_preorder.ttl")

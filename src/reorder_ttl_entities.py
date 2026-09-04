@@ -14,10 +14,15 @@ from pathlib import Path
 
 TARGET_TYPES = ("Person", "Organisation", "Place")
 TARGET_PATTERN = re.compile(
-    r"(^|\n)\S+\s+a\s+arche:(?:Person|Organisation|Place)\s*;",
+    r"(^|\n)\S+\s+a\s+acdh:(?:Person|Organisation|Place)\s*;",
     re.MULTILINE,
 )
 TYPE_PATTERN = re.compile(r"(^|\n)\S+\s+(?:a|rdf:type)\s+\S+", re.MULTILINE)
+PRIORITY_SUBJECTS = (
+    "acdhi:konradbayer",
+    "<https://id.acdh.oeaw.ac.at/konradbayer/kalender>",
+    "<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz>",
+)
 
 
 def split_prefix_and_body(content: str) -> tuple[str, str]:
@@ -51,6 +56,11 @@ def is_target_block(block: str) -> bool:
     return bool(TARGET_PATTERN.search(block))
 
 
+def is_priority_subject_block(block: str) -> bool:
+    first_line = block.lstrip().split("\n", 1)[0]
+    return any(first_line.startswith(subject) for subject in PRIORITY_SUBJECTS)
+
+
 def has_rdf_type(block: str) -> bool:
     return bool(TYPE_PATTERN.search(block))
 
@@ -63,8 +73,17 @@ def remove_blocks_without_rdf_type(blocks: list[str]) -> tuple[list[str], int]:
 
 def reorder_blocks(blocks: list[str]) -> list[str]:
     prioritized = [block for block in blocks if is_target_block(block)]
-    remaining = [block for block in blocks if not is_target_block(block)]
-    return prioritized + remaining
+    subject_prioritized = []
+    for subject in PRIORITY_SUBJECTS:
+        for block in blocks:
+            if not is_target_block(block) and block.lstrip().startswith(subject):
+                subject_prioritized.append(block)
+    remaining = [
+        block
+        for block in blocks
+        if not is_target_block(block) and not is_priority_subject_block(block)
+    ]
+    return prioritized + subject_prioritized + remaining
 
 
 def reorder_turtle(content: str) -> tuple[str, int, int]:
@@ -84,19 +103,21 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
             "Remove Turtle subject blocks without rdf:type and move blocks with "
-            "rdf:type arche:Person, arche:Organisation, or arche:Place to the top."
+            "rdf:type acdh:Person, acdh:Organisation, or acdh:Place to the top, "
+            "followed by the konradbayer collection subjects."
         )
     )
     parser.add_argument(
         "input",
         nargs="?",
-        default=str(project_root / "rdf" / "arche_constants.ttl"),
-        help="Input Turtle file. Defaults to rdf/arche_constants.ttl.",
+        default=str(project_root / "rdf" / "arche_constants_preorder.ttl"),
+        help="Input Turtle file. Defaults to rdf/arche_constants_preorder.ttl.",
     )
     parser.add_argument(
         "-o",
         "--output",
-        help="Output Turtle file. Defaults to the input file.",
+        default=str(project_root / "rdf" / "arche_constants.ttl"),
+        help="Output Turtle file. Defaults to rdf/arche_constants.ttl.",
     )
     return parser.parse_args()
 
@@ -112,7 +133,8 @@ def main() -> int:
 
     print(
         f"Removed {removed_count} untyped blocks and moved {moved_count} blocks "
-        f"with arche:{', arche:'.join(TARGET_TYPES)} to the top of {output_path}"
+        f"with acdh:{', acdh:'.join(TARGET_TYPES)} to the top of {output_path}; "
+        f"prioritized subjects: {', '.join(PRIORITY_SUBJECTS)}"
     )
     return 0
 

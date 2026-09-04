@@ -143,6 +143,7 @@ cols.json
 data.json
 curation_tools.md
 rdf/test-arche_constants*.ttl
+rdf/arche_constants_preorder.ttl
 rdf/fileList.json
 /reports
 /filechecker

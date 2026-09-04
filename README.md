@@ -40,14 +40,11 @@ Make sure enviroment variables are set for Baserow (see `.secret.example`):
 Then run the following commands:
 
 ```bash
-python -m venv venv # create a virtual environment
-source venv/bin/activate # activate the virtual environment
+uv sync # create the environment and install python dependencies
 
-pip install -r requirements.txt # install python dependencies
-
-python scripts/arche2json.py # create json files from ARCHE Schema
-python scripts/vocabs2json.py # create json files from vocabs.acdh.oeaw.ac.at
-python scripts/arche2baserow.py # upload json files to baserow to create tables
+uv run python src/arche2json.py # create json files from ARCHE Schema
+uv run python src/vocabs2json.py # create json files from vocabs.acdh.oeaw.ac.at
+uv run python src/arche2baserow.py # upload json files to baserow to create tables
 ```
 
 ### Baserow Data Dump and Turtle (ttl) Serialization (Local)
@@ -58,13 +55,11 @@ python scripts/arche2baserow.py # upload json files to baserow to create tables
 Then run the following commands:
 
 ```bash
-python -m venv venv # create a virtual environment
-source venv/bin/activate # activate the virtual environment
+uv sync # create the environment and install python dependencies
 
-pip install -r requirements.txt # install python dependencies
-
-python scripts/baserow_dump.py # fetch data from baserow and denormalized it
-python scripts/arche_constants.py # create ttl file from denormalized data
+uv run python src/baserow_dump.py # fetch data from baserow and denormalized it
+uv run python src/arche_constants.py # create ttl file from denormalized data
+uv run python src/reorder_ttl_entities.py # move Person, Organisation and Place blocks to the top of rdf/test-arche_constants.ttl
 ```
 
 ## Output Data Structure

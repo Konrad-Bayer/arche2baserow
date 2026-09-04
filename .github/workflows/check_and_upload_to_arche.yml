@@ -56,6 +56,7 @@ jobs:
     # - name: Creating ARCHE constants ttl file
     #   run: |
     #     uv run src/arche_constants.py
+    #     uv run src/reorder_ttl_entities.py
     - name: ingestion dependencies
       run: |
         composer require "acdh-oeaw/arche-ingest:^1"
@@ -67,7 +68,7 @@ jobs:
         echo "STEP=Upload AIP to $ARCHE_INSTANCE_NAME Instance" >> $GITHUB_ENV
         # vendor/bin/arche-delete-triples $OUTPUT_DIR/delete_facsimiles_creator.ttl https://$ARCHE_INSTANCE.oeaw.ac.at/api $ARCHE_LOGIN $ARCHE_PASSWORD
         # sleep 60
-        vendor/bin/arche-import-metadata $OUTPUT_DIR/arche_constants_crawler.ttl https://$ARCHE_INSTANCE.oeaw.ac.at/api $ARCHE_LOGIN $ARCHE_PASSWORD --retriesOnConflict 25
+        vendor/bin/arche-import-metadata $OUTPUT_DIR/arche_constants.ttl https://$ARCHE_INSTANCE.oeaw.ac.at/api $ARCHE_LOGIN $ARCHE_PASSWORD --retriesOnConflict 25
         # vendor/bin/arche-update-redmine --token ${{ secrets.REDMINE_TOKEN }} --append "$RUN_URL" $REDMINE_ID "Upload AIP to $ARCHE_INSTANCE_NAME Instance"
     # - name: on failure
     #   if: ${{ failure() }}

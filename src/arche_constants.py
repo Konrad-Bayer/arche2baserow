@@ -434,7 +434,7 @@ add_license_to_all_collection_with_oaiset(URIRef(f'{NAMESPACES["arche"]}hasLicen
 
 split_hasSubject_triple()
 inherit_rights_from_parent_collection()
-add_hasIdentifier_to_all_subjects()
+# add_hasIdentifier_to_all_subjects()
 
 serialize_graph(G, "turtle", "rdf/arche_constants.ttl")
 print("Done with ARCHE constants. file: rdf/arche_constants.ttl")

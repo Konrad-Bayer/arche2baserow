@@ -134,6 +134,7 @@ dmypy.json
 
 /out
 /json_dumps_local
+/json_dumps
 .secret.env
 test.sh
 /chunks
@@ -149,3 +150,4 @@ rdf/fileList.json
 /meta/crawler_*.log
 /data
 missing*.json
+404_subject_uris.json

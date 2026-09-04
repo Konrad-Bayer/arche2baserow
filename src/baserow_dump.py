@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from config import (
     br_client,
     BASEROW_DB_ID,
@@ -7,7 +8,7 @@ from config import (
     MAPPING_ORGS,
     MAPPING_PLACES,
 )
-from utils.denormalize import denormalize_json
+from utils.denormalize import denormalize_json, normalize_uris
 
 
 output_folder = "json_dumps"
@@ -15,8 +16,16 @@ os.makedirs(output_folder, exist_ok=True)
 
 if isinstance(BASEROW_DB_ID, str) or isinstance(BASEROW_DB_ID, int) and BASEROW_DB_ID != 0:
     print("Downloading data from Baserow...")
-    files = br_client.dump_tables_as_json(BASEROW_DB_ID, folder_name=output_folder, indent=2)
+    # files = br_client.dump_tables_as_json(BASEROW_DB_ID, folder_name=output_folder, indent=2)
     print("Data downloaded.")
+
+    print("Normalizing URIs...")
+    files = [Path(output_folder) / "Persons.json",
+             Path(output_folder) / "Organizations.json",
+             Path(output_folder) / "Places.json"]
+    for fn in files:
+        normalize_uris(fn)
+    print("URIs normalized.")
 
     print("Denormalizing data...")
     denormalize_json("Project", output_folder, MAPPING_PROJECT)

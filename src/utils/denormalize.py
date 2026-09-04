@@ -1,4 +1,6 @@
 import json
+from typing import Any
+from AcdhArcheAssets.uri_norm_rules import get_normalized_uri
 
 
 def load_lockup(path, mapping):
@@ -49,3 +51,36 @@ def denormalize_json(fn, path, mapping):
         json.dump(dta, w)
     print(f"finished update of {save_and_open} and save as {save_and_open}.")
     return dta
+
+
+VALID_PREFIXES = (
+    "https://d-nb.info",
+    "https://www.wikidata.org",
+    "https://www.geonames.org",
+)
+
+
+def load_json(fn):
+    with open(fn, "rb") as fb:
+        data = json.load(fb)
+    return data
+
+
+def is_target_url(url: str) -> bool:
+    return url.startswith(VALID_PREFIXES)
+
+
+def normalize_uris(path) -> dict[str, Any]:
+    data = load_json(path)
+    for record_id, record in data.items():
+        if not isinstance(record, dict):
+            continue
+        subject_uri = record.get("Subject_uri")
+        print(f"Processing subject uri: {subject_uri}")
+        if isinstance(subject_uri, str):
+            if is_target_url(subject_uri):
+                record["Subject_uri"] = get_normalized_uri(subject_uri)
+                print(f"Normalized subject uri: {record['Subject_uri']}")
+        with open(path, "w") as fb:
+            json.dump(data, fb)
+    return data

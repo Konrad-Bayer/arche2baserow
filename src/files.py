@@ -488,8 +488,8 @@ def list_directories_or_files(
             data_item = _create_data_item(
                 name, identifier, is_part_of, "Collection",
                 author_pers=author_pers, author_org=author_org, actor_pers=actor_pers,
-                actor_org=actor_org, title=title, date=date,
-                collection=collection, hasNextItem=has_next_item, path=item
+                actor_org=actor_org, title=title, date=date, collection=collection,
+                hasNextItem=has_next_item, path=item
             )
 
             data.append(data_item)

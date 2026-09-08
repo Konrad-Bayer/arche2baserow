@@ -2,6 +2,7 @@ import json
 import re
 import glob
 import os
+from datetime import datetime
 from config import PROJECT_NAME, LANG_SPECIAL_TOKEN
 from tqdm import tqdm
 from acdh_graph_pyutils.graph import (
@@ -133,6 +134,19 @@ def get_literal(
                 create_custom_triple(G, subject_uri, predicate_uri, URIRef(f'{arche_id}{literal.replace(" ", "")}'))
 
 
+def check_date(date: str) -> bool:
+    """
+    Check if a string is a valid date.
+    """
+    if isinstance(date, str) and len(date) > 0:
+        try:
+            datetime.strptime(date, "%Y-%m-%d")
+            return True
+        except ValueError:
+            return False
+    return False
+
+
 def get_date(
     subject_uri: URIRef,
     predicate_uri: URIRef,
@@ -142,6 +156,18 @@ def get_date(
     Create a Literal with datatype date from a string.
     """
     if isinstance(date, str) and len(date) > 0:
+        if not check_date(date):
+            with open("date.log", "a") as f:
+                f.write(f"Invalid date format: {date} for subject {subject_uri} and predicate {predicate_uri}\n")
+            year = date.split("-")[0]
+            if predicate_uri == URIRef('https://vocabs.acdh.oeaw.ac.at/schema#hasCreatedStartDateOriginal'):
+                date = f"{year}-01-01"
+            elif predicate_uri == URIRef('https://vocabs.acdh.oeaw.ac.at/schema#hasCreatedEndDateOriginal'):
+                date = f"{year}-12-31"
+            else:
+                raise ValueError(f"Invalid date format: {date} for subject {subject_uri} and predicate {predicate_uri}")
+            with open("fixed_date.log", "a") as f:
+                f.write(f"Fixed date format: {date} for subject {subject_uri} and predicate {predicate_uri}\n")
         create_custom_triple(G, subject_uri, predicate_uri, Literal(date, datatype=f'{NAMESPACES["xsd"]}date'))
 
 

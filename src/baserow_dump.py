@@ -16,7 +16,7 @@ os.makedirs(output_folder, exist_ok=True)
 
 if isinstance(BASEROW_DB_ID, str) or isinstance(BASEROW_DB_ID, int) and BASEROW_DB_ID != 0:
     print("Downloading data from Baserow...")
-    # files = br_client.dump_tables_as_json(BASEROW_DB_ID, folder_name=output_folder, indent=2)
+    files = br_client.dump_tables_as_json(BASEROW_DB_ID, folder_name=output_folder, indent=2)
     print("Data downloaded.")
 
     print("Normalizing URIs...")

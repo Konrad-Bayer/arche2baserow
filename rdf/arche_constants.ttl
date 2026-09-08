@@ -846,7 +846,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCoverageEndDate "1964-31-12"^^xsd:date ;
+    acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
     acdh:hasCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
@@ -42772,6 +42772,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42788,14 +42789,14 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasTitle "kbg-s_b143_001v.tiff"@und ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28> .
 
-<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_012_001_ar.tif> a acdh:Resource ;
+<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_012_001_ar.tif> a acdh:Resource ;
     acdh:hasAccessRestriction <https://vocabs.acdh.oeaw.ac.at/archeaccessrestrictions/public> ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
     acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasCategory <https://vocabs.acdh.oeaw.ac.at/archecategory/image> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCreatedEndDateOriginal "1957-31-01"^^xsd:date ;
-    acdh:hasCreatedStartDateOriginal "1957-31-01"^^xsd:date ;
+    acdh:hasCreatedEndDateOriginal "1957-01-31"^^xsd:date ;
+    acdh:hasCreatedStartDateOriginal "1957-01-31"^^xsd:date ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
     acdh:hasDepositor acdhi:azbl ;
     acdh:hasDigitisingAgent acdhi:azbl ;
@@ -42806,7 +42807,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_012_001_av.tif> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_012_001_av.tif> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42822,16 +42823,16 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Peter Kubelka"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTitle "kbg-e_012_001_ar.tif"@und ;
-    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01> .
+    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> .
 
-<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_012_001_av.tif> a acdh:Resource ;
+<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_012_001_av.tif> a acdh:Resource ;
     acdh:hasAccessRestriction <https://vocabs.acdh.oeaw.ac.at/archeaccessrestrictions/public> ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
     acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasCategory <https://vocabs.acdh.oeaw.ac.at/archecategory/image> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCreatedEndDateOriginal "1957-31-01"^^xsd:date ;
-    acdh:hasCreatedStartDateOriginal "1957-31-01"^^xsd:date ;
+    acdh:hasCreatedEndDateOriginal "1957-01-31"^^xsd:date ;
+    acdh:hasCreatedStartDateOriginal "1957-01-31"^^xsd:date ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
     acdh:hasDepositor acdhi:azbl ;
     acdh:hasDigitisingAgent acdhi:azbl ;
@@ -42842,7 +42843,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_b012_002_r.tif> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_b012_002_r.tif> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42858,16 +42859,16 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Peter Kubelka"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTitle "kbg-e_012_001_av.tif"@und ;
-    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01> .
+    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> .
 
-<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_b012_002_r.tif> a acdh:Resource ;
+<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_b012_002_r.tif> a acdh:Resource ;
     acdh:hasAccessRestriction <https://vocabs.acdh.oeaw.ac.at/archeaccessrestrictions/public> ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
     acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasCategory <https://vocabs.acdh.oeaw.ac.at/archecategory/image> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCreatedEndDateOriginal "1957-31-01"^^xsd:date ;
-    acdh:hasCreatedStartDateOriginal "1957-31-01"^^xsd:date ;
+    acdh:hasCreatedEndDateOriginal "1957-01-31"^^xsd:date ;
+    acdh:hasCreatedStartDateOriginal "1957-01-31"^^xsd:date ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
     acdh:hasDepositor acdhi:azbl ;
     acdh:hasDigitisingAgent acdhi:azbl ;
@@ -42878,7 +42879,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_b012_003_r.tif> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_b012_003_r.tif> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42894,16 +42895,16 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Peter Kubelka"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTitle "kbg-e_b012_002_r.tif"@und ;
-    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01> .
+    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> .
 
-<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_b012_003_r.tif> a acdh:Resource ;
+<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_b012_003_r.tif> a acdh:Resource ;
     acdh:hasAccessRestriction <https://vocabs.acdh.oeaw.ac.at/archeaccessrestrictions/public> ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
     acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasCategory <https://vocabs.acdh.oeaw.ac.at/archecategory/image> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCreatedEndDateOriginal "1957-31-01"^^xsd:date ;
-    acdh:hasCreatedStartDateOriginal "1957-31-01"^^xsd:date ;
+    acdh:hasCreatedEndDateOriginal "1957-01-31"^^xsd:date ;
+    acdh:hasCreatedStartDateOriginal "1957-01-31"^^xsd:date ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
     acdh:hasDepositor acdhi:azbl ;
     acdh:hasDigitisingAgent acdhi:azbl ;
@@ -42914,6 +42915,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42929,7 +42931,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Peter Kubelka"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTitle "kbg-e_b012_003_r.tif"@und ;
-    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01> .
+    acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kunstgewerbemuseum-zuerich_1962-07-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
@@ -71483,12 +71485,12 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasTitle "Brief an Konrad Bayer von Egon Kollitsch und Erni Kollitsch, 26. Feber 1964"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_kollitsch-egon_kollitsch-erni> .
 
-<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01> a acdh:Collection ;
+<https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119027569> ;
     acdh:hasContact acdhi:azbl ;
-    acdh:hasCoverageEndDate "1957-31-01"^^xsd:date ;
-    acdh:hasCoverageStartDate "1957-31-01"^^xsd:date ;
+    acdh:hasCoverageEndDate "1957-01-31"^^xsd:date ;
+    acdh:hasCoverageStartDate "1957-01-31"^^xsd:date ;
     acdh:hasCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
@@ -71499,7 +71501,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-31-01/kbg-e_012_001_ar.tif> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/kbg-e_012_001_ar.tif> ;
     acdh:hasOaiSet <https://vocabs.acdh.oeaw.ac.at/archeoaisets/kulturpool> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;

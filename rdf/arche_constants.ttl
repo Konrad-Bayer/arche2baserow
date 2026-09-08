@@ -42772,7 +42772,6 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42915,7 +42914,6 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,

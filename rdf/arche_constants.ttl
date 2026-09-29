@@ -63,15 +63,6 @@ acdhi:renateganser a acdh:Person ;
 <http://www.wikidata.org/entity/Q1020347> a acdh:Organisation ;
     acdh:hasTitle "Städtische Büchereien Wien"@de .
 
-<http://www.wikidata.org/entity/Q106314450> a acdh:Organisation ;
-    acdh:hasTitle "Wort in der Zeit"@de .
-
-<https://d-nb.info/gnd/116469986> a acdh:Person ;
-    acdh:hasTitle "Otto Breicha"@und .
-
-<https://d-nb.info/gnd/118536133> a acdh:Person ;
-    acdh:hasTitle "Gerhard Fritsch"@und .
-
 <https://d-nb.info/gnd/118693972> a acdh:Person ;
     acdh:hasTitle "Ernst Fuchs"@und .
 
@@ -90,11 +81,23 @@ acdhi:egonkollitsch a acdh:Person ;
 acdhi:ernikollitsch a acdh:Person ;
     acdh:hasTitle "Erni Kollitsch"@und .
 
+<http://www.wikidata.org/entity/Q106314450> a acdh:Organisation ;
+    acdh:hasTitle "Wort in der Zeit"@de .
+
 <https://d-nb.info/gnd/1011859-7> a acdh:Organisation ;
     acdh:hasTitle "Schweizerischer Werkbund"@de .
 
 <https://d-nb.info/gnd/10140798-1> a acdh:Organisation ;
     acdh:hasTitle "Deutsche Nationalbibliothek"@de .
+
+<https://d-nb.info/gnd/116469986> a acdh:Person ;
+    acdh:hasTitle "Otto Breicha"@und .
+
+<https://d-nb.info/gnd/118536133> a acdh:Person ;
+    acdh:hasTitle "Gerhard Fritsch"@und .
+
+acdhi:wrkf a acdh:Organisation ;
+    acdh:hasTitle "Wiener Kunstfonds"@de .
 
 <https://d-nb.info/gnd/118570595> a acdh:Person ;
     acdh:hasTitle "Serge Stauffer"@und .
@@ -114,8 +117,20 @@ acdhi:ernikollitsch a acdh:Person ;
 <https://d-nb.info/gnd/120669927> a acdh:Person ;
     acdh:hasTitle "Michel Würthle"@und .
 
-acdhi:wrkf a acdh:Organisation ;
-    acdh:hasTitle "Wiener Kunstfonds"@de .
+<https://d-nb.info/gnd/300755-8> a acdh:Organisation ;
+    acdh:hasTitle "Suhrkamp  Verlag"@de .
+
+<https://sws.geonames.org/2618425/> a acdh:Place ;
+    acdh:hasTitle "Kopenhagen"@dk .
+
+<https://sws.geonames.org/2659811/> a acdh:Place ;
+    acdh:hasTitle "Luzern"@de .
+
+<https://sws.geonames.org/2773447/> a acdh:Place ;
+    acdh:hasTitle "Krieglach"@de .
+
+<https://sws.geonames.org/2935517/> a acdh:Place ;
+    acdh:hasTitle "Dortmund"@de .
 
 <http://www.wikidata.org/entity/Q1039376> a acdh:Person ;
     acdh:hasTitle "Karl Laszlo"@und .
@@ -138,38 +153,11 @@ acdhi:wrkf a acdh:Organisation ;
 <https://d-nb.info/gnd/2016758-1> a acdh:Organisation ;
     acdh:hasTitle "Kunstgewerbemuseum Zürich"@de .
 
-<https://d-nb.info/gnd/300755-8> a acdh:Organisation ;
-    acdh:hasTitle "Suhrkamp  Verlag"@de .
-
 <https://d-nb.info/gnd/5109351-0> a acdh:Organisation ;
     acdh:hasTitle "Sandbergs Bokhandel"@se .
 
 acdhi:berndmueller a acdh:Person ;
     acdh:hasTitle "Bernd Müller"@und .
-
-<https://sws.geonames.org/2618425/> a acdh:Place ;
-    acdh:hasTitle "Kopenhagen"@dk .
-
-<https://sws.geonames.org/2659811/> a acdh:Place ;
-    acdh:hasTitle "Luzern"@de .
-
-<https://sws.geonames.org/2773447/> a acdh:Place ;
-    acdh:hasTitle "Krieglach"@de .
-
-<https://sws.geonames.org/2935517/> a acdh:Place ;
-    acdh:hasTitle "Dortmund"@de .
-
-<https://d-nb.info/gnd/118556894> a acdh:Person ;
-    acdh:hasTitle "Ernst Jandl"@und .
-
-<https://d-nb.info/gnd/118570757> a acdh:Person ;
-    acdh:hasTitle "Heinrich-Maria Ledig-Rowohlt"@und .
-
-<https://d-nb.info/gnd/118807234> a acdh:Person ;
-    acdh:hasTitle "Oswald Wiener"@und .
-
-acdhi:arminakermann a acdh:Person ;
-    acdh:hasTitle "Armin Akermann"@und .
 
 <https://sws.geonames.org/1850147/> a acdh:Place ;
     acdh:hasTitle "Tokyo"@jp .
@@ -228,26 +216,14 @@ acdhi:arminakermann a acdh:Person ;
 <https://sws.geonames.org/7872041/> a acdh:Place ;
     acdh:hasTitle "Hinterstoder"@de .
 
-<http://www.wikidata.org/entity/Q1884195> a acdh:Organisation ;
-    acdh:hasTitle "Magistrat der Stadt Wien"@de .
-
-<https://d-nb.info/gnd/1019301007> a acdh:Person ;
-    acdh:hasTitle "Robert Klemmer"@und .
-
-<https://d-nb.info/gnd/2007034-2> a acdh:Organisation ;
-    acdh:hasTitle "Hanserverlag"@de .
+<https://d-nb.info/gnd/118807234> a acdh:Person ;
+    acdh:hasTitle "Oswald Wiener"@und .
 
 <https://d-nb.info/gnd/5084733-8> a acdh:Organisation ;
     acdh:hasTitle "Deutscher Rundfunk"@de .
 
-acdhi:abschnitte-zeitschrift a acdh:Organisation ;
-    acdh:hasTitle "Abschnitte"@de .
-
-acdhi:charlyreisinger a acdh:Person ;
-    acdh:hasTitle "Charly Reisinger"@und .
-
-acdhi:eckhartlautenschlager a acdh:Person ;
-    acdh:hasTitle "Eckhart Lautenschlager"@und .
+acdhi:arminakermann a acdh:Person ;
+    acdh:hasTitle "Armin Akermann"@und .
 
 <https://sws.geonames.org/11819588/> a acdh:Place ;
     acdh:hasTitle "Vorderdruck"@de .
@@ -273,17 +249,32 @@ acdhi:eckhartlautenschlager a acdh:Person ;
 <https://sws.geonames.org/6077243/> a acdh:Place ;
     acdh:hasTitle "Montreal"@fr .
 
+<http://www.wikidata.org/entity/Q1884195> a acdh:Organisation ;
+    acdh:hasTitle "Magistrat der Stadt Wien"@de .
+
 <https://d-nb.info/gnd/1008405-8> a acdh:Organisation ;
     acdh:hasTitle "Bundesministerium für Unterricht"@de .
 
-<https://d-nb.info/gnd/116122781> a acdh:Person ;
-    acdh:hasTitle "Jes Petersen"@und .
+<https://d-nb.info/gnd/118556894> a acdh:Person ;
+    acdh:hasTitle "Ernst Jandl"@und .
+
+<https://d-nb.info/gnd/118570757> a acdh:Person ;
+    acdh:hasTitle "Heinrich-Maria Ledig-Rowohlt"@und .
+
+<https://d-nb.info/gnd/2007034-2> a acdh:Organisation ;
+    acdh:hasTitle "Hanserverlag"@de .
+
+acdhi:abschnitte-zeitschrift a acdh:Organisation ;
+    acdh:hasTitle "Abschnitte"@de .
+
+acdhi:charlyreisinger a acdh:Person ;
+    acdh:hasTitle "Charly Reisinger"@und .
+
+acdhi:eckhartlautenschlager a acdh:Person ;
+    acdh:hasTitle "Eckhart Lautenschlager"@und .
 
 acdhi:renesigel a acdh:Person ;
     acdh:hasTitle "René Sigel"@und .
-
-acdhi:werkstatt-schlemmer a acdh:Organisation ;
-    acdh:hasTitle "Werkstatt Schlemmer Schweiger"@de .
 
 <https://sws.geonames.org/2659836/> a acdh:Place ;
     acdh:hasTitle "Lugano"@de .
@@ -306,20 +297,11 @@ acdhi:werkstatt-schlemmer a acdh:Organisation ;
 <https://sws.geonames.org/7872905/> a acdh:Place ;
     acdh:hasTitle "Ernstbrunn"@de .
 
-<https://d-nb.info/gnd/1009716-8> a acdh:Organisation ;
-    acdh:hasTitle "Hessischer Rundfunk"@de .
+<https://d-nb.info/gnd/1019301007> a acdh:Person ;
+    acdh:hasTitle "Robert Klemmer"@und .
 
-<https://d-nb.info/gnd/104972061X> a acdh:Person ;
-    acdh:hasTitle "Helgard Kremin"@und .
-
-<https://d-nb.info/gnd/118830848> a acdh:Person ;
-    acdh:hasTitle "Hubert Aratym"@und .
-
-<https://d-nb.info/gnd/118850237> a acdh:Person ;
-    acdh:hasTitle "Peter Henisch"@und .
-
-acdhi:alpha-verlag a acdh:Organisation ;
-    acdh:hasTitle "Alpha Verlag"@de .
+acdhi:werkstatt-schlemmer a acdh:Organisation ;
+    acdh:hasTitle "Werkstatt Schlemmer Schweiger"@de .
 
 <https://sws.geonames.org/2515540/> a acdh:Place ;
     acdh:hasTitle "La Savina"@it .
@@ -333,26 +315,32 @@ acdhi:alpha-verlag a acdh:Organisation ;
 <http://www.wikidata.org/entity/Q55421334> a acdh:Organisation ;
     acdh:hasTitle "Konrad Fischer Galerie"@de .
 
-<https://d-nb.info/gnd/1033933-4> a acdh:Organisation ;
-    acdh:hasTitle "Forum Stadtpark"@de .
+<https://d-nb.info/gnd/104972061X> a acdh:Person ;
+    acdh:hasTitle "Helgard Kremin"@und .
 
-<https://d-nb.info/gnd/119063336> a acdh:Person ;
-    acdh:hasTitle "Alfred Kolleritsch"@und .
+<https://d-nb.info/gnd/118850237> a acdh:Person ;
+    acdh:hasTitle "Peter Henisch"@und .
 
 <https://d-nb.info/gnd/1247774503> a acdh:Person ;
     acdh:hasTitle "Georg Fritsch"@und .
 
+acdhi:alpha-verlag a acdh:Organisation ;
+    acdh:hasTitle "Alpha Verlag"@de .
+
 acdhi:christabreicha a acdh:Person ;
     acdh:hasTitle "Christa Breicha"@und .
 
+<https://d-nb.info/gnd/1009716-8> a acdh:Organisation ;
+    acdh:hasTitle "Hessischer Rundfunk"@de .
+
+<https://d-nb.info/gnd/116122781> a acdh:Person ;
+    acdh:hasTitle "Jes Petersen"@und .
+
+<https://d-nb.info/gnd/118830848> a acdh:Person ;
+    acdh:hasTitle "Hubert Aratym"@und .
+
 acdhi:josephpatsack a acdh:Person ;
     acdh:hasTitle "Josef Pazak"@und .
-
-<https://d-nb.info/gnd/1387847872> a acdh:Organisation ;
-    acdh:hasTitle "Tschudy Verlag"@de .
-
-<https://d-nb.info/gnd/7674-0> a acdh:Organisation ;
-    acdh:hasTitle "Deutsche Bibliothek Frankfurt"@de .
 
 <https://sws.geonames.org/2658822/> a acdh:Place ;
     acdh:hasTitle "Sankt Gallen"@de .
@@ -366,20 +354,17 @@ acdhi:josephpatsack a acdh:Person ;
 <https://sws.geonames.org/2778067/> a acdh:Place ;
     acdh:hasTitle "Graz"@de .
 
-<https://d-nb.info/gnd/1072925672> a acdh:Organisation ;
-    acdh:hasTitle "Ferdinand Kleinmayr Verlag"@de .
-
-<https://d-nb.info/gnd/118787624> a acdh:Person ;
-    acdh:hasTitle "Fritz J. Raddatz"@und .
-
 <https://d-nb.info/gnd/123821762> a acdh:Person ;
     acdh:hasTitle "Nora Gomringer"@und .
+
+<https://d-nb.info/gnd/1387847872> a acdh:Organisation ;
+    acdh:hasTitle "Tschudy Verlag"@de .
 
 <https://d-nb.info/gnd/16323470-X> a acdh:Organisation ;
     acdh:hasTitle "Fondazione Il Giardino di Daniel Spoerri"@de .
 
-acdhi:alexanderhimpel a acdh:Person ;
-    acdh:hasTitle "Alexander Himpel"@und .
+<https://d-nb.info/gnd/7674-0> a acdh:Organisation ;
+    acdh:hasTitle "Deutsche Bibliothek Frankfurt"@de .
 
 acdhi:barbaraachleitner a acdh:Person ;
     acdh:hasTitle "Barbara Achleitner"@und .
@@ -393,14 +378,14 @@ acdhi:salomestauffer a acdh:Person ;
 acdhi:violettegarnier a acdh:Person ;
     acdh:hasTitle "Violette Garnier"@und .
 
-<https://d-nb.info/gnd/1040293-7> a acdh:Organisation ;
-    acdh:hasTitle "IBM Österreich"@de .
+<https://d-nb.info/gnd/1033933-4> a acdh:Organisation ;
+    acdh:hasTitle "Forum Stadtpark"@de .
 
-<https://d-nb.info/gnd/141798920> a acdh:Person ;
-    acdh:hasTitle "René Simmen"@und .
+<https://d-nb.info/gnd/1072925672> a acdh:Organisation ;
+    acdh:hasTitle "Ferdinand Kleinmayr Verlag"@de .
 
-<https://d-nb.info/gnd/2020099-7> a acdh:Organisation ;
-    acdh:hasTitle "Rias Radiosender Berlin"@de .
+<https://d-nb.info/gnd/119063336> a acdh:Person ;
+    acdh:hasTitle "Alfred Kolleritsch"@und .
 
 <https://sws.geonames.org/2825297/> a acdh:Place ;
     acdh:hasTitle "Stuttgart"@de .
@@ -408,8 +393,11 @@ acdhi:violettegarnier a acdh:Person ;
 <https://sws.geonames.org/3164603/> a acdh:Place ;
     acdh:hasTitle "Venedig"@de .
 
-acdhi:arlettebarre a acdh:Person ;
-    acdh:hasTitle "Arlette Barré"@und .
+<https://d-nb.info/gnd/1040293-7> a acdh:Organisation ;
+    acdh:hasTitle "IBM Österreich"@de .
+
+<https://d-nb.info/gnd/2020099-7> a acdh:Organisation ;
+    acdh:hasTitle "Rias Radiosender Berlin"@de .
 
 acdhi:evabense a acdh:Person ;
     acdh:hasTitle "Eva Bense"@und .
@@ -423,11 +411,8 @@ acdhi:silardisaak a acdh:Person ;
 <https://sws.geonames.org/2774326/> a acdh:Place ;
     acdh:hasTitle "Klagenfurt"@de .
 
-<https://d-nb.info/gnd/101953625X> a acdh:Person ;
-    acdh:hasTitle "Hannes Schneider"@und .
-
-<https://d-nb.info/gnd/105573922> a acdh:Person ;
-    acdh:hasTitle "Wolfgang Fietkau"@und .
+acdhi:alexanderhimpel a acdh:Person ;
+    acdh:hasTitle "Alexander Himpel"@und .
 
 <https://sws.geonames.org/2673730/> a acdh:Place ;
     acdh:hasTitle "Stockholm"@de .
@@ -435,11 +420,11 @@ acdhi:silardisaak a acdh:Person ;
 <https://sws.geonames.org/2777067/> a acdh:Place ;
     acdh:hasTitle "Hagenberg"@de .
 
-<http://www.wikidata.org/entity/Q692419> a acdh:Organisation ;
-    acdh:hasTitle "Sender Freies Berlin"@de .
+<https://d-nb.info/gnd/141798920> a acdh:Person ;
+    acdh:hasTitle "René Simmen"@und .
 
-<https://d-nb.info/gnd/1009721-1> a acdh:Organisation ;
-    acdh:hasTitle "Süddeutscher Rundfunk"@de .
+acdhi:arlettebarre a acdh:Person ;
+    acdh:hasTitle "Arlette Barré"@und .
 
 acdhi:edithschreiber a acdh:Person ;
     acdh:hasTitle "Edith Schreiber"@und .
@@ -453,14 +438,20 @@ acdhi:salomeakermann a acdh:Person ;
 <https://sws.geonames.org/2911298/> a acdh:Place ;
     acdh:hasTitle "Hamburg"@de .
 
-<https://d-nb.info/gnd/2007965-5> a acdh:Organisation ;
-    acdh:hasTitle "Deutsche Schillergesellschaft"@de .
+<http://www.wikidata.org/entity/Q692419> a acdh:Organisation ;
+    acdh:hasTitle "Sender Freies Berlin"@de .
 
-acdhi:heinznoah a acdh:Person ;
-    acdh:hasTitle "Heinz Noah"@und .
+<https://d-nb.info/gnd/1009721-1> a acdh:Organisation ;
+    acdh:hasTitle "Süddeutscher Rundfunk"@de .
 
-acdhi:maschawossilus a acdh:Person ;
-    acdh:hasTitle "Mascha Wossilus"@und .
+<https://d-nb.info/gnd/101953625X> a acdh:Person ;
+    acdh:hasTitle "Hannes Schneider"@und .
+
+<https://d-nb.info/gnd/105573922> a acdh:Person ;
+    acdh:hasTitle "Wolfgang Fietkau"@und .
+
+<https://d-nb.info/gnd/118787624> a acdh:Person ;
+    acdh:hasTitle "Fritz J. Raddatz"@und .
 
 acdhi:reuss-gueterdirektion a acdh:Organisation ;
     acdh:hasTitle "Reuss'sche Güterdirektion"@de .
@@ -468,23 +459,17 @@ acdhi:reuss-gueterdirektion a acdh:Organisation ;
 <http://www.wikidata.org/entity/Q130253294> a acdh:Person ;
     acdh:hasTitle "Peter Schweiger"@und .
 
-<https://d-nb.info/gnd/1073078450> a acdh:Organisation ;
-    acdh:hasTitle "Gerhardt Verlag"@de .
-
 acdhi:babetteklemmer a acdh:Person ;
     acdh:hasTitle "Babette Klemmer"@und .
 
+<https://d-nb.info/gnd/2007965-5> a acdh:Organisation ;
+    acdh:hasTitle "Deutsche Schillergesellschaft"@de .
+
+acdhi:maschawossilus a acdh:Person ;
+    acdh:hasTitle "Mascha Wossilus"@und .
+
 <https://d-nb.info/gnd/1008658-4> a acdh:Organisation ;
     acdh:hasTitle "Radio Bremen"@de .
-
-<https://d-nb.info/gnd/116053232> a acdh:Person ;
-    acdh:hasTitle "Paul Patera"@und .
-
-<https://d-nb.info/gnd/120634643> a acdh:Person ;
-    acdh:hasTitle "Samson D. Sauerbier"@und .
-
-<https://d-nb.info/gnd/113626-4> a acdh:Organisation ;
-    acdh:hasTitle "Kyklos Presse"@de .
 
 <https://d-nb.info/gnd/137416342> a acdh:Person ;
     acdh:hasTitle "Thean Chie Chan"@und .
@@ -492,8 +477,20 @@ acdhi:babetteklemmer a acdh:Person ;
 acdhi:heiditomiak a acdh:Person ;
     acdh:hasTitle "Heidi Tomiak"@und .
 
-<https://d-nb.info/gnd/109101278> a acdh:Person ;
-    acdh:hasTitle "Christian Chruxin"@und .
+acdhi:heinznoah a acdh:Person ;
+    acdh:hasTitle "Heinz Noah"@und .
+
+<https://d-nb.info/gnd/116053232> a acdh:Person ;
+    acdh:hasTitle "Paul Patera"@und .
+
+<https://d-nb.info/gnd/120634643> a acdh:Person ;
+    acdh:hasTitle "Samson D. Sauerbier"@und .
+
+<https://sws.geonames.org/2643743/> a acdh:Place ;
+    acdh:hasTitle "London"@de .
+
+<https://d-nb.info/gnd/1073078450> a acdh:Organisation ;
+    acdh:hasTitle "Gerhardt Verlag"@de .
 
 <https://d-nb.info/gnd/131675869> a acdh:Person ;
     acdh:hasTitle "Siegfried Pflegerl"@und .
@@ -501,38 +498,35 @@ acdhi:heiditomiak a acdh:Person ;
 <https://d-nb.info/gnd/10078672-8> a acdh:Organisation ;
     acdh:hasTitle "Piper Verlag"@de .
 
-<https://sws.geonames.org/2643743/> a acdh:Place ;
-    acdh:hasTitle "London"@de .
-
-<https://d-nb.info/gnd/13525728X> a acdh:Person ;
-    acdh:hasTitle "Wilhelm Adams"@und .
-
-acdhi:mariababos a acdh:Person ;
-    acdh:hasTitle "Maria Babos"@und .
+<https://d-nb.info/gnd/109101278> a acdh:Person ;
+    acdh:hasTitle "Christian Chruxin"@und .
 
 <https://d-nb.info/gnd/1213265274> a acdh:Person ;
     acdh:hasTitle "Julian Kolleritsch"@und .
 
-<https://d-nb.info/gnd/1027332765> a acdh:Person ;
-    acdh:hasTitle "Andreas Weitbrecht"@und .
-
-<https://d-nb.info/gnd/118554786> a acdh:Person ;
-    acdh:hasTitle "Friedensreich Hundertwasser"@und .
+<https://d-nb.info/gnd/113626-4> a acdh:Organisation ;
+    acdh:hasTitle "Kyklos Presse"@de .
 
 acdhi:charlottezetterberg a acdh:Person ;
     acdh:hasTitle "Charlotte Zetterberg"@und .
 
+acdhi:mariababos a acdh:Person ;
+    acdh:hasTitle "Maria Babos"@und .
+
 <https://sws.geonames.org/2910831/> a acdh:Place ;
     acdh:hasTitle "Hannover"@de .
+
+<https://d-nb.info/gnd/13525728X> a acdh:Person ;
+    acdh:hasTitle "Wilhelm Adams"@und .
+
+<https://d-nb.info/gnd/1027332765> a acdh:Person ;
+    acdh:hasTitle "Andreas Weitbrecht"@und .
 
 <https://d-nb.info/gnd/119027569> a acdh:Person ;
     acdh:hasTitle "Peter Kubelka"@und .
 
-<https://d-nb.info/gnd/43218-0> a acdh:Organisation ;
-    acdh:hasTitle "Insel Verlag"@de .
-
-<https://d-nb.info/gnd/14318072X> a acdh:Person ;
-    acdh:hasTitle "Renate Gerhardt"@und .
+<https://d-nb.info/gnd/118554786> a acdh:Person ;
+    acdh:hasTitle "Friedensreich Hundertwasser"@und .
 
 <https://sws.geonames.org/2848845/> a acdh:Place ;
     acdh:hasTitle "Reinbek bei Hamburg"@de .
@@ -540,20 +534,23 @@ acdhi:charlottezetterberg a acdh:Person ;
 <https://sws.geonames.org/2934246/> a acdh:Place ;
     acdh:hasTitle "Düsseldorf"@de .
 
-<https://d-nb.info/gnd/1023559056> a acdh:Person ;
-    acdh:hasTitle "Achim Dehne"@und .
+<https://d-nb.info/gnd/14318072X> a acdh:Person ;
+    acdh:hasTitle "Renate Gerhardt"@und .
+
+<https://d-nb.info/gnd/43218-0> a acdh:Organisation ;
+    acdh:hasTitle "Insel Verlag"@de .
 
 <https://sws.geonames.org/2692969/> a acdh:Place ;
     acdh:hasTitle "Malmö"@sv .
 
-<https://d-nb.info/gnd/103336522X> a acdh:Person ;
-    acdh:hasTitle "Giovanni Blumer"@und .
-
 <https://d-nb.info/gnd/14324812X> a acdh:Person ;
     acdh:hasTitle "Immo Hilbinger"@und .
 
-acdhi:ginasedlaczek a acdh:Person ;
-    acdh:hasTitle "Gina Sedlaczek"@und .
+<https://d-nb.info/gnd/103336522X> a acdh:Person ;
+    acdh:hasTitle "Giovanni Blumer"@und .
+
+<https://d-nb.info/gnd/1023559056> a acdh:Person ;
+    acdh:hasTitle "Achim Dehne"@und .
 
 <https://d-nb.info/gnd/118603930> a acdh:Person ;
     acdh:hasTitle "Gerhard Rühm"@und .
@@ -561,11 +558,8 @@ acdhi:ginasedlaczek a acdh:Person ;
 <https://d-nb.info/gnd/131602632> a acdh:Person ;
     acdh:hasTitle "Ingrid Schuppan"@und .
 
-<https://d-nb.info/gnd/1107600839> a acdh:Person ;
-    acdh:hasTitle "Mia Williams"@und .
-
-acdhi:gertrudammerer a acdh:Person ;
-    acdh:hasTitle "Gertrud Ammerer"@und .
+acdhi:ginasedlaczek a acdh:Person ;
+    acdh:hasTitle "Gina Sedlaczek"@und .
 
 <https://d-nb.info/gnd/1047806894> a acdh:Organisation ;
     acdh:hasTitle "Hundertwasser Gemeinnützige Privatstiftung"@de .
@@ -573,17 +567,20 @@ acdhi:gertrudammerer a acdh:Person ;
 <https://sws.geonames.org/2867714/> a acdh:Place ;
     acdh:hasTitle "München"@de .
 
+<https://d-nb.info/gnd/1107600839> a acdh:Person ;
+    acdh:hasTitle "Mia Williams"@und .
+
+acdhi:gertrudammerer a acdh:Person ;
+    acdh:hasTitle "Gertrud Ammerer"@und .
+
 <https://sws.geonames.org/2657896/> a acdh:Place ;
     acdh:hasTitle "Zürich"@de .
-
-<https://d-nb.info/gnd/2020049-3> a acdh:Organisation ;
-    acdh:hasTitle "Rowohlt Verlag"@de .
 
 <https://d-nb.info/gnd/2020461-9> a acdh:Organisation ;
     acdh:hasTitle "Norddeutscher Rundfunk"@de .
 
-<https://d-nb.info/gnd/118504533> a acdh:Person ;
-    acdh:hasTitle "H. C. Artmann"@und .
+<https://d-nb.info/gnd/2020049-3> a acdh:Organisation ;
+    acdh:hasTitle "Rowohlt Verlag"@de .
 
 <https://sws.geonames.org/2988507/> a acdh:Place ;
     acdh:hasTitle "Paris"@de .
@@ -596,6 +593,9 @@ acdhi:gertrudammerer a acdh:Person ;
 
 <https://sws.geonames.org/6537071/> a acdh:Place ;
     acdh:hasTitle "Monterosso al Mare"@it .
+
+<https://d-nb.info/gnd/118504533> a acdh:Person ;
+    acdh:hasTitle "H. C. Artmann"@und .
 
 <https://sws.geonames.org/11612751/> a acdh:Place ;
     acdh:hasTitle "Berlin (West)"@de .
@@ -618,14 +618,14 @@ acdhi:gertrudammerer a acdh:Person ;
 <https://d-nb.info/gnd/1001454-8> a acdh:Organisation ;
     acdh:hasTitle "Austrian Academy of Sciences"@en .
 
-<https://d-nb.info/gnd/118507753> a acdh:Person ;
-    acdh:hasTitle "Konrad Bayer"@und .
-
 <https://sws.geonames.org/2761369/> a acdh:Place ;
     acdh:hasTitle "Wien"@de .
 
 <https://orcid.org/0000-0002-0636-4476> a acdh:Person ;
     acdh:hasTitle "Daniel Elsner"@und .
+
+<https://d-nb.info/gnd/118507753> a acdh:Person ;
+    acdh:hasTitle "Konrad Bayer"@und .
 
 <https://orcid.org/0009-0009-6117-8244> a acdh:Person ;
     acdh:hasTitle "Julius Handl"@und ;
@@ -28738,6 +28738,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad-und-bayer-traudl_von-radax-ferry_1963-01-21> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-21"^^xsd:date ;
@@ -29194,6 +29195,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-adams-wilhelm_1964-03-23> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/13525728X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/13525728X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-03-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-03-23"^^xsd:date ;
@@ -29265,6 +29267,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-adams-wilhelm_1964-04-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/13525728X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/13525728X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-20"^^xsd:date ;
@@ -35690,6 +35693,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-05-18> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-05-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-05-18"^^xsd:date ;
@@ -36106,6 +36110,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1962-07-16> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-16"^^xsd:date ;
@@ -36660,6 +36665,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_1961-08-24> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-08-24"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-08-24"^^xsd:date ;
@@ -36865,6 +36871,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_oj_2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -37208,6 +37215,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-breicha-otto_1964-08-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116469986>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116469986> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-08-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-08-25"^^xsd:date ;
@@ -37598,6 +37606,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-chruxin-christian_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/109101278>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/109101278> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -37669,6 +37678,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-creditanstalt-bankverein_1955-01-31> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q694468>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q694468> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1955-01-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1955-01-31"^^xsd:date ;
@@ -38562,6 +38572,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_oj_4> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -39076,6 +39087,8 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q106314450>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118536133> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q106314450>,
+        <https://d-nb.info/gnd/118536133> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-12-30"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-12-30"^^xsd:date ;
@@ -39565,6 +39578,8 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1073078450>,
+        <https://d-nb.info/gnd/14318072X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-17"^^xsd:date ;
@@ -39635,6 +39650,8 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-gerhardt-renate_1963-11-04> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
+        <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/14318072X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-04"^^xsd:date ;
@@ -39846,6 +39863,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-henisch-peter_1963-11-26> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118850237> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118850237> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-26"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-26"^^xsd:date ;
@@ -39913,6 +39931,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hessischer-rundfunk_1964-05-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1009716-8>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1009716-8> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-27"^^xsd:date ;
@@ -39982,6 +40001,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hessischer-rundfunk_1964-07-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1009716-8>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1009716-8> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-07-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-07-02"^^xsd:date ;
@@ -41420,6 +41440,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-04-08> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-08"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-08"^^xsd:date ;
@@ -41489,6 +41510,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-04-30> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-30"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-30"^^xsd:date ;
@@ -41558,6 +41580,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-08-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-08-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-08-27"^^xsd:date ;
@@ -41627,6 +41650,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-09-23> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-09-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-09-23"^^xsd:date ;
@@ -41696,6 +41720,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-11-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-25"^^xsd:date ;
@@ -41765,6 +41790,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-jandl-ernst_1963-11-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118556894> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118556894> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-14"^^xsd:date ;
@@ -42150,6 +42176,8 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/1033933-4>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119063336> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1033933-4>,
+        <https://d-nb.info/gnd/119063336> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-01-19"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-01-19"^^xsd:date ;
@@ -42222,6 +42250,8 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kolleritsch-alfred_1963-02-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1033933-4>,
         <https://d-nb.info/gnd/118507753>,
+        <https://d-nb.info/gnd/119063336> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1033933-4>,
         <https://d-nb.info/gnd/119063336> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-02-15"^^xsd:date ;
@@ -42772,6 +42802,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42914,6 +42945,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
+    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42934,6 +42966,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kunstgewerbemuseum-zuerich_1962-07-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2016758-1> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2016758-1> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-16"^^xsd:date ;
@@ -43728,6 +43761,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ledig-rowohlt-heinrich-maria_1964-02-03> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118570757> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118570757> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-03"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-03"^^xsd:date ;
@@ -43866,6 +43900,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-mueller-bernd_1964-02-29> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:berndmueller ;
+    acdh:hasAuthor acdhi:berndmueller ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-29"^^xsd:date ;
@@ -44004,6 +44039,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-noah-heinz_1963-08-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:heinznoah ;
+    acdh:hasAuthor acdhi:heinznoah ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-08-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-08-06"^^xsd:date ;
@@ -44803,6 +44839,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-oesterreichisches-kulturzentrum_1962-09-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1019688-2>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1019688-2> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-09-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-09-21"^^xsd:date ;
@@ -45312,6 +45349,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-petersen-jes_1964-08-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116122781>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116122781> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-08-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-08-20"^^xsd:date ;
@@ -45381,6 +45419,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-petersen-jes_ohne-jahr_ohne-ort_was-ist-mit-den-drucken> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116122781>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116122781> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
@@ -45651,6 +45690,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-piper-verlag_1963-01-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/10078672-8>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/10078672-8> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-21"^^xsd:date ;
@@ -46041,6 +46081,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1961-07-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-07-15"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-07-15"^^xsd:date ;
@@ -51481,6 +51522,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -52248,6 +52290,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-raddatz-fj_1964-01-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118787624> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118787624> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-01-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-13"^^xsd:date ;
@@ -52319,6 +52362,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-raddatz-fj_1964-03-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118787624> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118787624> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-03-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-03-17"^^xsd:date ;
@@ -52390,6 +52434,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-raddatz-fj_1964-04-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118787624> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118787624> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-28"^^xsd:date ;
@@ -52461,6 +52506,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-raddatz-fj_1964-07-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118787624> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118787624> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-07-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-07-14"^^xsd:date ;
@@ -52603,6 +52649,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radio-bremen_1964-02-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1008658-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1008658-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-20"^^xsd:date ;
@@ -52873,6 +52920,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rias_1963-07-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020099-7> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020099-7> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-07-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-07-11"^^xsd:date ;
@@ -52942,6 +52990,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rowohlt-verlag_1963-11-01> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020049-3> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020049-3> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-01"^^xsd:date ;
@@ -53149,6 +53198,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rowohlt-verlag_1964-04-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020049-3> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020049-3> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-02"^^xsd:date ;
@@ -53218,6 +53268,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rowohlt-verlag_1964-04-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020049-3> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020049-3> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-27"^^xsd:date ;
@@ -53356,6 +53407,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ruehm-gerhard_1960-07-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118603930> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118603930> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-07-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-07-17"^^xsd:date ;
@@ -53665,6 +53717,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sandbergs-bokhandel_1964-09-30> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/5109351-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/5109351-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-09-30"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-09-30"^^xsd:date ;
@@ -54961,6 +55014,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sigel-kurt_1963-06-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/117376663>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/117376663> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-06-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-06-06"^^xsd:date ;
@@ -55020,6 +55074,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-simmen-rene_1962-11-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/141798920> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/141798920> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-11-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-11-09"^^xsd:date ;
@@ -55089,6 +55144,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-simmen-rene_1962-11-10> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/141798920> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/141798920> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-11-10"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-11-10"^^xsd:date ;
@@ -55158,6 +55214,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-simmen-rene_1963-01-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/141798920> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/141798920> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-20"^^xsd:date ;
@@ -56088,6 +56145,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-tschudy-verlag_1963-04-05> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/1387847872> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1387847872> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-05"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-05"^^xsd:date ;
@@ -56922,6 +56980,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-weitbrecht-andreas_1964-05-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1027332765>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1027332765> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-16"^^xsd:date ;
@@ -58165,6 +58224,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-wossilus-mascha_1964-04-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:maschawossilus ;
+    acdh:hasAuthor acdhi:maschawossilus ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-27"^^xsd:date ;
@@ -59718,6 +59778,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-abschnitte-zeitschrift_1962-02-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:abschnitte-zeitschrift ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-02-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-02-11"^^xsd:date ;
@@ -59789,6 +59850,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-adams-wilhelm_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/13525728X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -60737,6 +60799,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-00-00_1> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -61913,6 +61976,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-deutscher-rundfunk_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/5084733-8> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -61982,6 +62046,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-editors-of-eroeffnungen_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/1391068998> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -62049,6 +62114,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-fietkau-wolfgang_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/105573922>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62292,6 +62358,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-krueger-hanspeter_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/124562132> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62360,6 +62427,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-mueller-bernd_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62429,6 +62497,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-norddeutscher-rundfunk_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020461-9> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62500,6 +62569,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-radio-bremen_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1008658-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62571,6 +62641,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-reuss-heinrich_1964-10-05> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:reuss-gueterdirektion ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-10-05"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-10-05"^^xsd:date ;
@@ -62711,6 +62782,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-staedtische-buecherei-dortmund_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/18951-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -62780,6 +62852,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-staedtische-buechereien-wien_1959-02-02> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q1020347>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-02-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-02-02"^^xsd:date ;
@@ -63120,6 +63193,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-tschudy-verlag_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/1387847872> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -63188,6 +63262,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-unbekannt_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -63255,6 +63330,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118764195>,
         <https://d-nb.info/gnd/2069287-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -63390,6 +63466,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-wossilus-mascha_1964-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:maschawossilus ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-17"^^xsd:date ;
@@ -63459,6 +63536,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l035_wandkalender-1965> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1965-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1965-01-01"^^xsd:date ;
@@ -63490,6 +63568,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad-und-bayer-traudl_von-szigethy-ida_1961-03-12> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/1080128433> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-03-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-03-12"^^xsd:date ;
@@ -63526,6 +63605,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-achleitner-friedrich_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119369125> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/119369125> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -63562,6 +63642,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-adams-wilhelm_1964-05-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/13525728X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/13525728X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-13"^^xsd:date ;
@@ -63598,6 +63679,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-adams-wilhelm_1964-05-29> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/13525728X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/13525728X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-29"^^xsd:date ;
@@ -63634,6 +63716,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1959-09-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-09-15"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-09-15"^^xsd:date ;
@@ -63669,6 +63752,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1961-03-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-03-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-03-28"^^xsd:date ;
@@ -63704,6 +63788,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1961-05-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-05-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-05-17"^^xsd:date ;
@@ -63739,6 +63824,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1963-11-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-18"^^xsd:date ;
@@ -63774,6 +63860,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1964-03-23> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-03-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-03-23"^^xsd:date ;
@@ -63809,6 +63896,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1958-00-00> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-01-01"^^xsd:date ;
@@ -63845,6 +63933,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1958-05-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-05-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-05-16"^^xsd:date ;
@@ -63881,6 +63970,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1958-10-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-10-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-10-28"^^xsd:date ;
@@ -63917,6 +64007,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1962-09-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-09-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-09-27"^^xsd:date ;
@@ -63953,6 +64044,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-03-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-03-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-03-18"^^xsd:date ;
@@ -63989,6 +64081,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-04-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-20"^^xsd:date ;
@@ -64025,6 +64118,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-09-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-09-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-09-02"^^xsd:date ;
@@ -64061,6 +64155,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-09-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-09-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-09-06"^^xsd:date ;
@@ -64097,6 +64192,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-02-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-11"^^xsd:date ;
@@ -64133,6 +64229,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-03-01> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-03-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-03-01"^^xsd:date ;
@@ -64169,6 +64266,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-04-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-13"^^xsd:date ;
@@ -64205,6 +64303,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-04-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-28"^^xsd:date ;
@@ -64241,6 +64340,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_oj-2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -64277,6 +64377,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-babos-maria_1956-10-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:mariababos ;
+    acdh:hasAuthor acdhi:mariababos ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-10-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-10-20"^^xsd:date ;
@@ -64312,6 +64413,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-babos-maria_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:mariababos ;
+    acdh:hasAuthor acdhi:mariababos ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -64346,6 +64448,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-barre-arlette_1956-07-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor acdhi:arlettebarre ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-07-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-07-25"^^xsd:date ;
@@ -64381,6 +64484,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-21_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-21"^^xsd:date ;
@@ -64416,6 +64520,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-24_3> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-24"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-24"^^xsd:date ;
@@ -64451,6 +64556,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-12-01> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-12-01"^^xsd:date ;
@@ -64486,6 +64592,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64521,6 +64628,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_1> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64555,6 +64663,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_10> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64590,6 +64699,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_3> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64625,6 +64735,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_6> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64660,6 +64771,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_7> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64695,6 +64807,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_8> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64730,6 +64843,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_9> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -64765,6 +64879,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-01-09> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-01-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-09"^^xsd:date ;
@@ -64800,6 +64915,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1962-07-00> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-01"^^xsd:date ;
@@ -64835,6 +64951,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1962-07-11> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-11"^^xsd:date ;
@@ -64870,6 +64987,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1962-07-19> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-19"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-19"^^xsd:date ;
@@ -64905,6 +65023,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_oj_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -64940,6 +65059,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_oj_3> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -64975,6 +65095,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_1963-07-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-07-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-07-31"^^xsd:date ;
@@ -65010,6 +65131,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65044,6 +65166,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_oj_3> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65079,6 +65202,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_oj_4> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65114,6 +65238,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-blumer-giovanni_oj_5> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/103336522X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/103336522X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65149,6 +65274,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-chruxin-christian_1963-06-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/109101278>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/109101278> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-06-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-06-02"^^xsd:date ;
@@ -65185,6 +65311,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_1962-08-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-08-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-08-28"^^xsd:date ;
@@ -65220,6 +65347,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_1964-08-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-08-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-08-06"^^xsd:date ;
@@ -65255,6 +65383,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_oj_2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65289,6 +65418,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-deutsche-bibliothek-frankfurt_1963-07-23> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/7674-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/7674-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-07-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-07-23"^^xsd:date ;
@@ -65324,6 +65454,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-deutsche-schillergesellschaft_1962-09-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2007965-5> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2007965-5> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-09-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-09-11"^^xsd:date ;
@@ -65359,6 +65490,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-deutsche-schillergesellschaft_1963-02-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2007965-5> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2007965-5> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-02-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-02-13"^^xsd:date ;
@@ -65394,6 +65526,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-fietkau-wolfgang_1964-04-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/105573922>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/105573922> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-13"^^xsd:date ;
@@ -65429,6 +65562,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-fietkau-wolfgang_1964-06-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/105573922>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/105573922> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-06-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-06-27"^^xsd:date ;
@@ -65534,6 +65668,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-garnier-pierre_1964-06-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119159155> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/119159155> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-06-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-06-25"^^xsd:date ;
@@ -65571,6 +65706,8 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1073078450>,
+        <https://d-nb.info/gnd/14318072X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-08-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-08-07"^^xsd:date ;
@@ -65606,6 +65743,8 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-gerhardt-renate_1963-03-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
+        <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/14318072X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-03-28"^^xsd:date ;
@@ -65643,6 +65782,8 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1073078450>,
+        <https://d-nb.info/gnd/14318072X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-05"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-05"^^xsd:date ;
@@ -65678,6 +65819,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-gomringer-eugen_1962-06-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/11869636X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/11869636X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-06-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-06-09"^^xsd:date ;
@@ -65714,6 +65856,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hanser-verlag_1964-02-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2007034-2> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2007034-2> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-27"^^xsd:date ;
@@ -65749,6 +65892,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-himpel-alexander_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:alexanderhimpel ;
+    acdh:hasAuthor acdhi:alexanderhimpel ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -65783,6 +65927,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hundertwasser-fritz_1957-00-00> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118554786> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118554786> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-01-01"^^xsd:date ;
@@ -65819,6 +65964,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hundertwasser-fritz_1961-08-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118554786> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118554786> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-08-15"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-08-15"^^xsd:date ;
@@ -65855,6 +66001,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-02-01> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-02-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-02-01"^^xsd:date ;
@@ -65890,6 +66037,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-jandl-ernst_1964-05-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118556894> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118556894> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-28"^^xsd:date ;
@@ -65925,6 +66073,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-klemmer-robert_1961-10-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1019301007>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1019301007> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-10-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-10-16"^^xsd:date ;
@@ -65961,6 +66110,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-klemmer-robert_1962-07-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1019301007>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1019301007> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-14"^^xsd:date ;
@@ -66032,6 +66182,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119027569> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-12-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-12-28"^^xsd:date ;
@@ -66101,6 +66252,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kyklos-presse_1963-05-05> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/113626-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/113626-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-05"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-05"^^xsd:date ;
@@ -66136,6 +66288,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kyklos-presse_1963-06-24> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/113626-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/113626-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-06-24"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-06-24"^^xsd:date ;
@@ -66171,6 +66324,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-lautenschlager-eckhardt_1963-09-04> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:eckhartlautenschlager ;
+    acdh:hasAuthor acdhi:eckhartlautenschlager ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-09-04"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-09-04"^^xsd:date ;
@@ -66206,6 +66360,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ledig-rowohlt-heinrich-maria_1964-04-23> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118570757> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118570757> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-23"^^xsd:date ;
@@ -66241,6 +66396,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-noah-heinz_1963-02-03> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:heinznoah ;
+    acdh:hasAuthor acdhi:heinznoah ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-02-03"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-02-03"^^xsd:date ;
@@ -66276,6 +66432,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-noah-heinz_1964-01-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:heinznoah ;
+    acdh:hasAuthor acdhi:heinznoah ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-01-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-12"^^xsd:date ;
@@ -66310,6 +66467,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-norddeutscher-rundfunk_1963-11-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020461-9> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020461-9> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-07"^^xsd:date ;
@@ -66345,6 +66503,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-patera-paul_1961-01-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116053232>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116053232> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-01-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-01-28"^^xsd:date ;
@@ -66380,6 +66539,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-petersen-jes_1963-11-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116122781>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116122781> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-22"^^xsd:date ;
@@ -66415,6 +66575,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-pflegerl-siegfried_1964-05-30> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131675869> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/131675869> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-30"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-30"^^xsd:date ;
@@ -66450,6 +66611,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-pflegerl-siegfried_oj_feldkirchen> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131675869> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/131675869> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -66485,6 +66647,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-piper-verlag_1962-12-03> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/10078672-8>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/10078672-8> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-12-03"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-12-03"^^xsd:date ;
@@ -66520,6 +66683,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1957-05-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-05-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-05-13"^^xsd:date ;
@@ -66559,6 +66723,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1961-02-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-02-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-02-09"^^xsd:date ;
@@ -66597,6 +66762,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1962-06-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-06-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-06-06"^^xsd:date ;
@@ -66635,6 +66801,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1963-10-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-10-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-10-11"^^xsd:date ;
@@ -66673,6 +66840,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_oj11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -66711,6 +66879,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_oj9> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -66749,6 +66918,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1955-08-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1955-08-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1955-08-07"^^xsd:date ;
@@ -66784,6 +66954,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-03-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-03-15"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-03-15"^^xsd:date ;
@@ -66820,6 +66991,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-09"^^xsd:date ;
@@ -66855,6 +67027,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-12_2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
@@ -66888,6 +67061,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-14_karte1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-14"^^xsd:date ;
@@ -66923,6 +67097,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-14_karte2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-14"^^xsd:date ;
@@ -66958,6 +67133,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-21"^^xsd:date ;
@@ -66993,6 +67169,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-08-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-08-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-08-16"^^xsd:date ;
@@ -67028,6 +67205,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-10-04> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-10-04"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-10-04"^^xsd:date ;
@@ -67063,6 +67241,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-10-06> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-10-06"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-10-06"^^xsd:date ;
@@ -67098,6 +67277,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-11-01> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-11-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-11-01"^^xsd:date ;
@@ -67133,6 +67313,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1962-11-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-11-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-11-22"^^xsd:date ;
@@ -67168,6 +67349,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1962-12-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-12-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-12-17"^^xsd:date ;
@@ -67203,6 +67385,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1964-05-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-11"^^xsd:date ;
@@ -67238,6 +67421,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67273,6 +67457,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj5> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67308,6 +67493,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-raddatz-fj_1964-09-29> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118787624> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118787624> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-09-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-09-29"^^xsd:date ;
@@ -67344,6 +67530,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-reisinger-charly_1962-05-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:charlyreisinger ;
+    acdh:hasAuthor acdhi:charlyreisinger ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-05-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-05-12"^^xsd:date ;
@@ -67378,6 +67565,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rowohlt-verlag_1963-12-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020049-3> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020049-3> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-12-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-12-18"^^xsd:date ;
@@ -67413,6 +67601,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-rowohlt-verlag_1964-02-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020049-3> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020049-3> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-25"^^xsd:date ;
@@ -67448,6 +67637,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ruehm-gerhard_1956-10-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118603930> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118603930> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-10-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-10-22"^^xsd:date ;
@@ -67483,6 +67673,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ruehm-gerhard_1962-05-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118603930> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118603930> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-05-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-05-16"^^xsd:date ;
@@ -67518,6 +67709,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ruehm-gerhard_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118603930> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118603930> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67553,6 +67745,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-schneider-hannes_oj1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/101953625X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/101953625X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67587,6 +67780,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-schuppan-ingrid_1959-03-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131602632> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/131602632> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-03-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-03-31"^^xsd:date ;
@@ -67622,6 +67816,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-schuppan-ingrid_1961-07-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131602632> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/131602632> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-07-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-07-11"^^xsd:date ;
@@ -67657,6 +67852,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-schuppan-ingrid_1963-05-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131602632> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/131602632> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-16"^^xsd:date ;
@@ -67692,6 +67888,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1952-00-00> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1952-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67726,6 +67923,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1952-10-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1952-10-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-10-07"^^xsd:date ;
@@ -67760,6 +67958,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1952-10-15> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1952-10-15"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-10-15"^^xsd:date ;
@@ -67794,6 +67993,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1952-10-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1952-10-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-10-20"^^xsd:date ;
@@ -67828,6 +68028,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1958-11-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-11-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-11-13"^^xsd:date ;
@@ -67862,6 +68063,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -67896,6 +68098,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sender-freies-berlin_1962-11-12> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q692419>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q692419> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-11-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-11-12"^^xsd:date ;
@@ -67931,6 +68134,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-spoerri-daniel_1964-04-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118752197> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118752197> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-14"^^xsd:date ;
@@ -67966,6 +68170,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-stauffer-serge_1962-06-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118570595> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118570595> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-06-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-06-22"^^xsd:date ;
@@ -68001,6 +68206,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sueddeutscher-rundfunk_1964-01-10> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1009721-1>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1009721-1> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-01-10"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-10"^^xsd:date ;
@@ -68036,6 +68242,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-szigethy-ida_1956-11-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-11-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-11-09"^^xsd:date ;
@@ -68071,6 +68278,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-szigethy-ida_1956-11-26> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-11-26"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-11-26"^^xsd:date ;
@@ -68107,6 +68315,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-szigethy-ida_1957-05-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-05-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-05-27"^^xsd:date ;
@@ -68142,6 +68351,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-szigethy-ida_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -68377,6 +68587,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-weitbrecht-andreas_1963-12-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1027332765>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1027332765> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-12-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-12-18"^^xsd:date ;
@@ -68412,6 +68623,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-weitbrecht-andreas_1964-01-13> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1027332765>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1027332765> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-01-13"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-13"^^xsd:date ;
@@ -68447,6 +68659,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-wien-ma_1959-04-17> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q1884195>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q1884195> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-04-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-04-17"^^xsd:date ;
@@ -68481,6 +68694,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-williams-mia_1964-10-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1107600839>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1107600839> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-10-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-10-02"^^xsd:date ;
@@ -68516,6 +68730,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-wuerthle-michel_1964-09-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/120669927> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/120669927> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-09-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-09-14"^^xsd:date ;
@@ -69088,6 +69303,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-artmann-hans-carl_1964-02-08> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-08"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-08"^^xsd:date ;
@@ -69126,6 +69342,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-00-00_3> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -69161,6 +69378,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-00-00_5> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -69196,6 +69414,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-11-27> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-11-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-11-27"^^xsd:date ;
@@ -69231,6 +69450,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1962-06-29> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-06-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-06-29"^^xsd:date ;
@@ -69266,6 +69486,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_oj_1> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -69301,6 +69522,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bundesministerium-fuer-unterricht_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1008405-8>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -69335,6 +69557,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-kleinmayr-ferdinand_1964-04-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1072925672>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-14"^^xsd:date ;
@@ -69370,6 +69593,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-schuppan-ingrid_1959-02-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/131602632> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-02-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-02-07"^^xsd:date ;
@@ -69404,6 +69628,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-szigethy-ida_ohne-jahr_ohne-ort_ich-weiss-nicht> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
@@ -69437,6 +69662,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-wiener-kunstfonds_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:wrkf ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -69471,6 +69697,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-abschnitte-zeitschrift_1963-03-29> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:abschnitte-zeitschrift ;
+    acdh:hasAuthor acdhi:abschnitte-zeitschrift ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-03-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-03-29"^^xsd:date ;
@@ -69506,6 +69733,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-alpha-verlag_1957-05-30> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:alpha-verlag ;
+    acdh:hasAuthor acdhi:alpha-verlag ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-05-30"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-05-30"^^xsd:date ;
@@ -69540,6 +69768,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1961-04-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-04-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-04-07"^^xsd:date ;
@@ -69575,6 +69804,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-aratym-hubert_1958-00-00> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118830848> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118830848> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-01-01"^^xsd:date ;
@@ -69610,6 +69840,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-aratym-hubert_1958-08-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118830848> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118830848> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-08-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-08-18"^^xsd:date ;
@@ -69646,6 +69877,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-02-26> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-02-26"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-02-26"^^xsd:date ;
@@ -69682,6 +69914,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-05-11> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-05-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-05-11"^^xsd:date ;
@@ -69717,6 +69950,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-brouwn-stanley_1964-05-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119131927> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/119131927> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-16"^^xsd:date ;
@@ -69753,6 +69987,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_oj_3> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -69787,6 +70022,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_oj_5> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -69821,6 +70057,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-himpel-alexander_1963-01-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:alexanderhimpel ;
+    acdh:hasAuthor acdhi:alexanderhimpel ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-25"^^xsd:date ;
@@ -69856,6 +70093,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-himpel-alexander_1963-03-03> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:alexanderhimpel ;
+    acdh:hasAuthor acdhi:alexanderhimpel ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-03-03"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-03-03"^^xsd:date ;
@@ -69891,6 +70129,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-insel-verlag_1963-04-04> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/43218-0> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/43218-0> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-04"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-04"^^xsd:date ;
@@ -69926,6 +70165,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kleinmayr-ferdinand_1963-05-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1072925672>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1072925672> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-25"^^xsd:date ;
@@ -69961,6 +70201,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kremin-helgard_1962-08-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/104972061X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/104972061X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-08-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-08-16"^^xsd:date ;
@@ -69996,6 +70237,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kyklos-presse_1964-00-00_2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/113626-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/113626-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-01"^^xsd:date ;
@@ -70031,6 +70273,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kyklos-presse_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/113626-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/113626-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -70066,6 +70309,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-laszlo-carl_1958-09-21> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q1039376>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q1039376> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-09-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-09-21"^^xsd:date ;
@@ -70101,6 +70345,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-pupp-julius_1958-05-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130281336> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130281336> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-05-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-05-28"^^xsd:date ;
@@ -70136,6 +70381,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-04-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-04-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-04-09"^^xsd:date ;
@@ -70171,6 +70417,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj7> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -70206,6 +70453,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ruehm-gerhard_1961-06-27> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118603930> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118603930> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-06-27"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-06-27"^^xsd:date ;
@@ -70241,6 +70489,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sauerbier-sd_1964-01-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/120634643> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/120634643> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-01-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-20"^^xsd:date ;
@@ -70276,6 +70525,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-schneider-hannes_oj2> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/101953625X>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/101953625X> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -70311,6 +70561,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-weitbrecht-andreas_1963-12-07> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1027332765>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1027332765> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-12-07"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-12-07"^^xsd:date ;
@@ -70713,6 +70964,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-00-00_4> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -70748,6 +71000,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1964-08-17> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-08-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-08-17"^^xsd:date ;
@@ -70784,6 +71037,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasActor <https://d-nb.info/gnd/1073078450>,
         <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/14318072X> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-04-10"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-04-10"^^xsd:date ;
@@ -70819,6 +71073,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-suhrkamp-verlag_1961-11-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/300755-8> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-11-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-11-22"^^xsd:date ;
@@ -70854,6 +71109,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-tschudy-verlag_1961-11-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/1387847872> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-11-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-11-22"^^xsd:date ;
@@ -70889,6 +71145,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ackermann-armin_1962-12-10> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:arminakermann ;
+    acdh:hasAuthor acdhi:arminakermann ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-12-10"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-12-10"^^xsd:date ;
@@ -70924,6 +71181,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1961-11-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-11-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-11-20"^^xsd:date ;
@@ -70960,6 +71218,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-05-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-09"^^xsd:date ;
@@ -70996,6 +71255,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1963-09-20> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-09-20"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-09-20"^^xsd:date ;
@@ -71032,6 +71292,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1964-09-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-09-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-09-11"^^xsd:date ;
@@ -71068,6 +71329,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_oj-1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71104,6 +71366,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-babos-maria_1956-08-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:mariababos ;
+    acdh:hasAuthor acdhi:mariababos ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-08-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-08-21"^^xsd:date ;
@@ -71138,6 +71401,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-barre-arlette_1957-01-04> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor acdhi:arlettebarre ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-01-04"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-01-04"^^xsd:date ;
@@ -71173,6 +71437,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-21_1> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-21"^^xsd:date ;
@@ -71208,6 +71473,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-24_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-24"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-24"^^xsd:date ;
@@ -71243,6 +71509,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-28> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-28"^^xsd:date ;
@@ -71278,6 +71545,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_oj_4> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71313,6 +71581,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_oj_5> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71348,6 +71617,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-chruxin-christian_1963-05-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/109101278>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/109101278> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-02"^^xsd:date ;
@@ -71384,6 +71654,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_oj_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71419,6 +71690,8 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kolleritsch-alfred_1963-11-03> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1033933-4>,
         <https://d-nb.info/gnd/118507753>,
+        <https://d-nb.info/gnd/119063336> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1033933-4>,
         <https://d-nb.info/gnd/119063336> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-03"^^xsd:date ;
@@ -71486,6 +71759,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/119027569> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/119027569> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-01-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-01-31"^^xsd:date ;
@@ -71522,6 +71796,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kyklos-presse_1964-00-00_1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/113626-4>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/113626-4> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-01"^^xsd:date ;
@@ -71556,6 +71831,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-pazak-josef-u-reyschel-kurt_1957-05-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor acdhi:josephpatsack ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-05-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-05-12"^^xsd:date ;
@@ -71590,6 +71866,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry-und-szigethy-ida_1963-01-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1080128433>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-09"^^xsd:date ;
@@ -71628,6 +71905,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-14"^^xsd:date ;
@@ -71663,6 +71941,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-22> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-22"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-22"^^xsd:date ;
@@ -71698,6 +71977,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1957-05-08> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-05-08"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-05-08"^^xsd:date ;
@@ -71734,6 +72014,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1957-06-19> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-06-19"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-06-19"^^xsd:date ;
@@ -71770,6 +72051,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1960-05-26> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-05-26"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-05-26"^^xsd:date ;
@@ -71805,6 +72087,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1961-08-28> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-08-28"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-08-28"^^xsd:date ;
@@ -71840,6 +72123,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1962-05-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-05-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-05-18"^^xsd:date ;
@@ -71875,6 +72159,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1963-06-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-06-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-06-12"^^xsd:date ;
@@ -71910,6 +72195,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj3> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71945,6 +72231,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj6> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -71981,6 +72268,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sauerbier-sd_1963-03-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/120634643> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/120634643> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-03-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-03-25"^^xsd:date ;
@@ -72016,6 +72304,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-sedlacek-gina_1952-10-05> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:ginasedlaczek ;
+    acdh:hasAuthor acdhi:ginasedlaczek ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1952-10-05"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-10-05"^^xsd:date ;
@@ -72083,6 +72372,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-wiener-oswald_1960-06-29> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118807234> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118807234> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-06-29"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-06-29"^^xsd:date ;
@@ -72118,6 +72408,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-williams-mia_1963-02-01> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1107600839>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1107600839> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-02-01"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-02-01"^^xsd:date ;
@@ -72153,6 +72444,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-williams-mia_1963-05-09> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1107600839>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1107600839> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-05-09"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-05-09"^^xsd:date ;
@@ -72188,6 +72480,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-wossilus-mascha_1964-05-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:maschawossilus ;
+    acdh:hasAuthor acdhi:maschawossilus ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-05-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-05-21"^^xsd:date ;
@@ -72312,6 +72605,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1960-00-00_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -72347,6 +72641,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1964-09-02> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-09-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-09-02"^^xsd:date ;
@@ -72382,6 +72677,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad-und-bayer-traudl_von-radax-ferry-und-szigethy-ida_oj14> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/1080128433> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1080128433> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -72420,6 +72716,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-artmann-hans-carl_1958-05-08> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118504533>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118504533> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-05-08"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-05-08"^^xsd:date ;
@@ -72456,6 +72753,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-19> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-19"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-19"^^xsd:date ;
@@ -72491,6 +72789,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-23> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-23"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-23"^^xsd:date ;
@@ -72526,6 +72825,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-24> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-24"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-24"^^xsd:date ;
@@ -72561,6 +72861,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1959-11-26> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-11-26"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-11-26"^^xsd:date ;
@@ -72596,6 +72897,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_4> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -72631,6 +72933,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_5> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -72666,6 +72969,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_1963-10-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-10-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-10-12"^^xsd:date ;
@@ -72701,6 +73005,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hundertwasser-fritz_1963-07-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118554786> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118554786> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-07-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-07-25"^^xsd:date ;
@@ -72737,6 +73042,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ibm-oesterreich_1960-03-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1040293-7>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1040293-7> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-03-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-03-14"^^xsd:date ;
@@ -72771,6 +73077,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-patera-paul_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/116053232>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/116053232> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -72805,6 +73112,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj4> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -72874,6 +73182,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-williams-mia_1964-06-16> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1107600839>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1107600839> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-06-16"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-06-16"^^xsd:date ;
@@ -73084,6 +73393,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1962-06-04> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-06-04"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-06-04"^^xsd:date ;
@@ -73119,6 +73429,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-dehne-achim_1963-01-21> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1023559056>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1023559056> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-01-21"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-21"^^xsd:date ;
@@ -73154,6 +73465,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1957-01-02> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-01-02"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-01-02"^^xsd:date ;
@@ -73189,6 +73501,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1957-06-14> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-06-14"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-06-14"^^xsd:date ;
@@ -73224,6 +73537,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1960-05-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-05-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-05-12"^^xsd:date ;
@@ -73259,6 +73573,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-werkstatt-schlemmer-schweiger_1963-11-08> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:werkstatt-schlemmer ;
+    acdh:hasAuthor acdhi:werkstatt-schlemmer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-11-08"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-11-08"^^xsd:date ;
@@ -73322,6 +73637,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1959-00-00_1> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-01-01"^^xsd:date ;
@@ -73357,6 +73673,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1962-07-11> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-07-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-07-11"^^xsd:date ;
@@ -73392,6 +73709,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-ammerer-gertrud_1959-10-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         acdhi:gertrudammerer ;
+    acdh:hasAuthor acdhi:gertrudammerer ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-10-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-10-31"^^xsd:date ;
@@ -73427,6 +73745,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1957-04-18> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-04-18"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-04-18"^^xsd:date ;
@@ -73462,6 +73781,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-williams-mia_1964-04-17> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/1107600839>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/1107600839> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-04-17"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-04-17"^^xsd:date ;
@@ -73616,6 +73936,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1959-00-00_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-01-01"^^xsd:date ;
@@ -73651,6 +73972,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-05-31> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-05-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-05-31"^^xsd:date ;
@@ -73779,6 +74101,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-bayer-traudl_1959-00-00_3> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-01-01"^^xsd:date ;
@@ -73814,6 +74137,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-bayer-traudl_1960-00-00_2> a acdh:Collection ;
     acdh:hasActor <http://www.wikidata.org/entity/Q108811535>,
         <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <http://www.wikidata.org/entity/Q108811535> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -73848,6 +74172,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-hundertwasser-fritz_1959-12-11> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/118554786> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118554786> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-11"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-12-11"^^xsd:date ;
@@ -73884,6 +74209,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_1956-06-12> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-06-12"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-06-12"^^xsd:date ;
@@ -73919,6 +74245,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -73954,6 +74281,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-norddeutscher-rundfunk_1964-06-25> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/2020461-9> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/2020461-9> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-06-25"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-06-25"^^xsd:date ;
@@ -73989,6 +74317,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-radax-ferry_oj1> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753>,
         <https://d-nb.info/gnd/130683191> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/130683191> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
@@ -74060,6 +74389,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l031_kalenderbuch-1961> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-01-01"^^xsd:date ;
@@ -74150,6 +74480,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l024_taschenkalender-1954> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1954-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1954-01-01"^^xsd:date ;
@@ -74180,6 +74511,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l033_taschenkalender-1963> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1963-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1963-01-01"^^xsd:date ;
@@ -74210,6 +74542,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l030_taschenkalender-1961> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1961-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1961-01-01"^^xsd:date ;
@@ -74240,6 +74573,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l029_taschenkalender-1960> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1960-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1960-01-01"^^xsd:date ;
@@ -74270,6 +74604,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l028_taschenkalender-1959> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1959-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1959-01-01"^^xsd:date ;
@@ -74300,6 +74635,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l025_taschenkalender-1956> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1956-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1956-01-01"^^xsd:date ;
@@ -74330,6 +74666,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l026_taschenkalender-1957> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1957-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1957-01-01"^^xsd:date ;
@@ -74360,6 +74697,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l032_taschenkalender-1962> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1962-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1962-01-01"^^xsd:date ;
@@ -74390,6 +74728,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l027_taschenkalender-1958> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1958-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1958-01-01"^^xsd:date ;
@@ -74420,6 +74759,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l034_taschenkalender-1964> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1964-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1964-01-01"^^xsd:date ;
@@ -74450,6 +74790,7 @@ acdhi:konradbayer a acdh:TopCollection ;
 
 <https://id.acdh.oeaw.ac.at/konradbayer/kalender/l023_taschenkalender-1953> a acdh:Collection ;
     acdh:hasActor <https://d-nb.info/gnd/118507753> ;
+    acdh:hasAuthor <https://d-nb.info/gnd/118507753> ;
     acdh:hasContact acdhi:azbl ;
     acdh:hasCoverageEndDate "1953-12-31"^^xsd:date ;
     acdh:hasCoverageStartDate "1953-01-01"^^xsd:date ;

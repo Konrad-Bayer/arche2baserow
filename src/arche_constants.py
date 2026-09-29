@@ -344,6 +344,22 @@ def inherit_rights_from_parent_collection() -> None:
                     create_custom_triple(G, subject_uri, predicate_uri, object_uri)
 
 
+def add_hasAuthor_to_subjects_with_oaiset_based_on_hasNextItem_subject() -> None:
+    """
+    Add acdh:hasAuthor to subjects that have oaiset based on the hasNextItem subject.
+    """
+    print("Adding hasAuthor triples based on hasNextItem subjects...")
+    has_next_item = URIRef(f'{NAMESPACES["acdh"]}hasNextItem')
+    has_author = URIRef(f'{NAMESPACES["acdh"]}hasAuthor')
+    has_oaiset = URIRef(f'{NAMESPACES["acdh"]}hasOaiSet')
+    for subject_uri in G.subjects(RDF.type, URIRef(f'{NAMESPACES["acdh"]}Collection')):
+        if not list(G.objects(subject_uri, has_oaiset)):
+            continue
+        for next_item_uri in G.objects(subject_uri, has_next_item):
+            for author_uri in G.objects(next_item_uri, has_author):
+                create_custom_triple(G, subject_uri, has_author, author_uri)
+
+
 def split_hasSubject_triple() -> None:
     """
     Split hasSubject triples into multiple triples for each subject separated by a comma.
@@ -469,6 +485,7 @@ add_license_to_all_collection_with_oaiset(URIRef(f'{NAMESPACES["acdh"]}hasLicens
 
 split_hasSubject_triple()
 inherit_rights_from_parent_collection()
+add_hasAuthor_to_subjects_with_oaiset_based_on_hasNextItem_subject()
 # add_hasIdentifier_to_all_subjects()
 
 serialize_graph(G, "turtle", "rdf/arche_constants_preorder.ttl")

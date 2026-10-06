@@ -442,6 +442,15 @@ def get_actor_author_from_name_list(name_list: list[str], wrapper: bool = False)
     return author, actor
 
 
+def filter_invalid_filenames(filename: str) -> bool:
+    """Filter out invalid filenames based on predefined criteria."""
+    # Example criteria: filename should not start with a dot and should not be empty
+    invalid_names = ["Thumbs.db", "DS.store"]
+    if filename in invalid_names:
+        return False
+    return True
+
+
 def list_directories_or_files(
     path: str,
     data: list,

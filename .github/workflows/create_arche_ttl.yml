@@ -7,12 +7,12 @@ on:
         type: number
         description: '(Required) Database ID as number'
         required: true
-        default: 0
+        default: 1088
       project_name:
         type: string
         description: '(Required) Project Name as string'
         required: true
-        default: 'my-arche-project'
+        default: 'konradbayer'
 
 jobs:
   update_baserow:
@@ -41,6 +41,7 @@ jobs:
       - name: Creating ARCHE constants ttl file
         run: |
           uv run src/arche_constants.py
+          uv run src/reorder_ttl_entities.py
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v7
         with:

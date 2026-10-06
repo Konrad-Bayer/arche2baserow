@@ -3,16 +3,6 @@ name: ARCHE-Ingest
 on:
   workflow_dispatch:
     inputs:
-      database_id:
-        type: number
-        description: '(Required) Database ID as number'
-        required: true
-        default: 1088
-      project_name:
-        type: string
-        description: '(Required) Project Name as string'
-        required: true
-        default: 'konradbayer'
       arche_instance:
         type: choice
         options:
@@ -32,31 +22,11 @@ jobs:
       ARCHE_INSTANCE: ${{ github.event.inputs.arche_instance }}
       ARCHE_INSTANCE_NAME: ${{ github.event.inputs.arche_instance == 'arche-curation.acdh-dev' && 'Curation' || 'Production' }}
       OUTPUT_DIR: rdf
-      BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
-      BASEROW_DB_ID: ${{ github.event.inputs.database_id }}
-      BASEROW_USER: ${{ secrets.BASEROW_USER }}
-      BASEROW_PW: ${{ secrets.BASEROW_PW }}
-      PROJECT_NAME: ${{ github.event.inputs.project_name }}
       ARCHE_LOGIN: ${{ secrets.ARCHE_LOGIN }}
       ARCHE_PASSWORD: ${{ secrets.ARCHE_PASSWORD }}
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v7
-    - name: Set up Python environment
-      uses: actions/setup-python@v7
-      with:
-        python-version: "3.12"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install uv
-    - name: Baserow Dump and TEI/XML Download
-      run: |
-        uv run src/baserow_dump.py
-    - name: Creating ARCHE constants ttl file
-      run: |
-        uv run src/arche_constants.py
-        uv run src/reorder_ttl_entities.py
     - name: ingestion dependencies
       run: |
         composer require "acdh-oeaw/arche-ingest:^1"

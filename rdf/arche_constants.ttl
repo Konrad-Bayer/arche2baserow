@@ -172,7 +172,7 @@ acdhi:berndmueller a acdh:Person ;
     acdh:hasTitle "Genf"@de .
 
 <https://sws.geonames.org/2660727/> a acdh:Place ;
-    acdh:hasTitle "Frauenfeld in der Schweiz"@de .
+    acdh:hasTitle "Frauenfeld"@de .
 
 <https://sws.geonames.org/2661552/> a acdh:Place ;
     acdh:hasTitle "Bern"@de .
@@ -343,7 +343,7 @@ acdhi:josephpatsack a acdh:Person ;
     acdh:hasTitle "Josef Pazak"@und .
 
 <https://sws.geonames.org/2658822/> a acdh:Place ;
-    acdh:hasTitle "Sankt Gallen"@de .
+    acdh:hasTitle "St. Gallen"@de .
 
 <https://sws.geonames.org/2661604/> a acdh:Place ;
     acdh:hasTitle "Basel"@de .
@@ -639,6 +639,7 @@ acdhi:azbl a acdh:Organisation ;
     acdh:hasAddressLine1 "Dannebergplatz 11/12" ;
     acdh:hasCity "Wien"@de ;
     acdh:hasCountry "Österreich"@de ;
+    acdh:hasDescription "Der 2021 gegründete Verein “Assoziation zum blauen Laub - Vereinigung zur Bewahrung und Verbreitung des Werks von Konrad Bayer zur Belebung von Literatur und Kunst in diesem Geist” mit Sitz in Wien betreut Werk, Stammnachlass und Bibliothek des Dichters Konrad Bayer (1932-1964). Neben der Verwaltung des auf Anfrage zugänglichen Archivs zählen zu den Vereinsaktivitäten Veranstaltungen, Editions- und Forschungsprojekte, die Bayer als bedeutenden Vertreter der Wiener Nachkriegsavantgarde einer wissenschaftlichen und literarischen Öffentlichkeit erschließen. Den Vorsitz führt Dr. Mag. Thomas Eder."@de ;
     acdh:hasEmail "archiv@konradbayer.at" ;
     acdh:hasPostcode "1030" ;
     acdh:hasRegion "Wien"@de ;
@@ -651,7 +652,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasCoverageStartDate "1952-01-01"^^xsd:date ;
     acdh:hasCurator <https://orcid.org/0000-0002-0636-4476> ;
     acdh:hasDepositor acdhi:azbl ;
-    acdh:hasDescription "Der Wiener Dichter Konrad Bayer (1932-1964), dessen Stammnachlass von der Assoziation zum blauen Laub archivarisch betreut wird, war als Mitglied der “Wiener Gruppe” ein wichtiger Akteur der österreichischen Nachkriegsavantgarde. Im Rahmen des Förderprogramms “Digitale Transformation” des BMWKMS wird in Zusammenarbeit mit dem ACDH ein Teil des Nachlasses öffentlich zugänglich gemacht. Inhalt der Sammlung sind Digitalisate von Bayers Taschenkalendern aus den Jahren 1953-1964, in die er literarische Notizen, Termine und Kontakte eintrug, sowie der Großteil seiner erhaltenen Korrespondenz. Diese umfasst Schriftverkehr mit Verlagen und Zeitschriften (Rowohlt, manuskripte), Briefe und Postkarten von künstlerischen Wegbegleiter:innen (H.C. Artmann, Ferry Radax, Ida Szigethy) sowie private Korrespondenz, darunter der umfangreiche Briefwechsel mit seiner Partnerin Traudl Bayer."@de ;
+    acdh:hasDescription "Der Wiener Dichter Konrad Bayer (1932-1964) war als Mitglied der “Wiener Gruppe” ein wichtiger Akteur der österreichischen Nachkriegsavantgarde. Seit 2021 liegt die archivarische Betreuung von Bayers Stammnachlass beim Verein Assoziation zum blauen Laub mit Sitz in Wien. In Zusammenarbeit mit der Forschungsabteilung Literaturwissenschaft & Printkulturforschung des ACDH wird im Rahmen des Förderprogramms “Digitale Transformation” des BMWKMS ein Teil des Nachlasses öffentlich zugänglich gemacht. Inhalt der Sammlung sind Digitalisate von Bayers Taschenkalendern aus den Jahren 1953-1964, in die er literarische Notizen, Termine und Kontakte eintrug, sowie der Großteil seiner erhaltenen Korrespondenz. Diese umfasst Schriftverkehr mit Verlagen und Zeitschriften (u.A. Rowohlt, manuskripte), Briefe und Postkarten von künstlerischen Wegbegleiter:innen (u.A. H.C. Artmann, Gerhard Rühm, Ferry Radax, Ida Szigethy) sowie private Korrespondenz, darunter der umfangreiche Briefwechsel mit seiner Partnerin Traudl Bayer. Die Systematik der Dateinamen für diese Auswahl folgt der des auf Anfrage zugänglichen physischen Nachlasses."@de ;
     acdh:hasEditor <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
     acdh:hasFunder <http://www.wikidata.org/entity/Q133821035> ;
@@ -42802,7 +42803,6 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -42945,7 +42945,6 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasLicensor <https://d-nb.info/gnd/119027569> ;
     acdh:hasMetadataCreator <https://orcid.org/0009-0001-4481-0967>,
         <https://orcid.org/0009-0009-6117-8244> ;
-    acdh:hasNextItem <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31/Thumbs.db> ;
     acdh:hasOwner acdhi:azbl ;
     acdh:hasPid "create" ;
     acdh:hasRelatedDiscipline <https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/602003>,
@@ -58860,7 +58859,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer als Co-Redakteur der Zeitschrift eröffnungen"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer als Co-Redakteur von eröffnungen (Zeitschrift)"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_fritsch-gerhard> a acdh:Collection ;
@@ -59195,7 +59194,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Eckhardt Lautenschlager"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Eckhardt Lautenschlager"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_oesterreichisches-kulturzentrum> a acdh:Collection ;
@@ -59662,7 +59661,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz Konrad Bayer und Werkstatt Schlemmer Schweiger"@de ;
+    acdh:hasTitle "Korrespondenz Konrad Bayer und Werkstatt Schlemmer/Schweiger"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_wien-ma> a acdh:Collection ;
@@ -59772,7 +59771,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Michel Würthle"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Michel Würthle"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-abschnitte-zeitschrift_1962-02-11> a acdh:Collection ;
@@ -62075,7 +62074,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTag "TEXT"@und ;
-    acdh:hasTitle "Briefentwurf von Konrad Bayer als Co-Redakteur der Zeitschrift eröffnungen an Unbekannt, undatiert"@de ;
+    acdh:hasTitle "Briefentwurf von Konrad Bayer als Co-Redakteur von eröffnungen (Zeitschrift) an Unbekannt, undatiert"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_eroeffnungen> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/von-bayer-konrad_an-editors-of-eroeffnungen_oj/kbg-s_b298_001r.tiff> a acdh:Resource ;
@@ -66176,7 +66175,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Postkarte"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTag "TEXT"@und ;
-    acdh:hasTitle "Postkarte an Konrad Bayer von Egon Kollitsch und Erni Kollitsch, undatiert"@de ;
+    acdh:hasTitle "Postkarte an Konrad Bayer von Egon und Erni Kollitsch, undatiert"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_kollitsch-egon_kollitsch-erni> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1956-12-28> a acdh:Collection ;
@@ -69043,7 +69042,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Egon Kollitsch und Erni Kollitsch"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Egon und Erni Kollitsch"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_kubelka-peter> a acdh:Collection ;
@@ -69100,7 +69099,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Heinrich Maria Ledig Rowohlt"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Heinrich Maria Ledig Rowohlt"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_mueller-bernd> a acdh:Collection ;
@@ -69240,7 +69239,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Radio Bremen"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Radio Bremen"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_sauerbier-samson-d> a acdh:Collection ;
@@ -70845,7 +70844,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Reuss'sche Güterdirektion"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Reuss'sche Güterdirektion"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_simmen-rene> a acdh:Collection ;
@@ -71753,7 +71752,7 @@ acdhi:konradbayer a acdh:TopCollection ;
     acdh:hasSpatialCoverage <https://sws.geonames.org/2761369/> ;
     acdh:hasSubject "https://id.acdh.oeaw.ac.at/azbl"@de ;
     acdh:hasTag "TEXT"@und ;
-    acdh:hasTitle "Brief an Konrad Bayer von Egon Kollitsch und Erni Kollitsch, 26. Feber 1964"@de ;
+    acdh:hasTitle "Brief an Konrad Bayer von Egon und Erni Kollitsch, 26. Feber 1964"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_kollitsch-egon_kollitsch-erni> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/an-bayer-konrad_von-kubelka-peter_1957-01-31> a acdh:Collection ;
@@ -73300,7 +73299,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Korrespondenz"@de,
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
-    acdh:hasTitle "Korrespondenz von Konrad Bayer mit Fritz J. Raddatz"@de ;
+    acdh:hasTitle "Korrespondenz von Konrad Bayer und Fritz J. Raddatz"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_rowohlt-verlag> a acdh:Collection ;
@@ -73602,7 +73601,7 @@ acdhi:konradbayer a acdh:TopCollection ;
         "Neo-Avantgarde"@de,
         "Wiener Gruppe"@de ;
     acdh:hasTag "TEXT"@und ;
-    acdh:hasTitle "Brief an Konrad Bayer von Werkstatt Schlemmer Schweiger, 8. November 1963"@de ;
+    acdh:hasTitle "Brief an Konrad Bayer von Werkstatt Schlemmer/Schweiger, 8. November 1963"@de ;
     acdh:isPartOf <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_werkstatt-schlemmer-schwaiger> .
 
 <https://id.acdh.oeaw.ac.at/konradbayer/korrespondenz/korrespondenz_bayer-konrad_gerhardt-renate> a acdh:Collection ;
